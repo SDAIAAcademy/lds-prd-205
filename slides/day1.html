@@ -161,6 +161,18 @@
   <aside class="notes"><p>دون ذكاء اصطناعي، ومقيَّم. تجوّل واقرأ الأسئلة: من كتب سؤالًا عن الصفحة أعده إلى نقطة التحقق. لا تعرض الموجز المرجعي حتى نهاية المختبر. البديل لمن لم يكمل: يأخذ الموجز المرجعي من المدرّب في بداية المختبر 1.3.</p></aside>
 </section>
 
+<section class="slide" id="debrief-1-1" data-lo="LO1" data-label="بعد المختبر 1.1">
+  <div class="kicker">بعد المختبر</div>
+  <h2>1,462 من 6,000 تواصل: السؤال عن المسافر، لا عن الصفحة</h2>
+  <ul class="bullets">
+    <li>24% من تواصل الشهر كان عن رسوم تغيير الحجز وقاعدته.</li>
+    <li>الموجز الجيد يسأل: هل يفهم المسافر رسومه دون أن يتصل؟</li>
+    <li>فرق السعر خارج النطاق: يحتاج إلى أسعار حية.</li>
+  </ul>
+  <aside class="notes"><p>الرقم محسوب من contact_reasons.csv الاصطناعي بسكربت المقرر. اقرأ موجزين بصوت عالٍ: أيهما سؤاله يُجاب عنه بنعم أو لا بعد اختبار؟</p></aside>
+</section>
+
+
 <!-- الجلسة 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
@@ -261,6 +273,17 @@ Work: one change per request, run it, then wait for my commit.</code></pre>
 <section class="slide lab" id="lab-1-2" data-auto="lab" data-lab="1.2">
   <aside class="notes"><p>ذكاء اصطناعي كامل. قبل الخطوة 4 تأكد أن كل وكيل مضبوط على السؤال قبل الأوامر. الخطة المسجلة فيها خمس مشكلات؛ لا تعطِ العدد في البداية. من لم يكمل موجزه يأخذ المرجعي الآن. انتبه لمن يلصق المفتاح في المحادثة: المفاتيح لا توزَّع قبل الجلسة 4.</p></aside>
 </section>
+
+<section class="slide" id="debrief-1-2" data-lo="LO2" data-label="بعد المختبر 1.2">
+  <div class="kicker">بعد المختبر</div>
+  <h2>خمس مشكلات في خطة من سبع خطوات، ولكل واحدة سطر في ملف السياق</h2>
+  <ul class="bullets">
+    <li>المشكلات في الخطوات 2 إلى 6؛ الخطوتان 1 و7 سليمتان.</li>
+    <li>كل سطر في ملف السياق قاعدة تُفحص، لا أمنية.</li>
+  </ul>
+  <aside class="notes"><p>المفتاح في reference/plan_key.md. اسأل: أي مشكلة كانت ستكلف أكثر لو بدأ التنفيذ دون قراءة الخطة؟</p></aside>
+</section>
+
 
 <!-- الجلسة 3 -->
 
@@ -363,6 +386,17 @@ Work: one change per request, run it, then wait for my commit.</code></pre>
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
   <aside class="notes"><p>ذكاء اصطناعي كامل. أهم ما تراقبه: هل يتحقق المشارك قبل الإيداع؟ اطلب من بعضهم <code>git log --oneline</code>. من تعطل وكيله يأخذ الحالات المرجعية <span class="en">v1_step1</span> إلى <span class="en">v1_step3</span> ويكمل الإيداع والتراجع. التغيير المكسور ينهار عند التشغيل، وهذا مقصود.</p></aside>
 </section>
+
+<section class="slide" id="debrief-1-3" data-lo="LO2" data-label="بعد المختبر 1.3">
+  <div class="kicker">بعد المختبر</div>
+  <h2>أربعة إيداعات، وتغيير مكسور لم يدخل السجل</h2>
+  <ul class="bullets">
+    <li>التغيير المكسور انهار عند التشغيل بـ <span class="en">KeyError</span>.</li>
+    <li><span class="en">git restore .</span> أعاد الملفات إلى آخر إيداع في ثوانٍ.</li>
+  </ul>
+  <aside class="notes"><p>ما سبق من تشغيل git الحقيقي في run_all.py 1.3. اسأل: من قرأ الفرق قبل كل إيداع؟ لا تفتح موضوع صحة الرسوم الآن؛ له مختبر في اليوم الثاني.</p></aside>
+</section>
+
 
 <!-- الجلسة 4 -->
 
@@ -481,6 +515,18 @@ MODEL_MAX_CALLS=30</code></pre>
 <section class="slide lab" id="lab-1-4" data-auto="lab" data-lab="1.4">
   <aside class="notes"><p>ذكاء اصطناعي كامل. المفاتيح وُزّعت في بداية الجلسة. إن انشغل النموذج المجاني أو رُفض المفتاح فليبقَ الجميع على stub: الخطوات 2 و3 و5 لا تحتاج إلى نموذج. لا تذكر نتيجة نموذج لم تره في القاعة. البديل لمن لم يكمل الخطوة 3: <span class="en">v1_step3.zip</span>.</p></aside>
 </section>
+
+<section class="slide" id="debrief-1-4" data-lo="LO2" data-label="بعد المختبر 1.4">
+  <div class="kicker">بعد المختبر</div>
+  <h2>بحد استدعاءين جاء الشرح الثالث من نص القاعدة</h2>
+  <ul class="bullets">
+    <li>المولّد أعاد الملف نفسه: 40 حجزًا، منها 22 لأكثر من مسافر أو رحلة.</li>
+    <li>لا مفتاح في ملفات الصفحة: يبقى في <span class="en">.env</span> على الخادم.</li>
+    <li>الشروح كلها من البديل المكتوب مسبقًا، لا من نموذج مستضاف.</li>
+  </ul>
+  <aside class="notes"><p>الأرقام من run_all.py 1.4 بوضع البديل. من جرّب مفتاحًا مستضافًا في القاعة يذكر ما رآه، دون أن تقارنه بنتيجة لم تُشغَّل عند الإعداد.</p></aside>
+</section>
+
 
 <section class="slide" id="wrap-up" data-label="خلاصة اليوم">
   <div class="kicker">خلاصة اليوم الأول</div>
