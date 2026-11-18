@@ -131,7 +131,8 @@ def explain(ref):
         except ModelError:
             text, source = "تعذّر الشرح الآن.", "fallback"
         return {"ok": True, "ref": ref, "route": "", "family": "", "rule_id": "", "allowed": True,
-                "fee": None, "passengers": 0, "segments": 0, "explanation": text, "source": source}
+                "fee": None, "passengers": 0, "segments": 0, "explanation": text, "source": source,
+            "mode": os.environ.get("MODEL_MODE", "stub")}
     rule = RULES[booking["family"]]
     allowed = float(booking["hours_to_departure"]) >= rule["deadline_hours"]
     fee = rule["fee_per_passenger_segment"] if allowed else None
@@ -142,7 +143,8 @@ def explain(ref):
     return {"ok": True, "ref": ref, "route": booking["route"], "family": rule["name"],
             "rule_id": rule["id"], "allowed": allowed, "fee": fee,
             "passengers": int(booking["passengers"]), "segments": int(booking["segments"]),
-            "explanation": text, "source": source}
+            "explanation": text, "source": source,
+            "mode": os.environ.get("MODEL_MODE", "stub")}
 
 
 def page():

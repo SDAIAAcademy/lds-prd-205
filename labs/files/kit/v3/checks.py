@@ -74,7 +74,7 @@ def run(folder):
             ok = False
             label += f" (خطأ: {type(error).__name__})"
         results[cid] = ok
-        print(("نجح " if ok else "فشل ") + cid + " · " + label)
+        print(("اجتاز " if ok else "أخفق ") + cid + " · " + label)
     print(f"النتيجة: {sum(results.values())} من {len(results)}")
     return results
 

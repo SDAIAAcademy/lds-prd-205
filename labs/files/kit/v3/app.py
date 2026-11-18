@@ -139,7 +139,8 @@ def explain(ref):
     return {"ok": True, "ref": ref, "route": booking["route"], "family": rule["name"],
             "rule_id": rule["id"], "allowed": allowed, "fee": fee,
             "passengers": int(booking["passengers"]), "segments": int(booking["segments"]),
-            "explanation": text, "source": source}
+            "explanation": text, "source": source,
+            "mode": os.environ.get("MODEL_MODE", "stub")}
 
 
 def page():

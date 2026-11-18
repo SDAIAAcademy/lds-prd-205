@@ -23,5 +23,8 @@ document.getElementById('form').addEventListener('submit', async (event) => {
   const meta = document.createElement('p');
   meta.className = 'note';
   meta.textContent = 'الأجرة: ' + data.family + ' · القاعدة ' + data.rule_id + ' · ' + data.route;
+  if (data.source === 'model' && data.mode === 'stub') {
+    meta.textContent += ' · الشرح من بديل مكتوب مسبقًا (stub)، لا من نموذج';
+  }
   out.append(head, body, meta);
 });
