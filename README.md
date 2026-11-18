@@ -41,14 +41,14 @@ Prototyping AI Products with Coding Agents
 
 ## كيف تسير الورشة
 
-- **قبل اليوم الأول:** عمل تحضيري موجه من ساعتين: مساحة العمل والوكيل والمفتاح، وتشغيل النسخة المرجعية، وقراءة ملفات الحالة، وتمرين على التراجع في Git، وبطاقة فكرة المشارك. الدليل في [`labs/files/prework_guide.md`](labs/files/prework_guide.md).
+- **قبل اليوم الأول:** عمل تحضيري موجه من ساعتين: مساحة العمل والوكيل، وتشغيل النسخة المرجعية، وقراءة ملفات الحالة، وتمرين على التراجع في Git، وبطاقة فكرة المشارك. الدليل في [`labs/files/prework_guide.md`](labs/files/prework_guide.md).
 - **اليوم الأول:** أربع جلسات، في كل منها 35 أو 40 دقيقة من المفاهيم ونقطة تحقق، ثم مختبر من 60 دقيقة.
 - **اليوم الثاني:** ثلاث جلسات من 30 دقيقة ومختبر من 60، ثم الاختبار القصير المراقب، ثم المراجعة المباشرة مع المهندس.
 - **فكرة المشارك:** آخر خطوة في كل مختبر تطبّق ما بُني على الحالة على فكرة المشارك نفسه، والمختبر 2.3 يختبرها مع خمسة زملاء. فيصل المشارك إلى المراجعة الختامية ومعه نموذج فكرته وحزمة تسليمه، دون مهمة بعد الورشة.
 
 | الجزء | الدقائق | التوزيع |
 |---|---|---|
-| الدراسة الذاتية الموجهة | 120 | مساحة العمل والوكيل والمفتاح 40؛ تشغيل النسخة المرجعية 15؛ ملفات الحالة 20؛ التراجع في Git 20؛ بطاقة الفكرة 15؛ دليل الاختبار السريع 10 |
+| الدراسة الذاتية الموجهة | 120 | مساحة العمل والوكيل 40؛ تشغيل النسخة المرجعية 15؛ ملفات الحالة 20؛ التراجع في Git 20؛ بطاقة الفكرة 15؛ دليل الاختبار السريع 10 |
 | الشرح | 240 | اليوم 1: 40 و35 و40 و35؛ اليوم 2: 30 و30 و30 |
 | المختبرات | 420 | سبعة مختبرات × 60 دقيقة |
 | التقييم | 60 | الاختبار القصير المراقب: تعليمات 5، وتحديد خمسة مخاطر في نموذج أولي جديد 50، والتسليم 5. بنوده لا تُنشر في هذا المستودع |
@@ -144,7 +144,7 @@ Prototyping AI Products with Coding Agents
 - [Personal Data Protection Law (SDAIA, English edition)](https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf)
 - [مكتب إدارة البيانات الوطنية: سياسة تصنيف البيانات](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf)
 - [NDMO: Data Classification Policy (English edition)](https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf)
-- [سدايا: المبادئ التوجيهية للذكاء الاصطناعي التوليدي للجهات الحكومية](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
+- [سدايا: مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية (2025)](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
 - [SDAIA: Generative AI Guidelines for Government (English edition)](https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf)
 - [سدايا: مبادئ الذكاء الاصطناعي التوليدي للعموم (2025)](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenerativeAIPublicAR.pdf)
 - [SDAIA: Generative AI Guidelines for Public (English edition)](https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf)
@@ -175,5 +175,5 @@ Prototyping AI Products with Coding Agents
 ### المرجعيات الوطنية
 
 - نظام حماية البيانات الشخصية: https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataProtectionLawAr.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf). النظام نافذ. نصه العربي في ملف PDF على موقع سدايا لا يُستخرج آليًا، فقُرئ من موقع هيئة الخبراء بمجلس الوزراء: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/b7cfae89-828e-4994-b167-adaa00e37188/1 (نوفمبر 2026، بتعديلاته). يستعمل المقرر المادة الحادية عشرة: الفقرة 3 (أن يكون محتوى البيانات الشخصية ملائمًا ومقصورًا على الحد الأدنى اللازم لتحقيق الغرض من جمعها) والفقرة 4 (التوقف عن جمع ما لم يعد ضروريًا وإتلافه). أما القاعدة العملية (لا بيانات شخصية في نموذج أولي، وإبلاغ مسؤول حماية البيانات عن ملف يشبهها) فقاعدة المقرر.
-- سياسة تصنيف البيانات الصادرة عن مكتب إدارة البيانات الوطنية: https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf). تسري على الجهات العامة. يستعمل المقرر أسماء مستوياتها كما وردت في المبادئ التوجيهية للذكاء الاصطناعي التوليدي بالعربية (عام، مقيد، سري، سري للغاية).
-- مبادئ الذكاء الاصطناعي التوليدي الصادرة عن سدايا: المبادئ التوجيهية للذكاء الاصطناعي التوليدي للجهات الحكومية https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf)، ومبادئ الذكاء الاصطناعي التوليدي للعموم (2025) https://sdaia.gov.sa/ar/SDAIA/about/Files/GenerativeAIPublicAR.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf). يستعمل المقرر من نسخة الجهات الحكومية القسم 3.5 (الخصوصية والأمن: لا بيانات مصنفة «مقيد» فأعلى، والاستخدام مقصور على البيانات «العامة»)، ومن نسخة العموم القسم 4.3 (الشفافية والقابلية للتفسير: إعلام المستخدمين حين يُنشأ المحتوى بالذكاء الاصطناعي) والقسم 4.4 (المساءلة والمسؤولية: خطر انتهاك حقوق الملكية الفكرية). اعتُمدت النسختان المنشورتان على موقع سدايا عند إعداد المقرر (نوفمبر 2026)، والنص العربي هو المرجع.
+- سياسة تصنيف البيانات الصادرة عن مكتب إدارة البيانات الوطنية: https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf). تسري على الجهات العامة. يستعمل المقرر أسماء مستوياتها كما وردت في مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية بالعربية (عام، مقيد، سري، سري للغاية).
+- مبادئ الذكاء الاصطناعي التوليدي الصادرة عن سدايا: مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية (2025) https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf)، ومبادئ الذكاء الاصطناعي التوليدي للعموم (2025) https://sdaia.gov.sa/ar/SDAIA/about/Files/GenerativeAIPublicAR.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf). يستعمل المقرر من نسخة الجهات الحكومية القسم 3.5 (الخصوصية والأمن: لا بيانات مصنفة «مقيد» فأعلى، والاستخدام مقصور على البيانات «العامة»)، ومن نسخة العموم القسم 4.3 (الشفافية والقابلية للتفسير: إعلام المستخدمين حين يُنشأ المحتوى بالذكاء الاصطناعي) والقسم 4.4 (المساءلة والمسؤولية: خطر انتهاك حقوق الملكية الفكرية). اعتُمدت النسختان المنشورتان على موقع سدايا عند إعداد المقرر (نوفمبر 2026)، والنص العربي هو المرجع.
