@@ -1,158 +1,505 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>رحّب وعرّف بنفسك. ثلاثة أسئلة برفع اليد: من كتب قصة مستخدم هذا الشهر؟ من طلب من وكيل برمجة أن يبني شيئًا؟ من سلّم نموذجًا أوليًّا لفريق هندسي فأُعيد بناؤه من الصفر؟ السؤال الثالث هو موضوع اليومين.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>أربع جلسات اليوم، كل منها نحو 35 إلى 40 دقيقة من المفاهيم ونقطة تحقق، ثم مختبر من 60 دقيقة. الاستراحات بزر B وليست شرائح.</p></aside>
+</section>
+
+<section class="slide" id="workshop-at-a-glance" data-label="الورشة">
+  <div class="kicker">الورشة في لمحة</div>
+  <h2>يومان على حالة واحدة، وفكرتك تُبنى بجانبها</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-navy"><h4>قبل الورشة</h4><p class="small">مساحة العمل والوكيل والمفتاح جاهزة، وبطاقة فكرتك في خمسة أسطر.</p></div>
+    <div class="card c-teal"><h4>اليوم 1</h4><p class="small">موجز، وملف سياق، ونسخة أولى بإيداع لكل خطوة، ثم استدعاء النموذج.</p></div>
+    <div class="card c-coral"><h4>اليوم 2</h4><p class="small">فحوصات القبول، وقائمة الحدود، وخمسة مستخدمين، وما يحتفظ به المهندسون.</p></div>
+    <div class="card c-purple"><h4>الختام</h4><p class="small">اختبار قصير مراقب، ثم مراجعة مباشرة مع مهندس لنموذج فكرتك.</p></div>
+  </div>
+  <div class="callout tip mt"><b>آخر خطوة في كل مختبر لفكرتك أنت.</b> ما تبنيه على الحالة تكرره على فكرتك، فتصل إلى المراجعة ومعك نموذجها وحزمة تسليمها.</div>
+  <aside class="notes"><p>اشرح البنية مرة واحدة: كل مختبر يبدأ من حالة مرجعية جاهزة على الحالة، ثم يكرر المشارك الخطوة على فكرته في آخر 10 إلى 15 دقيقة. من تعطلت فكرته يكمل على الحالة؛ لا أحد يتوقف. المختبرات المقيَّمة (30%) تُقيَّم على عمل الحالة، ونموذج الفكرة يُقيَّم في المشروع الختامي (35%) والمراجعة المباشرة (15%)، والاختبار القصير المراقب 20%.</p></aside>
+</section>
+
+<section class="slide" id="ai-modes" data-label="أوضاع الذكاء الاصطناعي">
+  <div class="kicker">قواعد الورشة</div>
+  <h2>ثلاثة أوضاع للذكاء الاصطناعي، ولكل نشاط وضعه</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>دون ذكاء اصطناعي</h4><p class="small mb0">الموجز الأول (المختبر 1.1)، والاختبار القصير المراقب. هذا حكمك أنت.</p></div>
+    <div class="card c-teal"><h4>كامل</h4><p class="small mb0">مختبرات البناء: الوكيل يكتب، وأنت تتحقق وتودع وتتراجع. توجيه الوكيل هو المهارة.</p></div>
+    <div class="card c-amber"><h4>مرشد</h4><p class="small mb0">مراجعة الحدود (المختبر 2.2): مساعد ينقد ترتيبك ولا يكتبه.</p></div>
+  </div>
+  <div class="callout warn mt"><b>في كل الأوضاع:</b> المفاتيح خارج الشيفرة، والبيانات اصطناعية، وتراخيص الأصول مفحوصة، ومستخدمو الاختبار يعرفون أن الذكاء الاصطناعي مستخدم.</div>
+  <aside class="notes"><p>هذه سياسة المقرر كما في بطاقته، لا اختيار المدرب. القواعد الأربع في الصندوق السفلي هي الاستخدام المسؤول للمقرر، وتفرضها قائمة تحقق الحدود المقيَّمة في المختبر 2.2 وفي المشروع الختامي. سجلات تفاعل الوكيل وسجل الإيداعات تُفحص في التقييم، فاحتفظ بها.</p></aside>
+</section>
+
+<section class="slide" id="qubbara-case" data-label="دراسة الحالة">
+  <div class="kicker">دراسة الحالة طوال الورشة</div>
+  <h2>طيران قُبّرة: هل تغني صفحة عن اتصال؟</h2>
+  <div class="cols cols-32">
+    <table class="t small">
+      <tr><th>الشخص</th><th>دوره</th></tr>
+      <tr><td><b>غيداء الصبّاغ</b></td><td>مديرة المنتج، صاحبة الفكرة، تقرر المشروع التجريبي</td></tr>
+      <tr><td><b>معاذ السرّاح</b></td><td>مصمم الخدمة</td></tr>
+      <tr><td><b>وفاء الخلف</b></td><td>قائدة مركز الاتصال</td></tr>
+      <tr><td><b>طلال الصغيّر</b></td><td>مسؤول حماية البيانات</td></tr>
+      <tr><td><b>م. ريان التريكي</b></td><td>قائد الهندسة، يراجع ما تسلّمه</td></tr>
+    </table>
+    <div class="stack">
+      <div class="card c-coral flat"><h4>ما لاحظوه</h4><p class="small mb0">ربع التواصل مع مركز الاتصال في شهر سؤال عن رسوم تغيير الحجز وقاعدته.</p></div>
+      <div class="card c-teal flat"><h4>الفكرة</h4><p class="small mb0">«شارح تغيير الحجز»: رمز الحجز، ثم الرسوم والقاعدة بعربية واضحة.</p></div>
+    </div>
+  </div>
+  <p class="xsmall muted mt-s">طيران قُبّرة ناقل افتراضي. الأشخاص والحجوزات والقواعد والأعداد كلها اصطناعية.</p>
+  <aside class="notes"><p>الأرقام الدقيقة في مذكرة الفكرة، ويقرؤها المشاركون في المختبر 1.1 دون مساعدة: لا تذكرها الآن. قواعد الأجرة الثلاث قواعد الحالة الافتراضية، لا قواعد أي ناقل حقيقي. ريان يراجع ولا يبني، وغيداء تقرر بعد المراجعة: هذا الفصل بين الأدوار يتكرر في حزمة التسليم.</p></aside>
+</section>
+
+<section class="slide" id="setup-check" data-label="التجهيز">
+  <div class="kicker">قبل أن نبدأ</div>
+  <h2>ثلاثة أشياء تعمل على جهازك الآن</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · مساحة العمل</h4><p class="small mb0">حاوية محلية أو بيئة مستضافة، فيها <span class="en">git</span> و<span class="en">uv</span>.</p></div>
+    <div class="card c-cyan"><h4>2 · النسخة المرجعية</h4><p class="small mb0">من <span class="en">v2.zip</span>: الأمر أدناه، ثم الرمز <span class="en">QB4K7M</span>.</p></div>
+    <div class="card c-coral"><h4>3 · الوكيل</h4><p class="small mb0">يعمل في المجلد، ويسألك قبل أي أمر أو تعديل.</p></div>
+  </div>
+  <pre class="code mt"><code class="language-bash">uv run app.py</code></pre>
+  <aside class="notes"><p>ثلاث دقائق، وهذا ما طلبه العمل التحضيري. رأيت رسومًا وشرحًا يبدأ بـ«تستطيع تغيير حجزك»؟ الجهاز جاهز. الشرح من بديل مكتوب مسبقًا، لا من نموذج. من لم يعمل عنده الأمر يجلس بجوار زميل، ويُحل أمره في أول استراحة. مفاتيح النموذج توزَّع في الجلسة 4، لا الآن.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide dark" id="building-is-cheap" data-lo="LO1" data-label="لماذا الآن">
+  <div class="kicker">ما الذي تغيّر</div>
+  <h2>بناء صفحة صار يأخذ ساعة. معرفة ما تعلّمناه منها لم يصر أسهل</h2>
+  <ul class="bullets">
+    <li>وكيل البرمجة يكتب صفحة تعمل من وصف قصير.</li>
+    <li>النتيجة <b>تبدو منتجًا</b>، فيُحكم عليها كمنتج.</li>
+    <li>من لا يعرف ماذا يسأل، يبني شيئًا لا يجيب عن شيء.</li>
+  </ul>
+  <aside class="notes"><p>الفكرة: السرعة نقلت الصعوبة من البناء إلى السؤال. اسأل القاعة: آخر نموذج أولي رأيتموه، ما السؤال الذي أجاب عنه؟ أغلب الإجابات ستكون «أن نرى الفكرة». هذا ليس سؤالًا.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="question-not-feature" data-lo="LO1" data-label="السؤال">
+  <div class="kicker">مثال موازٍ: شارح الأمتعة</div>
+  <h2>النموذج الأولي يجيب عن سؤال واحد، لا يعرض ميزة</h2>
+  <table class="t">
+    <tr><th>سؤال عن الصفحة</th><th>سؤال يجيب عنه نموذج أولي</th></tr>
+    <tr><td>«هل نبني صفحة للأمتعة؟»</td><td>«هل يعرف المسافر وزنه المسموح ورسوم الزيادة دون أن يتصل؟»</td></tr>
+    <tr><td>«هل يعجب المسافرين الشكل؟»</td><td>«هل يختار المسافر الباقة الأرخص لأمتعته من الصفحة وحدها؟»</td></tr>
+    <tr><td>«هل يعمل الذكاء الاصطناعي؟»</td><td>«هل يفهم المسافر الشرح المكتوب بالذكاء الاصطناعي دون خطأ في الوزن؟»</td></tr>
+  </table>
+  <p class="small mt-s">السؤال الجيد: من يجيب عنه، وفي كم دقيقة، وما القرار الذي يتوقف على جوابه.</p>
+  <aside class="notes"><p>المثال من خدمة أخرى في قُبّرة، الأمتعة، حتى لا نحل المختبر على الشاشة. اقرأ الصف الأول، واطلب من القاعة أن تحوّل الصفين الآخرين قبل أن تكشفهما. الاختبار السريع للسؤال: لو أجاب خمسة مستخدمين «نعم»، ماذا نفعل؟ ولو أجابوا «لا»؟ إن كان الجواب في الحالتين «نكمل البناء» فليس سؤالًا.</p></aside>
+</section>
+
+<section class="slide" id="fidelity" data-lo="LO1" data-label="مستوى الدقة">
+  <div class="kicker">مستوى الدقة</div>
+  <h2>اجعل حقيقيًا ما يجيب عن السؤال، وزيّف الباقي</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>حقيقي في شارح الأمتعة</h4><ul class="bullets small"><li>قاعدة الوزن والرسوم وحسابها</li><li>العربية من اليمين إلى اليسار</li><li>شرح يكتبه نموذج حقيقي</li></ul></div>
+    <div class="card c-amber"><h4>يكفي أن يكون مزيفًا</h4><ul class="bullets small"><li>الحجوزات: ملف اصطناعي</li><li>الدخول: لا دخول</li><li>التصميم: صفحة بسيطة</li><li>الدفع: لا دفع</li></ul></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> تزييف ما يُسأل عنه (شرح ثابت مكتوب باليد بدل النموذج) يعطيك جوابًا عن سؤال آخر.</div>
+  <aside class="notes"><p>مستوى الدقة ليس «منخفض» أو «عالٍ» للنموذج كله: هو قرار لكل جزء. القاعدة: كل جزء يمسه السؤال يكون حقيقيًا بما يكفي ليجيب، وكل جزء لا يمسه يكون أرخص ما يمكن. في المختبر 1.1 يكتب المشاركون هذين العمودين للشارح دون مساعدة.</p></aside>
+</section>
+
+<section class="slide" id="prototype-pilot-product" data-lo="LO1" data-label="ثلاث مراحل">
+  <div class="kicker">ثلاثة أشياء مختلفة</div>
+  <h2>النموذج الأولي يتعلّم، والمشروع التجريبي يقيس، والمنتج يخدم</h2>
+  <table class="t small">
+    <tr><th></th><th>نموذج أولي</th><th>مشروع تجريبي</th><th>منتج</th></tr>
+    <tr><td><b>يثبت</b></td><td>أن السؤال يستحق، وما يفهمه المستخدم</td><td>أثرًا في عملية حقيقية بمقياس</td><td>خدمة يعتمد عليها الناس</td></tr>
+    <tr><td><b>البيانات</b></td><td>اصطناعية</td><td>حقيقية، بموافقة وحوكمة</td><td>حقيقية</td></tr>
+    <tr><td><b>المستخدمون</b></td><td>خمسة، يعرفون أنه تجربة</td><td>عيّنة محددة لمدة محددة</td><td>الجميع</td></tr>
+    <tr><td><b>من يبني</b></td><td>فريق المنتج مع وكيل</td><td>فريق هندسي</td><td>فريق هندسي ودعم وتشغيل</td></tr>
+    <tr><td><b>الشيفرة</b></td><td>تُستبعد</td><td>تُكتب للبقاء</td><td>تُصان</td></tr>
+  </table>
+  <aside class="notes"><p>الصف الأخير هو ما يفاجئ القاعة: شيفرة النموذج الأولي تُستبعد. ما يبقى منه هو التعلّم، والمواصفات، وحالات التقييم: هذا ما نسلّمه في اليوم الثاني. الخطأ الشائع أن يُعرض النموذج الأولي على الإدارة فيُعامل كمشروع تجريبي جاهز.</p></aside>
+</section>
+
+<section class="slide" id="question-to-decision" data-lo="LO1" data-label="من السؤال إلى القرار">
+  <div class="kicker">خطوة بخطوة</div>
+  <h2>كل نموذج أولي ينتهي بقرار</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · سؤال</b>من يجيب، وعن ماذا</div>
+    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · نموذج أولي</b>ما يكفي ليُسأل</div>
+    <div class="arrow frag" data-frag="c">←</div><div class="step c-amber frag" data-frag="c"><b>3 · دليل</b>خمسة مستخدمين وفحوصات</div>
+    <div class="arrow frag" data-frag="d">←</div><div class="step c-coral frag" data-frag="d"><b>4 · قرار</b>مشروع تجريبي، أو سؤال آخر، أو توقف</div>
+  </div>
+  <div class="callout tip mt frag" data-frag="d"><b>الخلاصة.</b> إن لم تعرف القرار قبل البناء، فلن يصنعه النموذج الأولي.</div>
+  <aside class="notes"><p>اضغط مرة لكل خطوة. عند الخطوة 4 اسأل: من يتخذ القرار في الحالة؟ (غيداء، مديرة المنتج، بعد مراجعة ريان). التوقف قرار جيد: نموذج أولي يوفّر مشروعًا تجريبيًا لا حاجة إليه نجح.</p></aside>
+</section>
+
+<section class="slide" id="brief-is-the-spec" data-lo="LO1" data-label="الموجز">
+  <div class="kicker">ما يبنيه الوكيل</div>
+  <h2>الوكيل يبني ما كتبته، لا ما قصدته</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>موجز من سطر</h4><p class="small mb0">«صفحة تشرح رسوم الأمتعة بالذكاء الاصطناعي.» يختار الوكيل الباقي: قاعدة بيانات، ودخول، وأسعار من الإنترنت.</p></div>
+    <div class="card c-teal"><h4>موجز من ستة أقسام</h4><p class="small mb0">السؤال، ومستوى الدقة، والنطاق، والبيانات، والقيود، ومعايير الإنجاز. يختار الوكيل أقل، فتتحقق أسرع.</p></div>
+  </div>
+  <div class="callout note mt"><b>لماذا دون ذكاء اصطناعي في الموجز الأول؟</b> لأن ما لا تعرفه عن فكرتك لن يعرفه المساعد، وسيملؤه بما يبدو معقولًا.</div>
+  <aside class="notes"><p>دليل الناتج الأول في المقرر: موجز يبني الوكيل منه نسخة أولى عاملة. الأقسام الستة في قالب المختبر 1.1. اشرح «معايير الإنجاز»: جمل يقول فيها زميل «نجح» أو «فشل» بعد دقيقة من التشغيل. بعد الموجز الأول يجوز أن يراجعه مساعد، لكن ليس في هذا المختبر.</p></aside>
+</section>
+
+<section class="slide" id="check-s1" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي سؤال يستحق نموذجًا أوليًّا في أسبوع؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">فريق الأمتعة في قُبّرة لديه أسبوع قبل اجتماع قرار. أي صياغة تصلح سؤالًا لنموذجهم الأولي؟</p>
+    <div class="opts">
+      <div class="opt" data-why="سؤال عن الحل نفسه: الجواب «نعم» أو «لا» لا يأتي من مستخدمين، ولا يقود إلى قرار">هل نبني صفحة لشرح قواعد الأمتعة؟</div>
+      <div class="opt" data-ok>هل يعرف المسافر رسوم وزنه الزائد من الصفحة دون أن يتصل؟</div>
+      <div class="opt" data-why="يقيس الإعجاب بالشكل، والإعجاب لا يقول هل فهم المسافر الرسوم أو قرر بها">هل يعجب المسافرين تصميم الصفحة الجديدة؟</div>
+      <div class="opt" data-why="سؤال تقني عن الأداة، يجيب عنه المهندسون لا المستخدمون، ولا يتوقف عليه قرار المنتج">هل يستطيع النموذج اللغوي كتابة شرح بالعربية؟</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> يسمّي من يجيب (المسافر)، وما يُقاس (يعرف الرسوم)، والبديل (الاتصال)، فيقود جوابه إلى قرار.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الثاني. من اختار الرابع: النموذج يكتب العربية، والسؤال هو هل يفهمها المسافر ويقرر بها. من اختار الأول: هذا قرار البناء نفسه، والنموذج الأولي يجمع الدليل له.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>دون ذكاء اصطناعي، ومقيَّم. تجوّل واقرأ الأسئلة: من كتب سؤالًا عن الصفحة أعده إلى نقطة التحقق. لا تعرض الموجز المرجعي حتى نهاية المختبر. البديل لمن لم يكمل: يأخذ الموجز المرجعي من المدرّب في بداية المختبر 1.3.</p></aside>
 </section>
 
 <!-- الجلسة 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
+<section class="slide" id="brief-vs-context" data-lo="LO1" data-label="الموجز وملف السياق">
+  <div class="kicker">ملفان لقارئين</div>
+  <h2>الموجز لقرار المنتج، وملف السياق لكل جلسة مع الوكيل</h2>
   <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+    <div class="card c-teal"><h4><span class="en">BRIEF.md</span></h4><ul class="bullets small"><li>السؤال والقرار</li><li>مستوى الدقة والنطاق</li><li>معايير الإنجاز</li><li>يتغير حين يتغير السؤال</li></ul></div>
+    <div class="card c-cyan"><h4><span class="en">AGENTS.md</span></h4><ul class="bullets small"><li>كيف يُشغَّل ويُتحقق منه</li><li>البنية والمكتبات المسموحة</li><li>ما يُسأل عنه وما لا يُفعل</li><li>طريقة العمل: خطوة ثم تحقق</li></ul></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="callout tip mt"><b>ملف السياق يشير إلى الموجز</b> ولا ينسخه: نسختان تختلفان بعد أول تعديل.</div>
+  <aside class="notes"><p>AGENTS.md عُرف مفتوح تقرؤه وكلاء كثيرة: «ملف README للوكلاء»، مكان ثابت للسياق والتعليمات. بعض الوكلاء يقرأ ملفًا باسم آخر، والمحتوى نفسه. المصادر: agents.md.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="agent-forgets" data-lo="LO1" data-label="ما ينساه الوكيل">
+  <div class="kicker">ما يعرفه الوكيل</div>
+  <h2>الوكيل يبدأ كل جلسة دون ذاكرة لما اتفقتما عليه</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>يقرأ ما في المجلد: الملفات، وملف السياق.</li>
+      <li>لا يعرف ما قلته أمس إلا إن كان مكتوبًا.</li>
+      <li>يملأ الفراغ بما يبدو مألوفًا: قاعدة بيانات، ودخول، وحزم.</li>
+    </ul>
+    <div class="card c-coral"><h4>لذلك</h4><p class="small mb0">كل قاعدة قلتها مرتين في المحادثة مكانها ملف السياق. وكل قرار غيّرته يُكتب هناك أولًا.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>اطلب من القاعة مثالًا: ما الذي قلتموه لمساعد مرتين في الأسبوع الماضي؟ ذلك سطر في ملف السياق. لا ندخل في تفاصيل نافذة السياق وضغطها: ذلك في مقرر هندسة البرمجيات بالوكلاء. يكفي هنا: ما ليس مكتوبًا غير موجود في الجلسة التالية.</p></aside>
+</section>
+
+<section class="slide" id="context-file-example" data-lo="LO1" data-label="ملف سياق">
+  <div class="kicker">مثال موازٍ: شارح الأمتعة</div>
+  <h2>ملف سياق قصير يُقرأ في دقيقة</h2>
+  <pre class="code s" data-file="AGENTS.md"><code class="language-markdown"># Baggage explainer: context for the coding agent
+Read BRIEF.md before each step.
+Run:   uv run app.py   then open http://127.0.0.1:8300
+Check: try bags 18 kg, 23 kg and 32 kg after each step.
+Stack: Python standard library only. Data in data/ only.
+Always: the fee is computed by the program, never by the model.
+Ask first: any package, any file outside this folder.
+Never: a key outside .env; real passenger data; publishing.
+Work: one change per request, run it, then wait for my commit.</code></pre>
+  <aside class="notes"><p>الملف هنا بالإنجليزية لأن كثيرًا من الوكلاء يعمل بها أفضل، ويجوز أن يكون بالعربية كما في قالب المختبر. لاحظ أن كل سطر أمر يُتحقق منه. هذا مثال الأمتعة؛ ملف الشارح يكتبه المشاركون في المختبر، ولا نعرضه.</p></aside>
+</section>
+
+<section class="slide" id="rules-that-check" data-lo="LO1" data-label="قواعد تُفحص">
+  <div class="kicker">صياغة القواعد</div>
+  <h2>قاعدة لا تستطيع أن تفحصها لن يلتزم بها الوكيل</h2>
+  <table class="t">
+    <tr><th>قاعدة مبهمة</th><th>قاعدة تُفحص</th></tr>
+    <tr><td>«انتبه للأمان»</td><td>«لا مفتاح في أي ملف غير <span class="en">.env</span>»</td></tr>
+    <tr><td>«اجعل الشيفرة بسيطة»</td><td>«مكتبة <span class="en">Python</span> القياسية فقط؛ اسأل قبل أي حزمة»</td></tr>
+    <tr><td>«استخدم بيانات واقعية»</td><td>«البيانات من <span class="en">data/</span> فقط، وكلها اصطناعية»</td></tr>
+    <tr><td>«اعمل بعناية»</td><td>«تغيير واحد في كل طلب، ثم شغّل وانتظر»</td></tr>
+  </table>
+  <aside class="notes"><p>اسأل عن كل قاعدة في العمود الثاني: كيف أعرف أن الوكيل خالفها؟ (أبحث عن المفتاح في الملفات؛ أنظر في ملف الحزم؛ أنظر في مجلد البيانات؛ أقرأ الفرق في Git.) الصف الثالث فخ: «بيانات واقعية» تدعو الوكيل إلى جلب بيانات حقيقية.</p></aside>
+</section>
+
+<section class="slide" id="plan-before-code" data-lo="LO1" data-label="الخطة أولًا">
+  <div class="kicker">قبل أول سطر</div>
+  <h2>اطلب الخطة قبل الشيفرة، وراجعها على الموجز</h2>
+  <div class="prompt" data-tool="وكيل برمجة">اقرأ BRIEF.md وAGENTS.md. اقترح خطة من ثلاث خطوات على الأكثر، لكل خطوة طريقة التحقق منها. لا تكتب أي شيفرة ولا تنشئ أي ملف الآن.</div>
+  <div class="cols cols-3 mt">
+    <div class="card c-teal"><h4>خطوة صغيرة؟</h4><p class="small mb0">تُشغَّل وتُفحص وحدها.</p></div>
+    <div class="card c-amber"><h4>داخل النطاق؟</h4><p class="small mb0">لا شيء من قائمة «خارج النطاق».</p></div>
+    <div class="card c-coral"><h4>داخل القواعد؟</h4><p class="small mb0">لا حزمة، ولا مفتاح، ولا بيانات حقيقية.</p></div>
+  </div>
+  <aside class="notes"><p>الخطة رخيصة والشيفرة غالية: تصحيح سطر في الخطة يوفر ساعة تراجع. إن خالفت الخطة الموجز فلا تجادل الوكيل في المحادثة: صحّح ملف السياق واطلب الخطة من جديد، فيبقى التصحيح للجلسة التالية. في المختبر خطة مسجلة فيها مشكلات تجدونها.</p></aside>
+</section>
+
+<section class="slide" id="permission-modes" data-lo="LO1 LO2" data-label="أنماط الصلاحيات">
+  <div class="kicker">من يضغط «موافق»</div>
+  <h2>اعرف نمط صلاحيات وكيلك قبل أول طلب</h2>
+  <table class="t small">
+    <tr><th>الوكيل (مثالان)</th><th>الأنماط</th><th>ما يهمك</th></tr>
+    <tr><td><span class="en">goose</span></td><td>مستقل تمامًا، وموافقة يدوية، وموافقة ذكية حسب الخطر</td><td>النمط المستقل هو الافتراضي: يعدّل ويحذف دون أن يسأل</td></tr>
+    <tr><td><span class="en">OpenCode</span></td><td>لكل فعل قاعدة: سماح، أو سؤال، أو منع</td><td>إن لم تطابق قاعدة يسأل؛ وآخر قاعدة مطابقة تغلب</td></tr>
+  </table>
+  <div class="callout warn mt"><b>في الورشة:</b> اسأل قبل كل أمر وكل تعديل. حين تعرف ما يفعله الوكيل، توسّع الصلاحيات بقاعدة مكتوبة.</div>
+  <aside class="notes"><p>الأنماط تتغير بين الإصدارات: افتح وثائق وكيلك قبل الورشة. ما في الجدول من وثائق المنتجين عند إعداد المقرر (نوفمبر 2026). goose: «Autonomous Mode is applied by default». OpenCode: allow وask وdeny، و«If no rule matches, OpenCode uses ask». بيئة العمل المعزولة هي الحاجز الثاني: الوكيل لا يرى إلا ما فيها.</p><p>المصادر: goose documentation، goose permission modes؛ OpenCode documentation، permissions.</p></aside>
+</section>
+
+<section class="slide" id="check-s2" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي سطر مكانه ملف السياق؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">فريق الأمتعة يكتب ملفين لوكيله. أي سطر من هذه مكانه ملف السياق لا الموجز؟</p>
+    <div class="opts">
+      <div class="opt" data-why="هذا سؤال المنتج والقرار الذي يتوقف عليه، ومكانه الموجز الذي يقرؤه صاحب القرار">نريد أن نعرف هل يفهم المسافر رسوم الوزن الزائد دون اتصال.</div>
+      <div class="opt" data-why="نتيجة متوقعة من المستخدمين، وهي قرار منتج لا تعليمة للوكيل في كل جلسة">إن فهم أربعة من خمسة نقترح مشروعًا تجريبيًا.</div>
+      <div class="opt" data-why="وصف لمن يجيب عن السؤال، يخص تصميم الاختبار لا طريقة عمل الوكيل">المستخدمون مسافرون يحجزون من الجوال.</div>
+      <div class="opt" data-ok>اسأل قبل إضافة أي حزمة، وشغّل التطبيق بعد كل تغيير.</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> أمر يحتاجه الوكيل في كل جلسة ويُتحقق منه، وهذا ما يحمله ملف السياق.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الرابع. الثلاثة الأولى تبقى في الموجز، وملف السياق يشير إليه. من اختار الثالث: لا يحتاج الوكيل إلى معرفة المستخدمين ليبني الخطوة؛ يحتاج إلى القواعد.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-2" data-auto="lab" data-lab="1.2">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>ذكاء اصطناعي كامل. قبل الخطوة 4 تأكد أن كل وكيل مضبوط على السؤال قبل الأوامر. الخطة المسجلة فيها خمس مشكلات؛ لا تعطِ العدد في البداية. من لم يكمل موجزه يأخذ المرجعي الآن. انتبه لمن يلصق المفتاح في المحادثة: المفاتيح لا توزَّع قبل الجلسة 4.</p></aside>
 </section>
 
 <!-- الجلسة 3 -->
 
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="one-step-loop" data-lo="LO2" data-label="الحلقة">
+  <div class="kicker">طريقة العمل</div>
+  <h2>طلب واحد، ثم تشغيل، ثم تحقق، ثم إيداع</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · اطلب</b>تغييرًا واحدًا بكلماتك</div>
+    <div class="arrow">←</div><div class="step c-cyan"><b>2 · شغّل</b>على جهازك، لا في المحادثة</div>
+    <div class="arrow">←</div><div class="step c-amber"><b>3 · تحقق</b>بمعيار من الموجز</div>
+    <div class="arrow">←</div><div class="step c-coral"><b>4 · أودع</b>أو تراجع</div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="callout tip mt"><b>«يعمل» يعني: شغّلته وتحققت.</b> لا يعني أن الوكيل قال إنه يعمل.</div>
+  <aside class="notes"><p>دليل الناتج الثاني: نموذج يعمل وإيداع لكل خطوة عاملة. المهندس في المراجعة الختامية يختار إيداعًا ويطلب من المشارك شرحه؛ الإيداعات الصغيرة تجعل الشرح ممكنًا. الوكلاء يقولون «تم واختبرته» أحيانًا دون تشغيل حقيقي: التحقق عملك أنت.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="why-small" data-lo="LO2" data-label="لماذا صغيرة">
+  <div class="kicker">حجم الخطوة</div>
+  <h2>الخطوة الكبيرة تخفي ما كسرته</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>«ابنِ الصفحة كلها»</h4><p class="small mb0">عشرة ملفات تتغير. شيء لا يعمل. لا تعرف أي سطر، فتطلب إصلاحًا فوق إصلاح.</p></div>
+    <div class="card c-teal"><h4>«أضف البحث عن الرمز فقط»</h4><p class="small mb0">ملف واحد يتغير. إن فشل التحقق فالسبب في هذا التغيير، والتراجع أمر واحد.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout warn mt"><b>انتبه للترتيب غير المطلوب.</b> الوكيل يحب أن «يحسّن» ما يمر به. «لا تغيّر غير ذلك» جملة في كل طلب.</div>
+  <aside class="notes"><p>اسأل: من طلب من مساعد إصلاحًا فجاءه إصلاح وثلاثة تغييرات لم يطلبها؟ في المختبر تغيير «مرتب» من هذا النوع، يكشفه المشاركون بالتشغيل ويتراجعون عنه.</p></aside>
+</section>
+
+<section class="slide" id="git-as-undo" data-lo="LO2" data-label="التراجع">
+  <div class="kicker">إدارة الإصدارات وسيلةً للتراجع</div>
+  <h2>ستة أوامر تكفي لتعمل مع وكيل بأمان</h2>
+  <table class="t small">
+    <tr><th>الأمر</th><th>متى</th></tr>
+    <tr><td><code>git status</code></td><td>بعد كل رد من الوكيل: ما الملفات التي تغيرت؟</td></tr>
+    <tr><td><code>git diff --stat</code></td><td>كم تغيّر، وأين، قبل أن تقرأ أي سطر</td></tr>
+    <tr><td><code>git add .</code> ثم <code>git commit -m "…"</code></td><td>بعد أن تحققت فقط</td></tr>
+    <tr><td><code>git restore .</code></td><td>تغيير لم يُودَع كسر شيئًا: عد إلى آخر إيداع</td></tr>
+    <tr><td><code>git revert HEAD</code></td><td>إيداع كسر شيئًا: إيداع جديد يعكسه، والسجل باقٍ</td></tr>
+    <tr><td><code>git log --oneline</code></td><td>قصة نموذجك، إيداعًا إيداعًا</td></tr>
+  </table>
+  <aside class="notes"><p>تمرّن المشاركون على restore وrevert في العمل التحضيري. الفرق: restore يعيد ملفات العمل إلى آخر إيداع، وrevert ينشئ إيداعًا يعكس إيداعًا سابقًا دون حذفه من السجل. لا نستعمل أوامر تعيد كتابة السجل: السجل دليل في التقييم.</p><p>المصادر: Git documentation، git-restore وgit-revert.</p></aside>
+</section>
+
+<section class="slide" id="read-the-diff" data-lo="LO2" data-label="قراءة الفرق">
+  <div class="kicker">مثال موازٍ: شارح الأمتعة</div>
+  <h2>اقرأ حجم الفرق قبل أن تقرأ الشيفرة</h2>
+  <pre class="code s"><code class="language-text">$ git diff --stat
+ app.py              | 4 ++--
+ static/index.html   | 2 +-
+ data/baggage.csv    | 120 +++++++++++++++---------
+ 3 files changed, 66 insertions(+), 60 deletions(-)</code></pre>
+  <div class="callout warn mt"><b>طلبت تعديل الصفحة.</b> لماذا تغيّر ملف البيانات بمئة وعشرين سطرًا؟ لا تودع قبل أن تعرف.</div>
+  <aside class="notes"><p>المثال توضيحي من شارح الأمتعة، لا من مختبر. المهارة: أن ترى ملفًا لم تتوقع تغييره. لا تحتاج إلى قراءة Python لتسأل: «لماذا غيّرت هذا الملف؟» ولتتراجع إن لم يقنعك الجواب.</p></aside>
+</section>
+
+<section class="slide" id="undo-or-fix" data-lo="LO2" data-label="تراجع أم إصلاح">
+  <div class="kicker">قاعدة واحدة</div>
+  <h2>ما كان يعمل ثم توقف بعد تغيير جديد: تراجع أولًا</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>إصلاح فوق إصلاح</h4><p class="small mb0">«أصلح ما كسرته» ثلاث مرات. كل رد يغيّر أكثر، والإيداع الأخير الذي يعمل يبتعد.</p></div>
+    <div class="card c-teal"><h4>تراجع ثم طلب أدق</h4><p class="small mb0">عد إلى الإيداع الذي يعمل، واكتب الطلب من جديد بما تعلّمته: «لا تغيّر أسماء الأعمدة».</p></div>
+  </div>
+  <aside class="notes"><p>هذه أهم عادة في اليوم. ما يتعلمه المشارك من التغيير المكسور يذهب إلى ملف السياق سطرًا جديدًا، فلا يتكرر في الجلسة التالية.</p></aside>
+</section>
+
+<section class="slide" id="commit-log" data-lo="LO2" data-label="سجل الإيداعات">
+  <div class="kicker">ما يراه المهندس</div>
+  <h2>سجل الإيداعات قصة يقرؤها غيرك</h2>
+  <div class="cols cols-2">
+    <pre class="code s"><code class="language-text">a41c2e9 Step 3: show the weight rule and the fee
+7d03b11 Step 2: look up the booking
+2f9e6c0 Step 1: page with the booking form
+91ab7d4 Start: brief, context file and data</code></pre>
+    <ul class="bullets small">
+      <li>رسالة بفعل أمر: ما الذي صار يعمل.</li>
+      <li>كل إيداع يعمل لو عدت إليه.</li>
+      <li>سجلات تفاعل الوكيل تُحفظ بجانبه.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>المثال توضيحي. في المراجعة الختامية يختار المهندس إيداعًا ويطلب من المشارك أن يشرحه: ما الطلب الذي أنتجه، وكيف تحقق منه. إيداع اسمه «تحديثات» لا يُشرح. سجل الإيداعات وسجلات الوكيل يُفحصان في التقييم.</p></aside>
+</section>
+
+<section class="slide" id="check-s3" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>الوكيل كسر ما كان يعمل. ماذا الآن؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">في شارح الأمتعة طلبتَ إضافة رسالة للوزن الزائد. بعد رد الوكيل لم يعد البحث عن الحجز يعمل، ولم تودع بعد. ما خطوتك التالية؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>تتراجع إلى آخر إيداع، ثم تطلب الرسالة من جديد مع «لا تغيّر غير ذلك».</div>
+      <div class="opt" data-why="يفترض أن الوكيل يعرف ما كسره؛ كل إصلاح فوق التغيير يزيد ما تغيّر ويُبعد آخر حالة تعمل">تطلب من الوكيل أن يصلح البحث وتنتظر رده.</div>
+      <div class="opt" data-why="يحفظ حالة لا تعمل في السجل، فيصير التراجع لاحقًا أصعب ويضيع معنى «إيداع لكل خطوة عاملة»">تودع التغيير أولًا كي لا يضيع، ثم تصلحه.</div>
+      <div class="opt" data-why="قراءة الشيفرة كلها ليست طريقتك في التحقق، والتغيير الذي لم يُطلب يُرفض دون فهمه سطرًا سطرًا">تقرأ الشيفرة كلها لتجد السطر المكسور.</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> آخر إيداع يعمل، والتراجع أمر واحد، والطلب الأدق يمنع التكرار.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الأول. من اختار الثاني يحتاج إلى سماع القاعدة مرة أخرى: ما كان يعمل ثم توقف بعد تغيير جديد يعني تراجعًا أولًا. يجوز بعد التراجع أن تطلب الإصلاح نفسه بطلب أدق.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>ذكاء اصطناعي كامل. أهم ما تراقبه: هل يتحقق المشارك قبل الإيداع؟ اطلب من بعضهم <code>git log --oneline</code>. من تعطل وكيله يأخذ الحالات المرجعية <span class="en">v1_step1</span> إلى <span class="en">v1_step3</span> ويكمل الإيداع والتراجع. التغيير المكسور ينهار عند التشغيل، وهذا مقصود.</p></aside>
 </section>
 
 <!-- الجلسة 4 -->
 
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
+<section class="slide" id="sandbox" data-lo="LO2" data-label="البيئة المعزولة">
+  <div class="kicker">أين يعمل الوكيل</div>
+  <h2>الوكيل يرى ما في مساحة العمل، فاجعلها لا تحوي إلا التجربة</h2>
   <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+    <div class="card c-teal"><h4>داخل مساحة العمل</h4><ul class="bullets small"><li>مستودع النموذج الأولي</li><li>البيانات الاصطناعية</li><li>ملف <span class="en">.env</span> بالمفتاح المحدود</li></ul></div>
+    <div class="card c-coral"><h4>خارجها دائمًا</h4><ul class="bullets small"><li>ملفات عملك ومستنداته</li><li>مفاتيح الجهة وكلمات المرور</li><li>أي تصدير من نظام حقيقي</li></ul></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <p class="small mt-s">مثالان: حاوية تطوير محلية مع <span class="en">Git</span>، أو بيئة تطوير مستضافة بباقة مجانية. الأداة تتغير، والمبدأ واحد.</p>
+  <aside class="notes"><p>لماذا العزل؟ لأن الوكيل في نمط مستقل يقرأ ويعدّل ويشغّل أوامر. ما لا يراه لا يستطيع أن يرسله في أمر إلى النموذج، ولا أن يحذفه. شروط الباقات المجانية تتغير: راجعها قبل كل دفعة.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="capped-key" data-lo="LO2" data-label="المفتاح المحدود">
+  <div class="kicker">المفتاح</div>
+  <h2>مفتاح محدود الإنفاق والمدة، في ملف لا يدخل Git</h2>
+  <div class="cols cols-2">
+    <pre class="code s" data-file=".env.example"><code class="language-bash">MODEL_MODE=stub
+MODEL_BASE_URL=https://openrouter.ai/api/v1
+MODEL_NAME=
+MODEL_API_KEY=
+MODEL_MAX_CALLS=30</code></pre>
+    <ul class="bullets small">
+      <li><b>حد إنفاق</b> عند المزوّد: بعض المزوّدين يتيح حدًّا لكل مفتاح.</li>
+      <li><b>حد استدعاءات</b> في البرنامج نفسه.</li>
+      <li><b><span class="en">.env</span> في <span class="en">.gitignore</span></b>، و<span class="en">.env.example</span> فارغ يُودَع.</li>
+      <li>ينتهي المفتاح بنهاية الورشة.</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>وزّع المفاتيح الآن، ولا تعرضها على الشاشة. مثال المزوّد في الملف أحد المزوّدين الذين يتيحون حدًّا اختياريًّا للإنفاق لكل مفتاح، ونماذج مجانية بحدود للطلبات في الدقيقة واليوم؛ والأرقام تتغير، فلا نذكرها. الحد في البرنامج يحميك من حلقة يكتبها الوكيل خطأً فتستدعي النموذج آلاف المرات.</p><p>المصادر: OpenRouter documentation، API rate limits؛ provisioning API keys.</p></aside>
+</section>
+
+<section class="slide" id="key-stays-on-server" data-lo="LO2" data-label="المفتاح والمتصفح">
+  <div class="kicker">أين يُستدعى النموذج</div>
+  <h2>المتصفح يكلّم برنامجك، وبرنامجك وحده يكلّم النموذج</h2>
+  <div class="flow">
+    <div class="step c-cyan"><b>المتصفح</b>الصفحة، دون مفتاح</div>
+    <div class="arrow">←</div><div class="step c-teal"><b>برنامجك</b>يقرأ المفتاح من <span class="en">.env</span></div>
+    <div class="arrow">←</div><div class="step c-purple"><b>النموذج المستضاف</b>بمفتاح محدود</div>
+  </div>
+  <div class="callout warn mt"><b>كل ما في ملفات الصفحة يصل إلى كل من يفتحها.</b> مفتاح في ملف <span class="en">JavaScript</span> مفتاح منشور.</div>
+  <aside class="notes"><p>الوكلاء يقترحون أحيانًا «استدعاء أسرع من المتصفح». هذا يضع المفتاح في ملف يُرسل إلى كل زائر. في المختبر يتحقق المشاركون بفتح مصدر الصفحة. سنجد هذا الخطأ مزروعًا في اليوم الثاني.</p></aside>
+</section>
+
+<section class="slide" id="synthetic-data" data-lo="LO2" data-label="البيانات الاصطناعية">
+  <div class="kicker">البيانات</div>
+  <h2>بيانات اصطناعية ثابتة، تشبه الحالات الصعبة لا السهلة</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>ثابتة</h4><p class="small mb0">مولّد ببذرة ثابتة: الملف نفسه في كل تشغيل، والأرقام نفسها عند الجميع.</p></div>
+    <div class="card c-amber"><h4>صعبة</h4><p class="small mb0">عدة مسافرين، ورحلتان، وحجز قرب آخر موعد، ورمز غير موجود.</p></div>
+    <div class="card c-coral"><h4>غير شخصية</h4><p class="small mb0">لا أسماء ولا أرقام هوية ولا تواريخ ميلاد، ولو «للتجربة فقط».</p></div>
+  </div>
+  <div class="callout note mt"><b>ستة حجوزات سهلة تجعل كل شيء يعمل.</b> وهذا بالضبط ما لا تريده من نموذج أولي.</div>
+  <aside class="notes"><p>البيانات الشخصية لها نظام: نظام حماية البيانات الشخصية نافذ، ونموذج أولي ليس سببًا لمعالجتها. لا نحتاج إليها لنجيب عن سؤالنا، فلا تدخل. سؤال للقاعة: لماذا يُطلب من المولّد حجوزات قرب آخر موعد؟ لأن الحد هو حيث تخطئ الشيفرة.</p><p>المصادر: نظام حماية البيانات الشخصية (سدايا).</p></aside>
+</section>
+
+<section class="slide" id="public-only" data-lo="LO2" data-label="البيانات العامة فقط">
+  <div class="kicker">المرجع الوطني</div>
+  <h2>ما يدخل أدوات الذكاء الاصطناعي التوليدي: بيانات «عامة» فقط</h2>
+  <div class="cols cols-2">
+    <ul class="bullets small">
+      <li>المبادئ التوجيهية للذكاء الاصطناعي التوليدي للجهات الحكومية: لا يُدخل العاملون أي بيانات مصنفة «مقيد» فأعلى (مقيد، وسري، وسري للغاية).</li>
+      <li>ويُقصر استخدام هذه الأدوات على البيانات المصنفة «عامة».</li>
+      <li>مستويات التصنيف من سياسة تصنيف البيانات الصادرة عن مكتب إدارة البيانات الوطنية.</li>
+    </ul>
+    <div class="card c-teal"><h4>قاعدة قُبّرة في الحالة</h4><p class="small mb0">قُبّرة شركة لا جهة حكومية، وقد اعتمدت القاعدة نفسها لنماذجها الأولية: لا يدخل الوكيلَ ولا النموذجَ إلا ملفات مصنفة «عام» أو اصطناعية.</p></div>
+  </div>
+  <aside class="notes"><p>الفرق مهم: نص المبادئ موجّه إلى العاملين في الجهات الحكومية، والسياسة تسري على الجهات العامة. القاعدة في البطاقة اليمنى قاعدة الحالة الافتراضية، اعتمدتها قُبّرة، ونقولها كذلك. المبادئ التوجيهية سارية بنسختها المنشورة على موقع سدايا عند إعداد المقرر.</p><p>المصادر: سدايا، المبادئ التوجيهية للذكاء الاصطناعي التوليدي للجهات الحكومية، القسم 3.5 الخصوصية والأمن؛ مكتب إدارة البيانات الوطنية، سياسة تصنيف البيانات.</p></aside>
+</section>
+
+<section class="slide" id="numbers-by-code" data-lo="LO2" data-label="الرقم والكلمة">
+  <div class="kicker">قسمة العمل</div>
+  <h2>الرقم يحسبه البرنامج، والشرح يكتبه النموذج</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>البرنامج</h4><p class="small mb0">يقرأ القاعدة، ويحسب الرسوم، ويقرر هل يُسمح بالتغيير. نتيجته واحدة كل مرة، وتُفحص.</p></div>
+    <div class="card c-purple"><h4>النموذج</h4><p class="small mb0">يأخذ القاعدة والرقم، ويكتب جملتين بعربية واضحة. لا يخترع رقمًا ولا قاعدة.</p></div>
+  </div>
+  <div class="chat mt">
+    <div class="msg ai bad"><span class="who">نموذج سُئل وحده</span>رسوم الوزن الزائد نحو 50 ريالًا لكل كيلوغرام.</div>
+    <div class="msg ai good"><span class="who">نموذج أُعطي الرقم</span>وزنك يزيد 4 كيلوغرامات على المسموح، والرسوم التي حسبها النظام 200 ريال.</div>
+  </div>
+  <aside class="notes"><p>المثال توضيحي من شارح الأمتعة، والجملتان مكتوبتان للتوضيح، لا مخرجات نموذج جرّبناه. الفكرة: سؤال النموذج عن رقم يعطيك رقمًا معقولًا قد يكون خطأ، بثقة. في المختبر يبقى الحساب في البرنامج، ويُعطى النموذج الرقم.</p></aside>
+</section>
+
+<section class="slide" id="three-modes" data-lo="LO2" data-label="أوضاع النموذج">
+  <div class="kicker">ثلاثة أوضاع</div>
+  <h2>نموذج أولي يعمل دون مفتاح، ومع مفتاح، وحين يتعطل النموذج</h2>
+  <table class="t">
+    <tr><th>الوضع</th><th>ما يحدث</th><th>متى تستعمله</th></tr>
+    <tr><td><code>stub</code></td><td>جمل ثابتة تُملأ من الأرقام</td><td>البناء والفحوصات، دون مفتاح ودون تكلفة</td></tr>
+    <tr><td><code>hosted</code></td><td>نموذج مستضاف بمفتاحك المحدود</td><td>حين تريد أن ترى الشرح الحقيقي</td></tr>
+    <tr><td><code>fail</code></td><td>النموذج «متعطل» عمدًا</td><td>لتتأكد أن الصفحة تُظهر القاعدة ولا تنهار</td></tr>
+  </table>
+  <aside class="notes"><p>البديل المكتوب مسبقًا (stub) يجعل الفحوصات ثابتة ورخيصة، ويجعل الورشة تعمل إن انشغل النموذج المجاني. لا تخلط بين نتائجه ونتائج النموذج: لم نشغّل نموذجًا مستضافًا عند إعداد المقرر، فلا نقول ما يكتبه.</p></aside>
+</section>
+
+<section class="slide" id="check-s4" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أين يعيش المفتاح؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">وكيل شارح الأمتعة يقترح وضع مفتاح النموذج في مكان «يسهّل التشغيل». أي مكان تقبله؟</p>
+    <div class="opts">
+      <div class="opt" data-why="ملف الصفحة يُرسل إلى متصفح كل زائر، فيصير المفتاح منشورًا لمن يفتح المصدر">في ملف config.js بجوار الصفحة.</div>
+      <div class="opt" data-why="الثابت في الشيفرة يُودَع في Git مع كل نسخة، ويبقى في السجل حتى لو حُذف لاحقًا">ثابتًا في app.py مع تعليق «مؤقت».</div>
+      <div class="opt" data-ok>في .env الذي يتجاهله Git، ويقرؤه البرنامج من البيئة.</div>
+      <div class="opt" data-why="ملف الملاحظات يُودَع ويُشارك ويُرفع مع المجلد، ويقرؤه الوكيل في كل جلسة">في NOTES.md ليجده الزملاء بسرعة.</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> لا يُودَع، ولا يصل إلى المتصفح، ويُستبدل دون تغيير الشيفرة.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الثالث. أكّد: <code>git status</code> بعد إنشاء <code>.env</code> يجب ألا يُظهره. إن أُودِع مفتاح خطأً فالعلاج إلغاؤه عند المزوّد، لا حذف الملف في إيداع لاحق.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-4" data-auto="lab" data-lab="1.4">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>ذكاء اصطناعي كامل. المفاتيح وُزّعت في بداية الجلسة. إن انشغل النموذج المجاني أو رُفض المفتاح فليبقَ الجميع على stub: الخطوات 2 و3 و5 لا تحتاج إلى نموذج. لا تذكر نتيجة نموذج لم تره في القاعة. البديل لمن لم يكمل الخطوة 3: <span class="en">v1_step3.zip</span>.</p></aside>
 </section>
 
-<section class="slide" id="wrap-up">
-  <div class="kicker">خلاصة اليوم 1</div>
-  <h2>ثلاثة أمور تبقى معك</h2>
+<section class="slide" id="wrap-up" data-label="خلاصة اليوم">
+  <div class="kicker">خلاصة اليوم الأول</div>
+  <h2>ثلاثة أشياء تأخذها معك</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>1 · السؤال قبل البناء</h4><p class="small mb0">نموذج أولي بلا سؤال وقرار يبدو منتجًا ولا يعلّمك شيئًا.</p></div>
+    <div class="card c-cyan"><h4>2 · خطوة ثم تحقق ثم إيداع</h4><p class="small mb0">ما كان يعمل ثم توقف: تراجع أولًا.</p></div>
+    <div class="card c-coral"><h4>3 · الرقم من البرنامج</h4><p class="small mb0">والمفتاح في <span class="en">.env</span>، والبيانات اصطناعية.</p></div>
   </div>
+  <aside class="notes"><p>اسأل كل مشارك سؤالًا واحدًا قبل الخروج: كم إيداعًا في مستودع فكرتك؟ صفر يعني أن عليه أن يبدأ الليلة من بطاقة فكرته.</p></aside>
 </section>
 
-<section class="slide dark" id="next" data-label="التالي">
-  <div class="kicker">التالي</div>
-  <h2>اليوم 2: REPLACE: موضوع هذه الوحدة في كلمات قليلة</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+<section class="slide dark" id="next" data-label="غدًا">
+  <div class="kicker">لليوم الثاني</div>
+  <h2>أحضر نموذج فكرتك، حتى لو كان خطوة واحدة</h2>
+  <ul class="bullets">
+    <li>مستودع فكرتك بإيداعاته، والمفتاح في <span class="en">.env</span>.</li>
+    <li>الحالة المرجعية <span class="en">v2</span> تعمل عندك: منها يبدأ المختبر 2.1.</li>
+    <li>غدًا نسأل: أين يخدعنا ما بنيناه؟</li>
+  </ul>
+  <aside class="notes"><p>لا تكشف خطأي v2. قل فقط إن الحالة جُرِّبت على الحجوزات الستة الأولى.</p></aside>
 </section>

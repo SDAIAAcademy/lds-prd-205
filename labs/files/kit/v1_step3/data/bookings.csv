@@ -1,0 +1,7 @@
+ref,family,passengers,segments,route,hours_to_departure
+QB4K7M,B,1,1,الرياض - جدة,96
+QB7N2P,V,1,1,جدة - الدمام,30
+QB9R5T,F,1,1,الدمام - أبها,3
+QB2H8W,B,1,1,أبها - الرياض,10
+QB5D3X,V,1,1,الرياض - تبوك,72
+QB8F6Y,F,1,1,تبوك - جدة,200
