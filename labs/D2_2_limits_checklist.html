@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · قائمة تحقق الحدود · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_limits_checklist.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>قائمة تحقق الحدود</h1>
+<p>على نسخة «جاهزة للعرض» فيها حدود مزروعة: فحص آلي، ثم الفحوصات الخمسة، ثم الوصول والاتجاه والتراخيص والإفصاح باليد، ثم قائمة مرتبة. مساعد ذكي مرشد ينقد الترتيب. ثم القائمة على نموذجك.</p>
+<div class="meta"><span>60 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: الأسرار والحزم والوصول والتراخيص</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>قائمة تحقق الحدود مكتملة على نسخة «جاهزة للعرض» من الشارح: ما وجده الفحص الآلي، وما وجدته باليد.</li>
+    <li>قائمة حدود مرتبة بالأثر، لكل بند إصلاحه ومن يصلحه ومن يتحقق بعده.</li>
+    <li>القائمة نفسها على نموذج فكرتك.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/kit/seeded.zip" download><b>seeded.zip</b><span>نسخة الشارح بعد «آخر يوم قبل العرض»، ومعها ملاحظات البناء. لهذا المختبر فقط.</span></a>
+  <a href="files/kit/limits_scan.py" download><b>limits_scan.py</b><span>الفحص الآلي: يقرأ الملفات ولا يغيّر شيئًا.</span></a>
+  <a href="files/templates/limits_checklist.md" download><b>limits_checklist.md</b><span>قائمة التحقق بثمانية بنود، وسلم الأثر.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي: <b>مرشد.</b> مساعد ذكي ينقد ترتيبك بعد أن تكتبه، ولا يكتبه لك. لا ترفع ملفات النسخة إلى أي أداة: فيها ما يبدو بيانات شخصية، وهذا جزء مما تفحصه.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · شغّل الفحص الآلي على النسخة المزروعة واقرأ كل سطر <span class="min">6 دقائق</span></h3>
+  <p>فك <code>seeded.zip</code> بجوار <code>limits_scan.py</code>، ثم:</p>
+  <pre class="code"><code class="language-bash">uv run limits_scan.py seeded</code></pre>
+  <p>لكل سطر: افتح الملف عند الرقم المذكور، واكتب في القائمة ما رأيته بكلماتك. لا تثبّت أي حزمة من <code>requirements.txt</code>: لم يفحصها أحد، وهذا هو البند.</p>
+</div>
+
+<div class="step">
+  <h3>2 · شغّل الفحوصات الخمسة عليها، ثم افحص البنود 5 إلى 8 باليد <span class="min">14 دقيقة</span></h3>
+  <pre class="code"><code class="language-bash">cd seeded
+uv run checks.py
+uv run app.py</code></pre>
+  <p>افتح الصفحة ومصدرها في المتصفح. البند 5: <code>lang</code> و<code>dir</code>. البند 6: عنوان لكل حقل، ووصف بديل للصورة، ووضوح النص الرمادي، والعمل بلوحة المفاتيح وحدها (Tab ثم Enter). البند 8: هل تقول الصفحة إن الشرح مكتوب بالذكاء الاصطناعي؟ أوقف الخادم بعدها.</p>
+</div>
+
+<div class="step">
+  <h3>3 · تحقق من مصدر كل ملف بيانات وكل أصل <span class="min">8 دقائق</span></h3>
+  <p>اقرأ <code>NOTES.md</code>. لكل ملف في <code>data/</code> ولكل صورة في <code>static/</code>: من أين جاء؟ هل يجوز استعماله؟ هل يُكتب مصدره؟ ما لا تعرف مصدره بند في القائمة.</p>
+</div>
+
+<div class="step">
+  <h3>4 · رتّب البنود بالأثر، واكتب لكل بند إصلاحه ومن يصلحه <span class="min">12 دقيقة</span></h3>
+  <p>الأثر 3 يمنع أي عرض على مستخدمين، و2 يُصلح قبل الاختبار، و1 يُكتب في التسليم. ثم الترتيب داخل الأثر بسهولة الإصلاح. لكل بند: من يصلحه، ومن يتحقق بعده (غير من أصلحه).</p>
+</div>
+
+<div class="step">
+  <h3>5 · اطلب من مساعد ذكي أن ينقد ترتيبك دون أن تعطيه ملفات النسخة <span class="min">5 دقائق</span></h3>
+  <div class="prompt" data-tool="مساعد ذكي">هذه قائمة حدود مرتبة لنموذج أولي لصفحة ويب تشرح رسوم تغيير الحجز، قبل عرضه على خمسة مستخدمين: <span class="ph">الصق قائمتك دون أي محتوى من الملفات</span>. لا تعِد ترتيبها. اسألني ثلاثة أسئلة تكشف بندًا رتبته أعلى أو أدنى مما يستحق.</div>
+  <p>غيّر ما اقتنعت به فقط، واكتب السبب.</p>
+</div>
+
+<div class="step">
+  <h3>6 · فكرتك: القائمة نفسها على نموذجك <span class="min">15 دقيقة</span></h3>
+  <p>الفحص الآلي على مجلد فكرتك، ثم البنود باليد، ثم الترتيب. أصلح بندًا واحدًا بأثر 3 إن وجدته، وأودع، وأعد الفحص.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>اكتب للوكيل طلب إصلاح للبند الأول في قائمة النسخة المزروعة، ثم أعد الفحص الآلي والفحوصات الخمسة.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم بندًا وجد الفحص الآلي، وكم وجدت باليد؟ أي بند ما كان ليُكتشف دون فتح الصفحة؟</li>
+  <li>لماذا لا يكفي أن تحذف المفتاح من الملف في إيداع جديد؟</li>
+  <li>ما البند الذي يمنع الاختبار مع المستخدمين غدًا لو بقي؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>التحقق: <code>uv run labs/solutions/run_all.py 2.2</code>. الفحص الآلي يجد أربعة بنود من أربعة أنواع: المسار، والبيانات الشخصية، والسر، والحزمة. من الفحوصات الخمسة يُخفق C5 وحده. البنود 5 إلى 8 باليد. القائمة المرتبة المرجعية: <code>labs/solutions/reference/limits_ranked.md</code>.</li>
+    <li>الحدود المزروعة: L1 مفتاح في <code>static/app.js</code>؛ L2 مسار ملف على جهاز شخص في <code>app.py</code>؛ L3 حزمة غير مفحوصة وبلا إصدار؛ L4 ملف «تصدير» فيه أسماء وأرقام بشكل الهوية وتواريخ ميلاد؛ L5 <code>lang="en"</code> بلا <code>dir</code>؛ L6 حقل بلا عنوان، وصورة بلا وصف بديل، ونص رمادي فاتح؛ L7 صورة «من نتائج البحث»؛ L8 لا إفصاح.</li>
+    <li>كل ما في النسخة اصطناعي: المفتاح نص لا يعمل ولا يطابق صيغة أي مزوّد، وأرقام الهوية الاثنا عشر تفشل في خانة التحقق عمدًا، والصورة رسمها مُعدّ المقرر، واسم الحزمة غير مسجل في فهرس الحزم عند الإعداد. قل ذلك بعد المختبر، لا قبله: المشارك يتعامل معها كأنها حقيقية.</li>
+    <li>لا يثبّت أحد الحزمة. إن سأل أحد: الحزمة مكتوبة في الملف فقط، والبرنامج لا يستوردها، فحذفها هو الإصلاح.</li>
+    <li>الخطأ الشائع: ترتيب المسار المضمّن أولًا لأنه أول ما يطبعه الفحص. أعد السؤال: من يتضرر لو عُرضت الصفحة غدًا؟</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_1_acceptance_checks.html" rel="prev">→ المختبر السابق</a><a href="D2_3_five_users.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع b5b0f37</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T07:37:45Z","version":"2027.1.0","commit":"b5b0f37"},"course":{"id":"lds-prd-205","code":"LDS-PRD-205","title":"بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-prd-205/","repo":"SDAIAAcademy/lds-prd-205","home":"../index.html"},"lab":{"id":"2.2","title":"قائمة تحقق الحدود","summary":"على نسخة «جاهزة للعرض» فيها حدود مزروعة: فحص آلي، ثم الفحوصات الخمسة، ثم الوصول والاتجاه والتراخيص والإفصاح باليد، ثم قائمة مرتبة. مساعد ذكي مرشد ينقد الترتيب. ثم القائمة على نموذجك.","minutes":60,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_acceptance_checks.html","next":"D2_3_five_users.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

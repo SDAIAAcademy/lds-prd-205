@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="deck" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اليوم 2 · الحدود والتسليم · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day2.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة" data-track="executives" data-day="اليوم 2">
+<section class="slide title" id="title" data-auto="title" data-label="الترحيب" data-n="1">
+  <div class="kicker">أكاديمية سدايا · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة</div>
+  <h1>الحدود والتسليم</h1>
+  <p class="lead mt">اليوم 2: فحوصات القبول، وقائمة تحقق الحدود، والاختبار مع خمسة مستخدمين، وما يحتفظ به الفريق الهندسي</p>
+  <div class="meta"><span class="track">مسار التنفيذيين والقادة</span><span>يومان تدريبيان + يوم للمشروع الختامي</span><span>3 جلسات · 3 مختبرات</span><span>LDS-PRD-205</span></div>
+  <aside class="notes"><p>اسأل برفع اليد: من في مستودع فكرته ثلاثة إيداعات أو أكثر؟ من يعمل نموذجه بوضع البديل؟ من يعمل مع نموذج مستضاف؟ من لم يعمل نموذجه بعد يكمل اليوم على الحالة ويعود إلى فكرته في آخر خطوة من كل مختبر.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="جدول اليوم" data-n="2">
+  <div class="kicker">اليوم</div>
+  <h2>الحدود والتسليم</h2>
+  <div class="agenda"><div class="item"><div><b>الجلسة 1 · أوهام المسار المثالي</b><small>لماذا ينجح العرض ويفشل الاستعمال، وفحوصات القبول بالمعطى والفعل والمتوقع، والفحص الذي يجب أن يُخفق أولًا</small></div></div><div class="item"><div><b>الجلسة 2 · الأسرار والحزم والوصول والتراخيص</b><small>الأسرار والحزم غير المفحوصة وفجوات إمكانية الوصول والكتابة من اليمين إلى اليسار، والبيانات الحقيقية، وتراخيص الأصول المولَّدة</small></div></div><div class="item"><div><b>الجلسة 3 · خمسة مستخدمين وما يحتفظ به المهندسون</b><small>الاختبار السريع مع خمسة مستخدمين والإفصاح لهم، وترميز النتائج، وما يحتفظ به الفريق الهندسي: التعلّم والمواصفات وحالات التقييم</small></div></div></div>
+  <aside class="notes"><p>ثلاث جلسات، كل منها 30 دقيقة من المفاهيم ونقطة تحقق، ثم مختبر من 60 دقيقة. بعدها الاختبار القصير المراقب، ثم المراجعات المباشرة. الاستراحات بزر B.</p></aside>
+</section>
+
+<section class="slide" id="review-day1" data-lo="LO2" data-label="مراجعة اليوم الأول" data-n="3">
+  <div class="kicker">مراجعة اليوم الأول</div>
+  <h2>أيها يُودَع؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="review-day1-q1">
+    <p class="lead">في شارح المقاعد طلبتَ إضافة رسالة لمقعد محجوز. ردّ الوكيل: «تم، واختبرت كل شيء». أيها تودعه؟</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="أ">التغيير بعد أن شغّلته وجرّبت المقعد المحجوز وما كان يعمل قبله.</div>
+      <div class="opt" data-why="يأخذ قول الوكيل دليلًا؛ «اختبرت» في المحادثة ليس تشغيلًا على جهازك" data-k="ب">التغيير كما هو: الوكيل قال إنه اختبره، وهذا يكفي لإيداعه الآن.</div>
+      <div class="opt" data-why="يخلط بين الحفظ والتحقق: الإيداع قبل التشغيل يضع في السجل حالة لا يُعرف هل تعمل" data-k="ج">التغيير الآن، ثم تشغّله بعد الإيداع لترى هل يعمل كما وصفه الوكيل.</div>
+      <div class="opt" data-why="يرد كل تغيير دون فحص، فلا يتقدم البناء؛ التراجع لما كسر شيئًا لا لما لم يُفحص" data-k="د">لا شيء: كل تغيير من وكيل يُرفض أولًا.</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> «يعمل» يعني أنك شغّلته وتحققت منه، ومنه ما كان يعمل قبل التغيير.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الأول. دقيقتان. من اختار الثاني: اسأله من سيشرح هذا الإيداع للمهندس في المراجعة الختامية.</p></aside>
+</section>
+
+<!-- الجلسة 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">الجلسة 1</div>
+  <h1>أوهام المسار المثالي</h1>
+  <ul class="bullets outcomes"><li>تجد الحالات التي لم يجربها العرض الأول</li><li>تكتب فحص قبول بالمعطى والفعل والمتوقع قبل أن يُبرمج</li><li>تعيد الفحوصات كلها بعد كل إصلاح وتسجل نتائجها</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide dark" id="happy-path" data-lo="LO3" data-label="المسار المثالي" data-n="5" data-session="1">
+  <div class="kicker">وهم المسار المثالي</div>
+  <h2>ما جرّبته في العرض هو بالضبط ما يعمل</h2>
+  <ul class="bullets">
+    <li>الوكيل يبني على الأمثلة التي أعطيته إياها، ويجرّبها هي.</li>
+    <li>العرض يمر بالطريق نفسه، فينجح.</li>
+    <li>المستخدم الأول يمر بطريق آخر.</li>
+  </ul>
+  <aside class="notes"><p>اسأل: ما الأمثلة التي جرّبها كل واحد في نموذج فكرته أمس؟ لا تربط ذلك بحالة قُبّرة: يكتشفه المشاركون في المختبر. النموذج الأولي الذي يبنيه وكيل خطير بالذات لأنه يبدو مكتملًا: الشاشة نظيفة، والشرح واثق.</p></aside>
+</section>
+
+<section class="slide" id="where-illusions-hide" data-lo="LO3" data-label="أين يختبئ" data-n="6" data-session="1">
+  <div class="kicker">أربعة مخابئ</div>
+  <h2>أين يختبئ ما لا يعمل</h2>
+  <div class="cols cols-2 gap-s">
+    <div class="card c-amber"><h4>بيانات سهلة</h4><p class="small mb0">كل الأمثلة من النوع نفسه، فلا تُجرَّب الحالات الأخرى.</p></div>
+    <div class="card c-coral"><h4>«تم» من الوكيل</h4><p class="small mb0">يصف ما ظن أنه فعله، لا ما يحدث عند التشغيل.</p></div>
+    <div class="card c-cyan"><h4>شاشة تبدو صحيحة</h4><p class="small mb0">رقم في مكانه لا يعني أنه الرقم الصحيح.</p></div>
+    <div class="card c-purple"><h4>كلمات واثقة</h4><p class="small mb0">نموذج يُسأل عما لا يعرفه يجيب بثقة.</p></div>
+  </div>
+  <aside class="notes"><p>اطلب من القاعة مثالًا لكل مخبأ من نماذج أفكارهم، لا من حالة قُبّرة. الفحوصات الخمسة في المختبر تفتش المخابئ الأربعة.</p></aside>
+</section>
+
+<section class="slide" id="given-when-then" data-lo="LO3" data-label="صيغة الفحص" data-n="7" data-session="1">
+  <div class="kicker">مثال موازٍ: شارح الأمتعة</div>
+  <h2>فحص القبول: معطى، وفعل، ونتيجة متوقعة بالرقم</h2>
+  <table class="t">
+    <tr><th>المعطى</th><th>الفعل</th><th>المتوقع</th></tr>
+    <tr><td>حجز بحقيبتين: 23 و27 كغ، وباقة 23 كغ</td><td>اعرض الشرح</td><td>رسوم الحقيبة الثانية وحدها، ورقمها مكتوب في الفحص</td></tr>
+    <tr><td>حجز لا يوجد في الملف</td><td>اعرض الشرح</td><td>رسالة «لم نجد حجزًا»، ولا استدعاء للنموذج</td></tr>
+  </table>
+  <div class="callout warn mt"><b>المتوقع يُكتب قبل التشغيل.</b> فحص يأخذ «المتوقع» من ناتج البرنامج نفسه ينجح دائمًا.</div>
+  <aside class="notes"><p>المثال من شارح الأمتعة بأرقام توضيحية، وليس من المختبر. اطلب من القاعة صياغة فحص ثالث: النموذج متعطل. الجواب: «معطى: النموذج لا يرد؛ عند العرض: تظهر القاعدة ولا تنهار الصفحة».</p></aside>
+</section>
+
+<section class="slide" id="five-kinds" data-lo="LO3" data-label="ما تغطيه الخمسة" data-n="8" data-session="1">
+  <div class="kicker">خمسة فحوصات</div>
+  <h2>خمسة فحوصات تغطي خمسة أنواع، لا خمس نسخ من الحالة نفسها</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>عادي</b>الحالة التي جُرّبت</div>
+    <div class="arrow">←</div><div class="step c-amber"><b>أصعب</b>عدد، أو حد، أو تركيب</div>
+    <div class="arrow">←</div><div class="step c-coral"><b>خطأ</b>مدخل غير موجود</div>
+    <div class="arrow">←</div><div class="step c-purple"><b>تعطل</b>النموذج لا يرد</div>
+    <div class="arrow">←</div><div class="step c-cyan"><b>الصفحة</b>اللغة والاتجاه والعنوان والإفصاح</div>
+  </div>
+  <aside class="notes"><p>هذا هو دليل الناتج الثالث في شقه الأول: سجل فحوصات. الأنواع الخمسة هي ما يطلبه المختبر؛ اختيار الحجز لكل نوع عمل المشارك. الفحص الخامس ليس عن الحساب: الصفحة نفسها جزء مما نسلّمه.</p></aside>
+</section>
+
+<section class="slide" id="fail-first" data-lo="LO3" data-label="الفحص الذي يُخفق" data-n="9" data-session="1">
+  <div class="kicker">ما يثبته الفحص</div>
+  <h2>فحص لم يُخفق قط لم يثبت شيئًا بعد</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>اكتب الفحص من المواصفات، ثم شغّله على النسخة الحالية.</li>
+      <li>إن أخفق: وجدت ما يجب إصلاحه.</li>
+      <li>إن اجتاز: تأكد أنه يستطيع أن يُخفق، بتغيير الرقم المتوقع مرة.</li>
+    </ul>
+    <div class="card c-teal"><h4>للوكيل</h4><p class="small mb0">«حوّل هذه الفحوصات إلى برنامج، ولا تغيّر app.py». من يكتب الفحص لا يصلح ما يفحصه في الطلب نفسه.</p></div>
+  </div>
+  <aside class="notes"><p>وكلاء البرمجة يميلون إلى «إصلاح» البرنامج ليمر الفحص، أو تعديل الفحص ليمر البرنامج. فصل الطلبين يمنع ذلك: طلب يكتب الفحوصات، ثم طلب لكل إصلاح. هذا فصل بين الأدوار حتى داخل محادثة واحدة.</p></aside>
+</section>
+
+<section class="slide" id="rerun-all" data-lo="LO3" data-label="أعد الخمسة" data-n="10" data-session="1">
+  <div class="kicker">مثال موازٍ: سجل فحوصات شارح الأمتعة</div>
+  <h2>بعد كل إصلاح: الفحوصات كلها، لا الفحص الذي أصلحته</h2>
+  <table class="t small">
+    <tr><th>الحالة</th><th>اجتاز</th><th>أخفق</th><th>القرار</th></tr>
+    <tr><td>قبل الإصلاح</td><td>4 من 5</td><td>C2</td><td>إصلاح C2</td></tr>
+    <tr class="hl"><td>بعد إصلاح C2</td><td>4 من 5</td><td>C3</td><td>تراجع: كسر C3</td></tr>
+    <tr><td>إصلاح أدق</td><td>5 من 5</td><td>لا شيء</td><td>إيداع</td></tr>
+  </table>
+  <aside class="notes"><p>السجل توضيحي من شارح الأمتعة. الصف المظلل هو الدرس: الإصلاح الأول أصلح ما طُلب وكسر غيره، ولم يُعرف ذلك إلا لأن الخمسة أُعيدت. سجل الفحوصات بهذا الشكل دليل يُسلَّم، ويُقيَّم في المختبر.</p></aside>
+</section>
+
+<section class="slide" id="check-s1" data-lo="LO3" data-n="11" data-session="1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي فحص يكشف الوهم؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-s1-q1">
+    <p class="lead">بنى فريق المقاعد شارحًا جرّبوه على خمسة حجوزات، كلها لمسافر واحد في رحلة واحدة، فنجح كل شيء. أي فحص تضيفه أولًا؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يكرر ما نجح في العرض، فلا يكشف شيئًا لم يُجرَّب" data-k="أ">حجز سادس لمسافر واحد في رحلة واحدة، بالرقم المتوقع مكتوبًا قبل التشغيل.</div>
+      <div class="opt" data-why="يقيس سرعة لم يسأل عنها أحد، ويترك الحالات التي لم تُجرَّب" data-k="ب">أن تُفتح الصفحة في أقل من ثانيتين.</div>
+      <div class="opt" data-ok data-k="ج">حجز لأربعة مسافرين على رحلتين، بالرقم المتوقع مكتوبًا.</div>
+      <div class="opt" data-why="يفحص رأي المستخدم، وهذا يُعرف في الاختبار معهم لا بفحص قبول" data-k="د">أن يكون الشرح مقنعًا للمسافر وواضحًا في رأي أعضاء الفريق.</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> يجرّب ما لم يجرّبه العرض، ونتيجته رقم يُقارن.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الثالث. لا تربطه الآن بحالة قُبّرة: المختبر يفعل ذلك.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-1" data-auto="lab" data-lab="2.1" data-label="المختبر 2.1" data-n="12" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.1 · 60 دقيقة</div><h2>خمسة فحوصات قبول</h2><p class="lead small">تكتب خمسة فحوصات للشارح، ويحوّلها الوكيل إلى برنامج يعمل دون مفتاح، فتشغّلها على النسخة <span class="ltr" dir="ltr">v2</span> وتصلح ما يُخفق بطلب واحد لكل فحص، مع سجل فحوصات. ثم خمسة فحوصات لفكرتك.</p><a class="nb" href="../labs/D2_1_acceptance_checks.html">D2_1_acceptance_checks.html</a></div><ul class="checklist"><li>اكتب الفحوصات الخمسة: المعطى والفعل والمتوقع، دون شيفرة <span class="min">12 د</span></li><li>اطلب من الوكيل تحويلها إلى <span class="ltr" dir="ltr">checks.py</span> يعمل بوضع البديل <span class="min">10 د</span></li><li>شغّلها على <span class="ltr" dir="ltr">v2</span> وسجّل كل نتيجة في سجل الفحوصات <span class="min">8 د</span></li><li>أصلح فحصًا أخفق بطلب واحد، وأعد الخمسة، وأودع <span class="min">12 د</span></li><li>أصلح الفحص الآخر الذي أخفق بالطريقة نفسها <span class="min">8 د</span></li><li>فكرتك: خمسة فحوصات لنموذجك وتشغيلها <span class="min">10 د</span></li><li class="stretch">✱ إضافي: أضف فحصًا سادسًا لحجز لا يُغيَّر الآن، وانظر هل يُفهم إلغاءً</li></ul></div>
+  <aside class="notes"><p>ذكاء اصطناعي كامل. لا تعطِ checks.py المرجعي قبل نهاية الخطوة 2. راقب من يكتب «المتوقع» من ناتج البرنامج. حين يُخفق فحص، اطلب من المشارك أن يقرأ ما ظهر للمسافر بصوت عالٍ: هذا ما كان سيقرؤه مسافر حقيقي. v3 لمن تعطل وكيله بعد تسجيل نتائج v2.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-1" data-lo="LO3" data-label="بعد المختبر 2.1" data-n="13" data-session="1">
+  <div class="kicker">بعد المختبر</div>
+  <h2>في التشغيل المرجعي اجتازت v2 ثلاثة فحوصات من خمسة</h2>
+  <ul class="bullets">
+    <li>C2: حجز QB3M9K لثلاثة مسافرين ورحلتين أظهر 75 بدل 450.</li>
+    <li>C3: رمز غير موجود وصل إلى النموذج، فكتب البديل رسومًا لا وجود لها.</li>
+    <li>العرض الأول لم يكشفهما: الحجوزات الستة كلها لمسافر واحد ورحلة واحدة، ولم يجرّب أحد رمزًا غير موجود.</li>
+  </ul>
+  <aside class="notes"><p>الأرقام من تشغيل checks.py على v2 بوضع البديل في إعداد المقرر. الاختراع في C3 من البديل المكتوب مسبقًا، ولم يُجرَّب على نموذج مستضاف؛ قل ذلك صراحة. اسأل: من أعاد الخمسة بعد كل إصلاح؟</p></aside>
+</section>
+
+
+<!-- الجلسة 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="14">
+  <div class="kicker">الجلسة 2</div>
+  <h1>الأسرار والحزم والوصول والتراخيص</h1>
+  <ul class="bullets outcomes"><li>تطبق قائمة تحقق الحدود بفحص آلي ثم باليد</li><li>تتحقق من مصدر كل ملف بيانات وترخيص كل أصل</li><li>ترتب الحدود بالأثر وتحدد لكل حد إصلاحه ومن يصلحه</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="limits-checklist" data-lo="LO3" data-label="قائمة الحدود" data-n="15" data-session="2">
+  <div class="kicker">قائمة تحقق الحدود</div>
+  <h2>ثمانية بنود قبل أن يرى أحد نموذجك</h2>
+  <table class="t small">
+    <tr><th>#</th><th>البند</th><th>#</th><th>البند</th></tr>
+    <tr><td>1</td><td>سر مكتوب في ملف</td><td>5</td><td>لغة الصفحة واتجاهها</td></tr>
+    <tr><td>2</td><td>مسار على جهاز شخص واحد</td><td>6</td><td>عناوين الحقول والتباين ولوحة المفاتيح</td></tr>
+    <tr><td>3</td><td>حزمة لم تُفحص</td><td>7</td><td>ترخيص كل أصل</td></tr>
+    <tr><td>4</td><td>بيانات حقيقية أو تشبهها</td><td>8</td><td>الإفصاح عن الذكاء الاصطناعي</td></tr>
+  </table>
+  <aside class="notes"><p>البنود الخمسة الأولى من نص الناتج الثالث في بطاقة المقرر (المسارات المضمنة، والأسرار، والتبعيات، والبيانات الحقيقية، وإمكانية الوصول)، والبنود 5 إلى 8 تضيف الاتجاه والتراخيص والإفصاح من موضوعات المقرر وقواعد الاستخدام المسؤول. القائمة نفسها في القالب، وتُقيَّم في المختبر وفي المشروع الختامي.</p></aside>
+</section>
+
+<section class="slide" id="secrets" data-lo="LO3" data-label="الأسرار" data-n="16" data-session="2">
+  <div class="kicker">البند 1</div>
+  <h2>المفتاح الذي دخل سجل Git أو ملف الصفحة يُلغى، لا يُحذف</h2>
+  <div class="cols cols-2">
+    <ul class="bullets small">
+      <li>ملف الصفحة يصل إلى كل زائر.</li>
+      <li>إيداع حذف المفتاح يُبقيه في الإيداع الذي قبله.</li>
+      <li>العلاج: إلغاء المفتاح عند المزوّد، ثم مفتاح جديد في <span class="en">.env</span>.</li>
+    </ul>
+    <pre class="code s"><code class="language-bash">git <span class="hljs-built_in">log</span> -p | grep -i <span class="hljs-string">&quot;api_key&quot;</span></code></pre>
+  </div>
+  <aside class="notes"><p>الأمر يبحث في كل الإيداعات عن اسم متغير المفتاح، ويرجع الأسطر التي أضافته أو حذفته. لا نعيد كتابة السجل في هذا المقرر: الإلغاء أبسط وأضمن. الحد على الإنفاق يقلل الضرر، ولا يلغيه.</p></aside>
+</section>
+
+<section class="slide" id="unvetted-packages" data-lo="LO3" data-label="الحزم" data-n="17" data-session="2">
+  <div class="kicker">البند 3</div>
+  <h2>كل حزمة أضافها الوكيل تحتاج أربعة أجوبة</h2>
+  <div class="cols cols-4 gap-s">
+    <div class="card c-teal"><h4>الضرورة</h4><p class="small mb0">هل يستوردها البرنامج أصلًا؟</p></div>
+    <div class="card c-cyan"><h4>الصيانة</h4><p class="small mb0">من يصونها، ومتى آخر إصدار؟</p></div>
+    <div class="card c-amber"><h4>الترخيص</h4><p class="small mb0">هل يسمح بما ستفعله؟</p></div>
+    <div class="card c-coral"><h4>الإصدار</h4><p class="small mb0">هل هو مثبت في الملف؟</p></div>
+  </div>
+  <div class="callout warn mt"><b>اسم لا تعرفه لا تثبّته لتعرفه.</b> قد يكون اسمًا يشبه حزمة مشهورة وضعه أحد عمدًا.</div>
+  <aside class="notes"><p>الوكلاء يقترحون أحيانًا أسماء حزم غير موجودة أو قريبة من أسماء معروفة، ومن يسجل الاسم لاحقًا يصل إلى كل من يثبّته. لذلك «اسأل قبل أي حزمة» في ملف السياق، و«ابحث عن الحزمة في فهرسها قبل التثبيت». في المختبر حزمة لا تُثبَّت أبدًا.</p></aside>
+</section>
+
+<section class="slide" id="accessibility-rtl" data-lo="LO3" data-label="الوصول والاتجاه" data-n="18" data-session="2">
+  <div class="kicker">البندان 5 و6</div>
+  <h2>صفحة عربية لا تعلن أنها عربية تُقرأ خطأ</h2>
+  <pre class="code s" data-file="index.html"><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ar&quot;</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">&quot;rtl&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;ref&quot;</span>&gt;</span>رمز الحجز<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;ref&quot;</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">&quot;ltr&quot;</span>&gt;</span></code></pre>
+  <ul class="bullets small mt-s">
+    <li>لغة الصفحة تُعرف برمجيًا: قارئ الشاشة يختار النطق منها.</li>
+    <li>لكل حقل عنوان أو تعليمات، لا نص داخل الحقل يختفي عند الكتابة.</li>
+    <li>جرّب الصفحة بلوحة المفاتيح وحدها، وبنص رمادي على أبيض في ضوء القاعة.</li>
+  </ul>
+  <aside class="notes"><p>البند الأول من معيار النجاح 3.1.1 (لغة الصفحة)، والثاني من 3.3.2 (العناوين أو التعليمات)، والعلاقة بين العنوان والحقل من 1.3.1، وكلها من المستوى A في إرشادات WCAG 2.2. حقل رمز الحجز من اليسار لأن الرمز لاتيني. لا نتعمق هنا: المقرر LDS-PRD-203 يعلّم اختبار إمكانية الوصول.</p><p>المصادر: W3C WCAG 2.2، معايير النجاح 3.1.1 و3.3.2 و1.3.1.</p></aside>
+</section>
+
+<section class="slide" id="looks-real" data-lo="LO3" data-label="بيانات تشبه الحقيقية" data-n="19" data-session="2">
+  <div class="kicker">البند 4</div>
+  <h2>ما يبدو بيانات شخصية حقيقية يُعامل كأنه حقيقي</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>العلامات</h4><ul class="bullets small"><li>أسماء كاملة وأرقام بشكل الهوية وتواريخ ميلاد</li><li>ملف «من تصدير النظام»</li><li>لا أحد يعرف من أين جاء</li></ul></div>
+    <div class="card c-teal"><h4>ما تفعله</h4><ul class="bullets small"><li>توقف العرض والاختبار</li><li>احذف الملف من المجلد ومن مشاركته</li><li>أبلغ مسؤول حماية البيانات، ولا تقرر وحدك أنه «مجرد تجربة» (قاعدة المقرر)</li></ul></div>
+  </div>
+  <aside class="notes"><p>نظام حماية البيانات الشخصية نافذ، ومادته الحادية عشرة تقصر محتوى البيانات الشخصية على الحد الأدنى اللازم لغرض جمعها، وتوجب التوقف عن جمع ما لم يعد ضروريًا وإتلافه. سؤال النموذج الأولي لا يحتاج إلى بيانات شخصية أصلًا. في الحالة، القرار في ملف كهذا لمسؤول حماية البيانات، طلال الصغيّر، لا لمن وجده: فصل بين من يجد ومن يقرر. الخطوات في بطاقة «ما تفعله» قاعدة المقرر، لا نص النظام.</p><p>المصادر: نظام حماية البيانات الشخصية، المادة الحادية عشرة (هيئة الخبراء بمجلس الوزراء، النص العربي).</p></aside>
+</section>
+
+<section class="slide" id="asset-licences" data-lo="LO3" data-label="تراخيص الأصول" data-n="20" data-session="2">
+  <div class="kicker">البند 7</div>
+  <h2>لكل صورة وخط وأيقونة ونص مولَّد مصدر وشروط</h2>
+  <table class="t small">
+    <tr><th>الأصل</th><th>ما تسأله</th></tr>
+    <tr><td>صورة من نتائج بحث</td><td>من صاحبها، وما ترخيصها؟ لا جواب: لا تُستعمل</td></tr>
+    <tr><td>صورة أو أيقونة مولَّدة</td><td>ما تقوله شروط الأداة التي ولّدتها عن الاستعمال؟</td></tr>
+    <tr><td>خط أو مكتبة رسوم</td><td>ترخيصها، ويُكتب في ملف المصادر</td></tr>
+    <tr><td>نص كتبه النموذج</td><td>يُعلَن أنه مكتوب بالذكاء الاصطناعي</td></tr>
+  </table>
+  <aside class="notes"><p>مبادئ سدايا للذكاء الاصطناعي التوليدي للعموم تذكر خطر انتهاك حقوق الملكية الفكرية في المساءلة والمسؤولية، وتدعو إلى الالتزام بأنظمة الملكية الفكرية. لا نعطي هنا رأيًا قانونيًا في أداة بعينها: القاعدة العملية أن يُعرف المصدر وتُقرأ الشروط ويُكتب ذلك، وما لا يُعرف يُحذف.</p><p>المصادر: سدايا، مبادئ الذكاء الاصطناعي التوليدي للعموم، القسم 4.4.</p></aside>
+</section>
+
+<section class="slide" id="scan-then-hand" data-lo="LO3" data-label="آلي ثم يدوي" data-n="21" data-session="2">
+  <div class="kicker">كيف تفحص</div>
+  <h2>الفحص الآلي يقرأ الملفات، وعينك تقرأ الصفحة</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>آليًا</h4><p class="small mb0">الأسرار، والمسارات، والحزم، والأعمدة والأرقام التي تشبه البيانات الشخصية.</p></div>
+    <div class="card c-amber"><h4>باليد</h4><p class="small mb0">اللغة والاتجاه، والعناوين ولوحة المفاتيح، ومصدر كل أصل، والإفصاح.</p></div>
+  </div>
+  <div class="callout warn mt"><b>فحص لم يجد شيئًا لا يعني أن لا شيء هناك.</b> يعني أنه لم يجد ما يبحث عنه.</div>
+  <aside class="notes"><p>الفحص الآلي في المختبر سكربت قصير بمكتبة Python القياسية، يقرأ الملفات ولا يغيّر شيئًا. في جهات كثيرة أدوات أوسع منه، والمبدأ واحد. الحكم في البنود اليدوية هو ما يُختبر في الاختبار القصير المراقب.</p></aside>
+</section>
+
+<section class="slide" id="rank-limits" data-lo="LO3" data-label="الترتيب" data-n="22" data-session="2">
+  <div class="kicker">القائمة المرتبة</div>
+  <h2>رتّب بالأثر على الناس أولًا، ثم بسهولة الإصلاح</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>3 · يمنع العرض</h4><p class="small mb0">يعرّض أشخاصًا أو مفتاحًا أو يخالف قاعدة الإفصاح.</p></div>
+    <div class="card c-amber"><h4>2 · يُصلح قبل الاختبار</h4><p class="small mb0">يمنع مستخدمًا من الاستعمال أو يربك ما يراه.</p></div>
+    <div class="card c-teal"><h4>1 · يُكتب في التسليم</h4><p class="small mb0">لا يضر أحدًا الآن، ويضر من يبني على الشيفرة.</p></div>
+  </div>
+  <p class="small mt-s">لكل بند: من يصلحه، ومن يتحقق بعده. من أصلح لا يغلق البند وحده.</p>
+  <aside class="notes"><p>دليل الناتج الثالث في شقه الثاني: قائمة حدود مرتبة. السلم من وضع المقرر، لا معيار وطني. لا تحل ترتيب النسخة المزروعة هنا: ذلك المختبر، والمساعد المرشد ينقد الترتيب ولا يكتبه.</p></aside>
+</section>
+
+<section class="slide" id="check-s2" data-lo="LO3" data-n="23" data-session="2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي حد يأتي أولًا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-s2-q1">
+    <p class="lead">نسخة شارح الأمتعة قبل اختبار الغد فيها أربعة حدود. أيها يأتي أولًا في القائمة المرتبة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="حد حقيقي يمنع بعض المستخدمين، لكنه لا يعرّض أحدًا لضرر إن أُصلح قبل الاختبار" data-k="أ">حقل الوزن بلا عنوان مرئي، فلا يعرف قارئ الشاشة ما يُكتب فيه.</div>
+      <div class="opt" data-ok data-k="ب">مفتاح النموذج مكتوب في ملف تحمّله الصفحة.</div>
+      <div class="opt" data-why="يضر من يعيد استعمال الشيفرة لا من يرى الصفحة؛ يُكتب في التسليم" data-k="ج">مسار ملف القواعد على جهاز المصمم.</div>
+      <div class="opt" data-why="يُصلح بإصدار مثبت أو بحذف الحزمة، ولا يعرّض أحدًا الآن ما لم تُثبَّت" data-k="د">حزمة في ملف المتطلبات دون إصدار مثبت ودون أن يسأل عنها أحد.</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> كل من يفتح الصفحة يرى المفتاح، والإلغاء عند المزوّد يجب أن يسبق أي عرض.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الثاني. لا تذكر محتوى النسخة المزروعة قبل المختبر.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-2" data-auto="lab" data-lab="2.2" data-label="المختبر 2.2" data-n="24" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.2 · 60 دقيقة</div><h2>قائمة تحقق الحدود</h2><p class="lead small">على نسخة «جاهزة للعرض» فيها حدود مزروعة: فحص آلي، ثم الفحوصات الخمسة، ثم الوصول والاتجاه والتراخيص والإفصاح باليد، ثم قائمة مرتبة. مساعد ذكي مرشد ينقد الترتيب. ثم القائمة على نموذجك.</p><a class="nb" href="../labs/D2_2_limits_checklist.html">D2_2_limits_checklist.html</a></div><ul class="checklist"><li>شغّل الفحص الآلي على النسخة المزروعة واقرأ كل سطر <span class="min">6 د</span></li><li>شغّل الفحوصات الخمسة عليها، ثم افحص البنود 5 إلى 8 باليد <span class="min">14 د</span></li><li>تحقق من مصدر كل ملف بيانات وكل أصل <span class="min">8 د</span></li><li>رتّب البنود بالأثر، واكتب لكل بند إصلاحه ومن يصلحه <span class="min">12 د</span></li><li>اطلب من مساعد ذكي أن ينقد ترتيبك دون أن تعطيه ملفات النسخة <span class="min">5 د</span></li><li>فكرتك: القائمة نفسها على نموذجك <span class="min">15 د</span></li><li class="stretch">✱ إضافي: اكتب للوكيل طلب إصلاح للبند الأول، ثم أعد الفحص الآلي والفحوصات الخمسة</li></ul></div>
+  <aside class="notes"><p>ذكاء اصطناعي مرشد: المساعد ينقد الترتيب فقط، ولا تُرفع ملفات النسخة إليه. تأكد أن أحدًا لا يثبّت الحزمة. بعد المختبر قل بوضوح: كل ما في النسخة اصطناعي، المفتاح نص لا يعمل، وأرقام الهوية لا تصح، والصورة رسمها مُعدّ المقرر.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-2" data-lo="LO3" data-label="بعد المختبر 2.2" data-n="25" data-session="2">
+  <div class="kicker">بعد المختبر</div>
+  <h2>الفحص الآلي وجد أربعة أنواع، والبقية وجدتها العين</h2>
+  <ul class="bullets">
+    <li>آليًا: السر، والمسار، والحزمة، والملف الذي يشبه بيانات شخصية.</li>
+    <li>باليد: اللغة والاتجاه، والعناوين والتباين، ومصدر الصورة، والإفصاح.</li>
+    <li>الفحوصات الخمسة: أخفق C5 وحده: الصفحة لا تعلن لغتها ولا إفصاحها.</li>
+  </ul>
+  <div class="callout note mt"><b>كل ما في النسخة اصطناعي:</b> المفتاح نص لا يعمل، وأرقام الهوية لا تصح، والصورة رسمها مُعدّ المقرر.</div>
+  <aside class="notes"><p>الأرقام من تشغيل limits_scan.py وchecks.py على النسخة المزروعة في إعداد المقرر. ناقش الترتيب: من وضع المفتاح أو ملف التصدير في المرتبة الأولى؟ ومن يتحقق بعد من أصلح؟</p></aside>
+</section>
+
+
+<!-- الجلسة 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="26">
+  <div class="kicker">الجلسة 3</div>
+  <h1>خمسة مستخدمين وما يحتفظ به المهندسون</h1>
+  <ul class="bullets outcomes"><li>تدير جلسة اختبار قصيرة بمهمة واحدة وإفصاح عن الذكاء الاصطناعي</li><li>ترمّز ملاحظات خمس جلسات في نتائج معدودة تجيب عن السؤال</li><li>تفصل في التسليم التعلّم والمواصفات وحالات التقييم عن الشيفرة المستبعدة</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="five-users" data-lo="LO4" data-label="خمسة مستخدمين" data-n="27" data-session="3">
+  <div class="kicker">لماذا خمسة</div>
+  <h2>خمسة مستخدمين يكشفون أكثر المشكلات تكرارًا</h2>
+  <div class="cols cols-2 mid">
+    <div class="stat center"><div class="big">85%</div><div class="lbl">من مشكلات قابلية الاستخدام وجدتها أول دراسة بخمسة مشاركين، بمعدل اكتشاف 31% لكل مستخدم</div></div>
+    <ul class="bullets small">
+      <li>الرقم من نموذج عام لدراسات سابقة، لا وعد لكل نموذج أولي.</li>
+      <li>التوصية: اختبارات صغيرة كثيرة، لا دراسة واحدة كبيرة.</li>
+      <li>خمسة يكفون لسؤال واحد، لا لقياس أثر.</li>
+    </ul>
+  </div>
+  <div class="caption">المصدر: Nielsen Norman Group، «Why You Only Need to Test with 5 Users»، 18 مارس 2000.</div>
+  <aside class="notes"><p>اشرح القيد: الرقم مقالة من عام 2000 تحسب ما يجده خمسة من المشكلات بمتوسط اكتشاف 31% لكل مستخدم في مشروعات درسها الكاتب. يصلح لاختبار سريع يجيب عن سؤال، ولا يصلح لقياس نسبة نجاح؛ ذلك عمل المشروع التجريبي.</p><p>المصادر: Nielsen Norman Group، Why You Only Need to Test with 5 Users، 18 مارس 2000.</p></aside>
+</section>
+
+<section class="slide" id="run-a-session" data-lo="LO4" data-label="الجلسة" data-n="28" data-session="3">
+  <div class="kicker">جلسة من دقيقتين</div>
+  <h2>مهمة واحدة، وإفصاح قبلها، وصمت أثناءها</h2>
+  <div class="flow">
+    <div class="step c-purple"><b>1 · الإفصاح</b>تجربة، وبيانات اصطناعية، والشرح بالذكاء الاصطناعي</div>
+    <div class="arrow">←</div><div class="step c-teal"><b>2 · المهمة</b>بكلمات المستخدم لا الشاشة</div>
+    <div class="arrow">←</div><div class="step c-cyan"><b>3 · الملاحظة</b>ما قال وما فعل</div>
+    <div class="arrow">←</div><div class="step c-amber"><b>4 · سؤال واحد</b>«ماذا توقعت؟»</div>
+  </div>
+  <div class="callout note mt"><b>من مبادئ سدايا للعموم:</b> إعلام المستخدمين حين يُنشأ المحتوى بالذكاء الاصطناعي.</div>
+  <aside class="notes"><p>الإفصاح قاعدة الاستخدام المسؤول في المقرر، ويقرؤه الميسّر بصوت عالٍ في كل جلسة. لا تشرح الصفحة أثناء الجلسة: إن سأل المستخدم «ماذا أفعل؟» فقل «ماذا تتوقع؟». لا أسماء في الملاحظات: رموز فقط.</p><p>المصادر: سدايا، مبادئ الذكاء الاصطناعي التوليدي للعموم، القسم 4.3 الشفافية والقابلية للتفسير.</p></aside>
+</section>
+
+<section class="slide" id="round-robin" data-lo="LO4" data-label="الجولات" data-n="29" data-session="3">
+  <div class="kicker">في القاعة</div>
+  <h2>ستة في المجموعة، وخمس جولات، وكل واحد يختبر مع خمسة</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الجولة</h4><p class="small mb0">خمس دقائق: ثلاثة أزواج، يختبر كل واحد نموذج الآخر دقيقتين ثم يتبادلان.</p></div>
+    <div class="card c-cyan"><h4>التبديل</h4><p class="small mb0">زوج جديد كل جولة، حتى يقابل كل واحد الخمسة الآخرين.</p></div>
+    <div class="card c-amber"><h4>التسجيل</h4><p class="small mb0">رمز المستخدم، وما قال، وما فعل. الرأي يُكتب بعد الجولات.</p></div>
+  </div>
+  <aside class="notes"><p>شغّل مؤقتًا لكل جولة. الزملاء ليسوا مسافرين حقيقيين، وهذا قيد يُكتب في الحزمة: الاختبار يكشف ما يربك أي قارئ، لا ما يخص جمهورًا بعينه.</p></aside>
+</section>
+
+<section class="slide" id="code-findings" data-lo="LO4" data-label="الترميز" data-n="30" data-session="3">
+  <div class="kicker">مثال موازٍ: شارح المقاعد</div>
+  <h2>من ملاحظات متفرقة إلى نتائج معدودة</h2>
+  <table class="t small">
+    <tr><th>النتيجة</th><th>من رآها</th><th>العدد</th><th>ماذا تعني للسؤال</th></tr>
+    <tr><td>يبحث عن زر لاختيار المقعد</td><td>P1 P2 P4 P5</td><td>4 من 5</td><td>الصفحة تبدو منتجًا ينفّذ</td></tr>
+    <tr><td>لا يفهم رمز صف المقاعد</td><td>P2 P3</td><td>2 من 5</td><td>مواصفة للنص</td></tr>
+    <tr><td>الألوان باهتة</td><td>P3</td><td>1 من 5</td><td>تُذكر، ولا تغيّر الجواب</td></tr>
+  </table>
+  <aside class="notes"><p>الجدول توضيحي من شارح المقاعد. الطريقة: كل ملاحظة تدل على مشكلة تصير نتيجة قصيرة، وكل من رآها يُضاف إليها، ثم العدّ، ثم السؤال: ماذا تقول عن سؤالنا؟ في المختبر خمس جلسات مسجلة للشارح، ونتائجها لا تُذكر قبله.</p></aside>
+</section>
+
+<section class="slide" id="what-engineering-keeps" data-lo="LO4" data-label="ما يُحتفظ به" data-n="31" data-session="3">
+  <div class="kicker">ما يحتفظ به الفريق الهندسي</div>
+  <h2>يُسلَّم التعلّم والمواصفات وحالات التقييم، وتُستبعد الشيفرة</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>يُحتفظ به</h4><ul class="bullets small"><li>ما ثبت، بعدد المستخدمين</li><li>القواعد بالكلمات: ما يجب أن يبقى</li><li>حالات التقييم: الفحوصات وحالات من الجلسات</li><li>القائمة المرتبة للحدود المفتوحة</li></ul></div>
+    <div class="card c-coral"><h4>يُستبعد</h4><ul class="bullets small"><li>الشيفرة التي كتبها الوكيل لسؤال واحد</li><li>البيانات الاصطناعية بعد التجربة</li><li>التصميم البصري المؤقت</li></ul></div>
+  </div>
+  <aside class="notes"><p>دليل الناتج الرابع: حزمة تسليم تُقبل في مراجعة مباشرة. «تُستبعد» لا تعني «تُرمى قبل أن تُقرأ»: المهندس يرى المستودع وسجله، لكنه لا يبني عليه. من يدافع عن إبقاء الشيفرة يُسأل: من راجعها، ومن سيصونها؟</p></aside>
+</section>
+
+<section class="slide" id="handover-pack" data-lo="LO4" data-label="حزمة التسليم" data-n="32" data-session="3">
+  <div class="kicker">القالب</div>
+  <h2>حزمة تسليم من ثمانية أقسام يقرؤها مهندس في عشر دقائق</h2>
+  <div class="cols cols-2">
+    <ol class="small">
+      <li>السؤال والجواب: ما ثبت وما لم يثبت</li>
+      <li>المواصفات التي تُحفظ</li>
+      <li>حالات التقييم</li>
+      <li>ما يُحتفظ به وما يُستبعد</li>
+    </ol>
+    <ol class="small" start="5">
+      <li>الحدود والمخاطر المفتوحة</li>
+      <li>البيانات والأصول ومصادرها</li>
+      <li>السؤال التالي</li>
+      <li>من بنى، ومن يراجع، ومن يقرر</li>
+    </ol>
+  </div>
+  <aside class="notes"><p>القالب في ملفات المختبر. يبدأه المشارك في آخر خطوة من المختبر، ويكمله في التحضير الأخير قبل المراجعة. القسم السابع مهم: كثير من النماذج الأولية تنتهي بسؤال لا يجيب عنه إلا مشروع تجريبي.</p></aside>
+</section>
+
+<section class="slide" id="separation-of-roles" data-lo="LO4" data-label="الأدوار" data-n="33" data-session="3">
+  <div class="kicker">الفصل بين الأدوار</div>
+  <h2>من بنى لا يراجع، ومن يراجع لا يقرر</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>يبني</b>فريق المنتج مع الوكيل</div>
+    <div class="arrow">←</div><div class="step c-cyan"><b>يراجع</b>مهندس لم يبنِ</div>
+    <div class="arrow">←</div><div class="step c-coral"><b>يقرر</b>صاحب الفكرة، بعد المراجعة</div>
+  </div>
+  <p class="small mt-s">قاعدة المقرر: لا تدخل بيانات حقيقية مشروعًا تجريبيًا قبل موافقة مسؤول حماية البيانات.</p>
+  <aside class="notes"><p>في الحالة: معاذ وفريق المنتج يبنون، وم. ريان يراجع، وغيداء تقرر، وطلال يوافق على البيانات. في المراجعة الختامية المهندس يراجع ولا يقرر مصير الفكرة في جهة المشارك.</p></aside>
+</section>
+
+<section class="slide" id="check-s3" data-lo="LO4" data-n="34" data-session="3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما الذي يدخل الحزمة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="check-s3-q1">
+    <p class="lead">بعد خمس جلسات على شارح المقاعد، أي سطر يكتبه الفريق في قسم «ما ثبت» من حزمة التسليم؟</p>
+    <div class="opts">
+      <div class="opt" data-why="رأي الفريق في عمله، لا نتيجة من المستخدمين" data-k="أ">الصفحة سهلة وواضحة في رأي كل من بناها في الفريق.</div>
+      <div class="opt" data-why="يعمّم من خمسة زملاء إلى كل المسافرين، والاختبار السريع لا يقيس نسبًا" data-k="ب">80% من المسافرين سيستعملون الصفحة بدل الاتصال بمركز الاتصال.</div>
+      <div class="opt" data-why="تفصيل تقني يخص الشيفرة المستبعدة، لا ما تعلّمه الفريق عن السؤال" data-k="ج">الشيفرة مكتوبة بمكتبة Python القياسية دون أي حزمة إضافية.</div>
+      <div class="opt" data-ok data-k="د">أربعة من خمسة بحثوا عن زر لاختيار المقعد، فظنوا الصفحة تنفّذ.</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> نتيجة معدودة من الجلسات، بدليلها، وتغيّر المواصفات.</div>
+  </div>
+  <aside class="notes"><p>الجواب: الخيار الرابع. الخيار الثاني فخ شائع في عروض الإدارة: خمسة يكشفون مشكلات، ولا يقيسون نسبة استعمال.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-3" data-auto="lab" data-lab="2.3" data-label="المختبر 2.3" data-n="35" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 2.3 · 60 دقيقة</div><h2>اختبار مع خمسة مستخدمين</h2><p class="lead small">ترمّز خمس جلسات مسجلة للشارح في جدول نتائج وتقرر ما يُحتفظ به، ثم تختبر نموذجك مع خمسة زملاء بالتناوب وتبدأ حزمة التسليم.</p><a class="nb" href="../labs/D2_3_five_users.html">D2_3_five_users.html</a></div><ul class="checklist"><li>رمّز الجلسات الخمس المسجلة في جدول نتائج <span class="min">12 د</span></li><li>اكتب ما تقوله النتائج عن السؤال، وما يُحتفظ به وما يُستبعد <span class="min">8 د</span></li><li>جهّز اختبار نموذجك: المهمة وسطر الإفصاح <span class="min">5 د</span></li><li>اختبر مع خمسة زملاء بالتناوب في مجموعات من ستة <span class="min">25 د</span></li><li>رتّب نتائجك وابدأ حزمة التسليم <span class="min">10 د</span></li><li class="stretch">✱ إضافي: اطلب من زميل أن يؤدي دور المهندس ويختار إيداعًا من نموذجك تشرحه في دقيقة</li></ul></div>
+  <aside class="notes"><p>كوّن مجموعات من ستة قبل الخطوة 4، وشغّل مؤقتًا لكل جولة من خمس دقائق. تأكد أن سطر الإفصاح يُقرأ في كل جلسة. من لم يعمل نموذج فكرته يختبر v3 مع زملائه، ويكتب ذلك في حزمته. لا تُرفع ملاحظات الجلسات إلى أي أداة.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-3" data-lo="LO4" data-label="بعد المختبر 2.3" data-n="36" data-session="3">
+  <div class="kicker">بعد المختبر</div>
+  <h2>الجلسات المسجلة: فهموا الرسوم، ولم يقرروا دون فرق السعر</h2>
+  <table class="t small">
+    <tr><th>النتيجة</th><th>العدد</th></tr>
+    <tr><td>ظن أن الصفحة تنفّذ التغيير</td><td>4 من 5</td></tr>
+    <tr><td>احتاج إلى فرق السعر ليقرر</td><td>4 من 5</td></tr>
+    <tr><td>حار: الرسوم للمسافر أم للحجز؟</td><td>3 من 5</td></tr>
+    <tr><td>لم يلاحظ الإفصاح</td><td>3 من 5</td></tr>
+    <tr><td>لم يجد رمز الحجز</td><td>2 من 5</td></tr>
+  </table>
+  <div class="caption">بيانات اصطناعية: جلسات كتبها مُعدّ المقرر.</div>
+  <aside class="notes"><p>العدّ محسوب من ملاحظات الجلسات الاصطناعية التي كتبها مُعدّ المقرر، وليست من مسافرين حقيقيين. السؤال التالي (فرق السعر بأسعار حية) لمشروع تجريبي لا لنموذج أولي، وقراره لغيداء بعد مراجعة م. ريان.</p></aside>
+</section>
+
+
+<section class="slide" id="wrap-up" data-label="خلاصة اليوم" data-n="37" data-session="3">
+  <div class="kicker">خلاصة اليوم الثاني</div>
+  <h2>ثلاثة أشياء تأخذها معك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · افحص ما لم يُجرَّب</h4><p class="small mb0">خمسة فحوصات لخمسة أنواع، والمتوقع مكتوب قبل التشغيل.</p></div>
+    <div class="card c-coral"><h4>2 · الحدود قبل الناس</h4><p class="small mb0">مفتاح، أو بيانات، أو إفصاح: لا عرض قبل الإصلاح.</p></div>
+    <div class="card c-purple"><h4>3 · سلّم ما تعلّمته</h4><p class="small mb0">الشيفرة تُستبعد، والدليل والمواصفات والحالات تبقى.</p></div>
+  </div>
+  <aside class="notes"><p>دقيقتان. اسأل: ما السؤال التالي في فكرتك، وهل يجيب عنه نموذج أولي أم مشروع تجريبي؟</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="بعد الظهر" data-n="38" data-session="3">
+  <div class="kicker">ما بقي اليوم</div>
+  <h2>الاختبار القصير المراقب، ثم المراجعة مع المهندس</h2>
+  <ul class="bullets">
+    <li>الاختبار القصير: خمسة مخاطر في نموذج أولي لم تره، دون ذكاء اصطناعي.</li>
+    <li>المراجعة: حزمة تسليمك ونموذجك يعمل، وإيداع يختاره المهندس.</li>
+    <li>أكمل حزمتك، وتأكد أن لا مفتاح في أي ملف ولا في السجل.</li>
+  </ul>
+  <aside class="notes"><p>بعد الاستراحة يبدأ الاختبار القصير المراقب. اطلب من الجميع إغلاق الوكلاء والمساعدات قبل الدخول.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T07:37:45Z","version":"2027.1.0","commit":"b5b0f37"},"course":{"id":"lds-prd-205","code":"LDS-PRD-205","title":"بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-prd-205/","repo":"SDAIAAcademy/lds-prd-205","home":"../index.html"},"deck":{"id":"day2","kind":"day","day":2,"label":"اليوم 2","title":"الحدود والتسليم","prev":"day1.html","next":"capstone.html","md":"day2.md","alt":{}},"sessions":[{"n":1,"label":"الجلسة 1","title":"أوهام المسار المثالي","slide":"s1","outcomes":["تجد الحالات التي لم يجربها العرض الأول","تكتب فحص قبول بالمعطى والفعل والمتوقع قبل أن يُبرمج","تعيد الفحوصات كلها بعد كل إصلاح وتسجل نتائجها"],"minutes":90,"lab":{"id":"2.1","title":"خمسة فحوصات قبول","minutes":60,"href":"../labs/D2_1_acceptance_checks.html"}},{"n":2,"label":"الجلسة 2","title":"الأسرار والحزم والوصول والتراخيص","slide":"s2","outcomes":["تطبق قائمة تحقق الحدود بفحص آلي ثم باليد","تتحقق من مصدر كل ملف بيانات وترخيص كل أصل","ترتب الحدود بالأثر وتحدد لكل حد إصلاحه ومن يصلحه"],"minutes":90,"lab":{"id":"2.2","title":"قائمة تحقق الحدود","minutes":60,"href":"../labs/D2_2_limits_checklist.html"}},{"n":3,"label":"الجلسة 3","title":"خمسة مستخدمين وما يحتفظ به المهندسون","slide":"s3","outcomes":["تدير جلسة اختبار قصيرة بمهمة واحدة وإفصاح عن الذكاء الاصطناعي","ترمّز ملاحظات خمس جلسات في نتائج معدودة تجيب عن السؤال","تفصل في التسليم التعلّم والمواصفات وحالات التقييم عن الشيفرة المستبعدة"],"minutes":90,"lab":{"id":"2.3","title":"اختبار مع خمسة مستخدمين","minutes":60,"href":"../labs/D2_3_five_users.html"}}],"slides":[{"id":"title","n":1,"title":"الحدود والتسليم","kind":"title","session":0,"hash":"e5331582","md":"#### [day2#title] الحدود والتسليم\n\n*أكاديمية سدايا · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة*\n\nاليوم 2: فحوصات القبول، وقائمة تحقق الحدود، والاختبار مع خمسة مستخدمين، وما يحتفظ به الفريق الهندسي\n\nمسار التنفيذيين والقادة · يومان تدريبيان + يوم للمشروع الختامي · 3 جلسات · 3 مختبرات · LDS-PRD-205","notes":"اسأل برفع اليد: من في مستودع فكرته ثلاثة إيداعات أو أكثر؟ من يعمل نموذجه بوضع البديل؟ من يعمل مع نموذج مستضاف؟ من لم يعمل نموذجه بعد يكمل اليوم على الحالة ويعود إلى فكرته في آخر خطوة من كل مختبر.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"الحدود والتسليم","kind":"content","session":0,"hash":"ec342d05","md":"#### [day2#agenda] الحدود والتسليم\n\n*اليوم*\n\n- **الجلسة 1 · أوهام المسار المثالي**: لماذا ينجح العرض ويفشل الاستعمال، وفحوصات القبول بالمعطى والفعل والمتوقع، والفحص الذي يجب أن يُخفق أولًا\n- **الجلسة 2 · الأسرار والحزم والوصول والتراخيص**: الأسرار والحزم غير المفحوصة وفجوات إمكانية الوصول والكتابة من اليمين إلى اليسار، والبيانات الحقيقية، وتراخيص الأصول المولَّدة\n- **الجلسة 3 · خمسة مستخدمين وما يحتفظ به المهندسون**: الاختبار السريع مع خمسة مستخدمين والإفصاح لهم، وترميز النتائج، وما يحتفظ به الفريق الهندسي: التعلّم والمواصفات وحالات التقييم","notes":"ثلاث جلسات، كل منها 30 دقيقة من المفاهيم ونقطة تحقق، ثم مختبر من 60 دقيقة. بعدها الاختبار القصير المراقب، ثم المراجعات المباشرة. الاستراحات بزر B.","minutes":null,"lo":[]},{"id":"review-day1","n":3,"title":"أيها يُودَع؟","kind":"quiz","session":0,"hash":"805cea8e","md":"#### [day2#review-day1] أيها يُودَع؟\n\n*مراجعة اليوم الأول*\n\n**سؤال:** في شارح المقاعد طلبتَ إضافة رسالة لمقعد محجوز. ردّ الوكيل: «تم، واختبرت كل شيء». أيها تودعه؟\n\n- أ. التغيير بعد أن شغّلته وجرّبت المقعد المحجوز وما كان يعمل قبله.\n- ب. التغيير كما هو: الوكيل قال إنه اختبره، وهذا يكفي لإيداعه الآن.\n- ج. التغيير الآن، ثم تشغّله بعد الإيداع لترى هل يعمل كما وصفه الوكيل.\n- د. لا شيء: كل تغيير من وكيل يُرفض أولًا.","notes":"الجواب: الخيار الأول. دقيقتان. من اختار الثاني: اسأله من سيشرح هذا الإيداع للمهندس في المراجعة الختامية.","minutes":null,"lo":["LO2"]},{"id":"s1","n":4,"title":"أوهام المسار المثالي","kind":"section","session":1,"hash":"233eb59a","md":"#### [day2#s1] أوهام المسار المثالي\n\n*الجلسة 1*\n\n- تجد الحالات التي لم يجربها العرض الأول\n- تكتب فحص قبول بالمعطى والفعل والمتوقع قبل أن يُبرمج\n- تعيد الفحوصات كلها بعد كل إصلاح وتسجل نتائجها","notes":"","minutes":null,"lo":["LO3"]},{"id":"happy-path","n":5,"title":"ما جرّبته في العرض هو بالضبط ما يعمل","kind":"content","session":1,"hash":"2578ce3e","md":"#### [day2#happy-path] ما جرّبته في العرض هو بالضبط ما يعمل\n\n*وهم المسار المثالي*\n\n- الوكيل يبني على الأمثلة التي أعطيته إياها، ويجرّبها هي.\n- العرض يمر بالطريق نفسه، فينجح.\n- المستخدم الأول يمر بطريق آخر.","notes":"اسأل: ما الأمثلة التي جرّبها كل واحد في نموذج فكرته أمس؟ لا تربط ذلك بحالة قُبّرة: يكتشفه المشاركون في المختبر. النموذج الأولي الذي يبنيه وكيل خطير بالذات لأنه يبدو مكتملًا: الشاشة نظيفة، والشرح واثق.","minutes":null,"lo":["LO3"]},{"id":"where-illusions-hide","n":6,"title":"أين يختبئ ما لا يعمل","kind":"content","session":1,"hash":"c0228980","md":"#### [day2#where-illusions-hide] أين يختبئ ما لا يعمل\n\n*أربعة مخابئ*\n\n- **بيانات سهلة.** كل الأمثلة من النوع نفسه، فلا تُجرَّب الحالات الأخرى.\n- **«تم» من الوكيل.** يصف ما ظن أنه فعله، لا ما يحدث عند التشغيل.\n- **شاشة تبدو صحيحة.** رقم في مكانه لا يعني أنه الرقم الصحيح.\n- **كلمات واثقة.** نموذج يُسأل عما لا يعرفه يجيب بثقة.","notes":"اطلب من القاعة مثالًا لكل مخبأ من نماذج أفكارهم، لا من حالة قُبّرة. الفحوصات الخمسة في المختبر تفتش المخابئ الأربعة.","minutes":null,"lo":["LO3"]},{"id":"given-when-then","n":7,"title":"فحص القبول: معطى، وفعل، ونتيجة متوقعة بالرقم","kind":"content","session":1,"hash":"fa30b42d","md":"#### [day2#given-when-then] فحص القبول: معطى، وفعل، ونتيجة متوقعة بالرقم\n\n*مثال موازٍ: شارح الأمتعة*\n\n| المعطى | الفعل | المتوقع |\n| --- | --- | --- |\n| حجز بحقيبتين: 23 و27 كغ، وباقة 23 كغ | اعرض الشرح | رسوم الحقيبة الثانية وحدها، ورقمها مكتوب في الفحص |\n| حجز لا يوجد في الملف | اعرض الشرح | رسالة «لم نجد حجزًا»، ولا استدعاء للنموذج |\n\n> **المتوقع يُكتب قبل التشغيل.** فحص يأخذ «المتوقع» من ناتج البرنامج نفسه ينجح دائمًا.","notes":"المثال من شارح الأمتعة بأرقام توضيحية، وليس من المختبر. اطلب من القاعة صياغة فحص ثالث: النموذج متعطل. الجواب: «معطى: النموذج لا يرد؛ عند العرض: تظهر القاعدة ولا تنهار الصفحة».","minutes":null,"lo":["LO3"]},{"id":"five-kinds","n":8,"title":"خمسة فحوصات تغطي خمسة أنواع، لا خمس نسخ من الحالة نفسها","kind":"content","session":1,"hash":"44e26ce0","md":"#### [day2#five-kinds] خمسة فحوصات تغطي خمسة أنواع، لا خمس نسخ من الحالة نفسها\n\n*خمسة فحوصات*\n\n1. **عادي** الحالة التي جُرّبت\n2. **أصعب** عدد، أو حد، أو تركيب\n3. **خطأ** مدخل غير موجود\n4. **تعطل** النموذج لا يرد\n5. **الصفحة** اللغة والاتجاه والعنوان والإفصاح","notes":"هذا هو دليل الناتج الثالث في شقه الأول: سجل فحوصات. الأنواع الخمسة هي ما يطلبه المختبر؛ اختيار الحجز لكل نوع عمل المشارك. الفحص الخامس ليس عن الحساب: الصفحة نفسها جزء مما نسلّمه.","minutes":null,"lo":["LO3"]},{"id":"fail-first","n":9,"title":"فحص لم يُخفق قط لم يثبت شيئًا بعد","kind":"content","session":1,"hash":"331b6722","md":"#### [day2#fail-first] فحص لم يُخفق قط لم يثبت شيئًا بعد\n\n*ما يثبته الفحص*\n\n- اكتب الفحص من المواصفات، ثم شغّله على النسخة الحالية.\n- إن أخفق: وجدت ما يجب إصلاحه.\n- إن اجتاز: تأكد أنه يستطيع أن يُخفق، بتغيير الرقم المتوقع مرة.\n\n- **للوكيل.** «حوّل هذه الفحوصات إلى برنامج، ولا تغيّر app.py». من يكتب الفحص لا يصلح ما يفحصه في الطلب نفسه.","notes":"وكلاء البرمجة يميلون إلى «إصلاح» البرنامج ليمر الفحص، أو تعديل الفحص ليمر البرنامج. فصل الطلبين يمنع ذلك: طلب يكتب الفحوصات، ثم طلب لكل إصلاح. هذا فصل بين الأدوار حتى داخل محادثة واحدة.","minutes":null,"lo":["LO3"]},{"id":"rerun-all","n":10,"title":"بعد كل إصلاح: الفحوصات كلها، لا الفحص الذي أصلحته","kind":"content","session":1,"hash":"a89e98be","md":"#### [day2#rerun-all] بعد كل إصلاح: الفحوصات كلها، لا الفحص الذي أصلحته\n\n*مثال موازٍ: سجل فحوصات شارح الأمتعة*\n\n| الحالة | اجتاز | أخفق | القرار |\n| --- | --- | --- | --- |\n| قبل الإصلاح | 4 من 5 | C2 | إصلاح C2 |\n| بعد إصلاح C2 | 4 من 5 | C3 | تراجع: كسر C3 |\n| إصلاح أدق | 5 من 5 | لا شيء | إيداع |","notes":"السجل توضيحي من شارح الأمتعة. الصف المظلل هو الدرس: الإصلاح الأول أصلح ما طُلب وكسر غيره، ولم يُعرف ذلك إلا لأن الخمسة أُعيدت. سجل الفحوصات بهذا الشكل دليل يُسلَّم، ويُقيَّم في المختبر.","minutes":null,"lo":["LO3"]},{"id":"check-s1","n":11,"title":"أي فحص يكشف الوهم؟","kind":"quiz","session":1,"hash":"b8b8d8bc","md":"#### [day2#check-s1] أي فحص يكشف الوهم؟\n\n*نقطة تحقق*\n\n**سؤال:** بنى فريق المقاعد شارحًا جرّبوه على خمسة حجوزات، كلها لمسافر واحد في رحلة واحدة، فنجح كل شيء. أي فحص تضيفه أولًا؟\n\n- أ. حجز سادس لمسافر واحد في رحلة واحدة، بالرقم المتوقع مكتوبًا قبل التشغيل.\n- ب. أن تُفتح الصفحة في أقل من ثانيتين.\n- ج. حجز لأربعة مسافرين على رحلتين، بالرقم المتوقع مكتوبًا.\n- د. أن يكون الشرح مقنعًا للمسافر وواضحًا في رأي أعضاء الفريق.","notes":"الجواب: الخيار الثالث. لا تربطه الآن بحالة قُبّرة: المختبر يفعل ذلك.","minutes":null,"lo":["LO3"]},{"id":"lab-2-1","n":12,"title":"خمسة فحوصات قبول","kind":"lab","session":1,"hash":"545dc65e","md":"#### [day2#lab-2-1] خمسة فحوصات قبول\n\nالمختبر 2.1 · 60 دقيقة\n\nتكتب خمسة فحوصات للشارح، ويحوّلها الوكيل إلى برنامج يعمل دون مفتاح، فتشغّلها على النسخة v2 وتصلح ما يُخفق بطلب واحد لكل فحص، مع سجل فحوصات. ثم خمسة فحوصات لفكرتك.\n\n[D2_1_acceptance_checks.html](https://sdaiaacademy.github.io/lds-prd-205/labs/D2_1_acceptance_checks.html)\n\n- [ ] اكتب الفحوصات الخمسة: المعطى والفعل والمتوقع، دون شيفرة (12 د)\n- [ ] اطلب من الوكيل تحويلها إلى checks.py يعمل بوضع البديل (10 د)\n- [ ] شغّلها على v2 وسجّل كل نتيجة في سجل الفحوصات (8 د)\n- [ ] أصلح فحصًا أخفق بطلب واحد، وأعد الخمسة، وأودع (12 د)\n- [ ] أصلح الفحص الآخر الذي أخفق بالطريقة نفسها (8 د)\n- [ ] فكرتك: خمسة فحوصات لنموذجك وتشغيلها (10 د)\n- [ ] ✱ إضافي: أضف فحصًا سادسًا لحجز لا يُغيَّر الآن، وانظر هل يُفهم إلغاءً","notes":"ذكاء اصطناعي كامل. لا تعطِ checks.py المرجعي قبل نهاية الخطوة 2. راقب من يكتب «المتوقع» من ناتج البرنامج. حين يُخفق فحص، اطلب من المشارك أن يقرأ ما ظهر للمسافر بصوت عالٍ: هذا ما كان سيقرؤه مسافر حقيقي. v3 لمن تعطل وكيله بعد تسجيل نتائج v2.","minutes":null,"lo":[]},{"id":"debrief-2-1","n":13,"title":"في التشغيل المرجعي اجتازت v2 ثلاثة فحوصات من خمسة","kind":"content","session":1,"hash":"34064f78","md":"#### [day2#debrief-2-1] في التشغيل المرجعي اجتازت v2 ثلاثة فحوصات من خمسة\n\n*بعد المختبر*\n\n- C2: حجز QB3M9K لثلاثة مسافرين ورحلتين أظهر 75 بدل 450.\n- C3: رمز غير موجود وصل إلى النموذج، فكتب البديل رسومًا لا وجود لها.\n- العرض الأول لم يكشفهما: الحجوزات الستة كلها لمسافر واحد ورحلة واحدة، ولم يجرّب أحد رمزًا غير موجود.","notes":"الأرقام من تشغيل checks.py على v2 بوضع البديل في إعداد المقرر. الاختراع في C3 من البديل المكتوب مسبقًا، ولم يُجرَّب على نموذج مستضاف؛ قل ذلك صراحة. اسأل: من أعاد الخمسة بعد كل إصلاح؟","minutes":null,"lo":["LO3"]},{"id":"s2","n":14,"title":"الأسرار والحزم والوصول والتراخيص","kind":"section","session":2,"hash":"81b69ef9","md":"#### [day2#s2] الأسرار والحزم والوصول والتراخيص\n\n*الجلسة 2*\n\n- تطبق قائمة تحقق الحدود بفحص آلي ثم باليد\n- تتحقق من مصدر كل ملف بيانات وترخيص كل أصل\n- ترتب الحدود بالأثر وتحدد لكل حد إصلاحه ومن يصلحه","notes":"","minutes":null,"lo":["LO3"]},{"id":"limits-checklist","n":15,"title":"ثمانية بنود قبل أن يرى أحد نموذجك","kind":"content","session":2,"hash":"55b3c4b5","md":"#### [day2#limits-checklist] ثمانية بنود قبل أن يرى أحد نموذجك\n\n*قائمة تحقق الحدود*\n\n| # | البند | # | البند |\n| --- | --- | --- | --- |\n| 1 | سر مكتوب في ملف | 5 | لغة الصفحة واتجاهها |\n| 2 | مسار على جهاز شخص واحد | 6 | عناوين الحقول والتباين ولوحة المفاتيح |\n| 3 | حزمة لم تُفحص | 7 | ترخيص كل أصل |\n| 4 | بيانات حقيقية أو تشبهها | 8 | الإفصاح عن الذكاء الاصطناعي |","notes":"البنود الخمسة الأولى من نص الناتج الثالث في بطاقة المقرر (المسارات المضمنة، والأسرار، والتبعيات، والبيانات الحقيقية، وإمكانية الوصول)، والبنود 5 إلى 8 تضيف الاتجاه والتراخيص والإفصاح من موضوعات المقرر وقواعد الاستخدام المسؤول. القائمة نفسها في القالب، وتُقيَّم في المختبر وفي المشروع الختامي.","minutes":null,"lo":["LO3"]},{"id":"secrets","n":16,"title":"المفتاح الذي دخل سجل Git أو ملف الصفحة يُلغى، لا يُحذف","kind":"content","session":2,"hash":"bb6fc8fa","md":"#### [day2#secrets] المفتاح الذي دخل سجل Git أو ملف الصفحة يُلغى، لا يُحذف\n\n*البند 1*\n\n- ملف الصفحة يصل إلى كل زائر.\n- إيداع حذف المفتاح يُبقيه في الإيداع الذي قبله.\n- العلاج: إلغاء المفتاح عند المزوّد، ثم مفتاح جديد في .env.\n\n```bash\ngit log -p | grep -i \"api_key\"\n```","notes":"الأمر يبحث في كل الإيداعات عن اسم متغير المفتاح، ويرجع الأسطر التي أضافته أو حذفته. لا نعيد كتابة السجل في هذا المقرر: الإلغاء أبسط وأضمن. الحد على الإنفاق يقلل الضرر، ولا يلغيه.","minutes":null,"lo":["LO3"]},{"id":"unvetted-packages","n":17,"title":"كل حزمة أضافها الوكيل تحتاج أربعة أجوبة","kind":"content","session":2,"hash":"644b59eb","md":"#### [day2#unvetted-packages] كل حزمة أضافها الوكيل تحتاج أربعة أجوبة\n\n*البند 3*\n\n- **الضرورة.** هل يستوردها البرنامج أصلًا؟\n- **الصيانة.** من يصونها، ومتى آخر إصدار؟\n- **الترخيص.** هل يسمح بما ستفعله؟\n- **الإصدار.** هل هو مثبت في الملف؟\n\n> **اسم لا تعرفه لا تثبّته لتعرفه.** قد يكون اسمًا يشبه حزمة مشهورة وضعه أحد عمدًا.","notes":"الوكلاء يقترحون أحيانًا أسماء حزم غير موجودة أو قريبة من أسماء معروفة، ومن يسجل الاسم لاحقًا يصل إلى كل من يثبّته. لذلك «اسأل قبل أي حزمة» في ملف السياق، و«ابحث عن الحزمة في فهرسها قبل التثبيت». في المختبر حزمة لا تُثبَّت أبدًا.","minutes":null,"lo":["LO3"]},{"id":"accessibility-rtl","n":18,"title":"صفحة عربية لا تعلن أنها عربية تُقرأ خطأ","kind":"content","session":2,"hash":"a6c51a2c","md":"#### [day2#accessibility-rtl] صفحة عربية لا تعلن أنها عربية تُقرأ خطأ\n\n*البندان 5 و6*\n\n```html\n\u003c!-- ملف: index.html -->\n\u003chtml lang=\"ar\" dir=\"rtl\">\n\u003clabel for=\"ref\">رمز الحجز\u003c/label>\n\u003cinput id=\"ref\" dir=\"ltr\">\n```\n\n- لغة الصفحة تُعرف برمجيًا: قارئ الشاشة يختار النطق منها.\n- لكل حقل عنوان أو تعليمات، لا نص داخل الحقل يختفي عند الكتابة.\n- جرّب الصفحة بلوحة المفاتيح وحدها، وبنص رمادي على أبيض في ضوء القاعة.","notes":"البند الأول من معيار النجاح 3.1.1 (لغة الصفحة)، والثاني من 3.3.2 (العناوين أو التعليمات)، والعلاقة بين العنوان والحقل من 1.3.1، وكلها من المستوى A في إرشادات WCAG 2.2. حقل رمز الحجز من اليسار لأن الرمز لاتيني. لا نتعمق هنا: المقرر LDS-PRD-203 يعلّم اختبار إمكانية الوصول.\n\nالمصادر: W3C WCAG 2.2، معايير النجاح 3.1.1 و3.3.2 و1.3.1.","minutes":null,"lo":["LO3"]},{"id":"looks-real","n":19,"title":"ما يبدو بيانات شخصية حقيقية يُعامل كأنه حقيقي","kind":"content","session":2,"hash":"0d48884a","md":"#### [day2#looks-real] ما يبدو بيانات شخصية حقيقية يُعامل كأنه حقيقي\n\n*البند 4*\n\n- **العلامات.**\n  - أسماء كاملة وأرقام بشكل الهوية وتواريخ ميلاد\n  - ملف «من تصدير النظام»\n  - لا أحد يعرف من أين جاء\n- **ما تفعله.**\n  - توقف العرض والاختبار\n  - احذف الملف من المجلد ومن مشاركته\n  - أبلغ مسؤول حماية البيانات، ولا تقرر وحدك أنه «مجرد تجربة» (قاعدة المقرر)","notes":"نظام حماية البيانات الشخصية نافذ، ومادته الحادية عشرة تقصر محتوى البيانات الشخصية على الحد الأدنى اللازم لغرض جمعها، وتوجب التوقف عن جمع ما لم يعد ضروريًا وإتلافه. سؤال النموذج الأولي لا يحتاج إلى بيانات شخصية أصلًا. في الحالة، القرار في ملف كهذا لمسؤول حماية البيانات، طلال الصغيّر، لا لمن وجده: فصل بين من يجد ومن يقرر. الخطوات في بطاقة «ما تفعله» قاعدة المقرر، لا نص النظام.\n\nالمصادر: نظام حماية البيانات الشخصية، المادة الحادية عشرة (هيئة الخبراء بمجلس الوزراء، النص العربي).","minutes":null,"lo":["LO3"]},{"id":"asset-licences","n":20,"title":"لكل صورة وخط وأيقونة ونص مولَّد مصدر وشروط","kind":"content","session":2,"hash":"a511f5a7","md":"#### [day2#asset-licences] لكل صورة وخط وأيقونة ونص مولَّد مصدر وشروط\n\n*البند 7*\n\n| الأصل | ما تسأله |\n| --- | --- |\n| صورة من نتائج بحث | من صاحبها، وما ترخيصها؟ لا جواب: لا تُستعمل |\n| صورة أو أيقونة مولَّدة | ما تقوله شروط الأداة التي ولّدتها عن الاستعمال؟ |\n| خط أو مكتبة رسوم | ترخيصها، ويُكتب في ملف المصادر |\n| نص كتبه النموذج | يُعلَن أنه مكتوب بالذكاء الاصطناعي |","notes":"مبادئ سدايا للذكاء الاصطناعي التوليدي للعموم تذكر خطر انتهاك حقوق الملكية الفكرية في المساءلة والمسؤولية، وتدعو إلى الالتزام بأنظمة الملكية الفكرية. لا نعطي هنا رأيًا قانونيًا في أداة بعينها: القاعدة العملية أن يُعرف المصدر وتُقرأ الشروط ويُكتب ذلك، وما لا يُعرف يُحذف.\n\nالمصادر: سدايا، مبادئ الذكاء الاصطناعي التوليدي للعموم، القسم 4.4.","minutes":null,"lo":["LO3"]},{"id":"scan-then-hand","n":21,"title":"الفحص الآلي يقرأ الملفات، وعينك تقرأ الصفحة","kind":"content","session":2,"hash":"4da3847d","md":"#### [day2#scan-then-hand] الفحص الآلي يقرأ الملفات، وعينك تقرأ الصفحة\n\n*كيف تفحص*\n\n- **آليًا.** الأسرار، والمسارات، والحزم، والأعمدة والأرقام التي تشبه البيانات الشخصية.\n- **باليد.** اللغة والاتجاه، والعناوين ولوحة المفاتيح، ومصدر كل أصل، والإفصاح.\n\n> **فحص لم يجد شيئًا لا يعني أن لا شيء هناك.** يعني أنه لم يجد ما يبحث عنه.","notes":"الفحص الآلي في المختبر سكربت قصير بمكتبة Python القياسية، يقرأ الملفات ولا يغيّر شيئًا. في جهات كثيرة أدوات أوسع منه، والمبدأ واحد. الحكم في البنود اليدوية هو ما يُختبر في الاختبار القصير المراقب.","minutes":null,"lo":["LO3"]},{"id":"rank-limits","n":22,"title":"رتّب بالأثر على الناس أولًا، ثم بسهولة الإصلاح","kind":"content","session":2,"hash":"94d174e2","md":"#### [day2#rank-limits] رتّب بالأثر على الناس أولًا، ثم بسهولة الإصلاح\n\n*القائمة المرتبة*\n\n- **3 · يمنع العرض.** يعرّض أشخاصًا أو مفتاحًا أو يخالف قاعدة الإفصاح.\n- **2 · يُصلح قبل الاختبار.** يمنع مستخدمًا من الاستعمال أو يربك ما يراه.\n- **1 · يُكتب في التسليم.** لا يضر أحدًا الآن، ويضر من يبني على الشيفرة.\n\nلكل بند: من يصلحه، ومن يتحقق بعده. من أصلح لا يغلق البند وحده.","notes":"دليل الناتج الثالث في شقه الثاني: قائمة حدود مرتبة. السلم من وضع المقرر، لا معيار وطني. لا تحل ترتيب النسخة المزروعة هنا: ذلك المختبر، والمساعد المرشد ينقد الترتيب ولا يكتبه.","minutes":null,"lo":["LO3"]},{"id":"check-s2","n":23,"title":"أي حد يأتي أولًا؟","kind":"quiz","session":2,"hash":"190035e8","md":"#### [day2#check-s2] أي حد يأتي أولًا؟\n\n*نقطة تحقق*\n\n**سؤال:** نسخة شارح الأمتعة قبل اختبار الغد فيها أربعة حدود. أيها يأتي أولًا في القائمة المرتبة؟\n\n- أ. حقل الوزن بلا عنوان مرئي، فلا يعرف قارئ الشاشة ما يُكتب فيه.\n- ب. مفتاح النموذج مكتوب في ملف تحمّله الصفحة.\n- ج. مسار ملف القواعد على جهاز المصمم.\n- د. حزمة في ملف المتطلبات دون إصدار مثبت ودون أن يسأل عنها أحد.","notes":"الجواب: الخيار الثاني. لا تذكر محتوى النسخة المزروعة قبل المختبر.","minutes":null,"lo":["LO3"]},{"id":"lab-2-2","n":24,"title":"قائمة تحقق الحدود","kind":"lab","session":2,"hash":"9375f2b7","md":"#### [day2#lab-2-2] قائمة تحقق الحدود\n\nالمختبر 2.2 · 60 دقيقة\n\nعلى نسخة «جاهزة للعرض» فيها حدود مزروعة: فحص آلي، ثم الفحوصات الخمسة، ثم الوصول والاتجاه والتراخيص والإفصاح باليد، ثم قائمة مرتبة. مساعد ذكي مرشد ينقد الترتيب. ثم القائمة على نموذجك.\n\n[D2_2_limits_checklist.html](https://sdaiaacademy.github.io/lds-prd-205/labs/D2_2_limits_checklist.html)\n\n- [ ] شغّل الفحص الآلي على النسخة المزروعة واقرأ كل سطر (6 د)\n- [ ] شغّل الفحوصات الخمسة عليها، ثم افحص البنود 5 إلى 8 باليد (14 د)\n- [ ] تحقق من مصدر كل ملف بيانات وكل أصل (8 د)\n- [ ] رتّب البنود بالأثر، واكتب لكل بند إصلاحه ومن يصلحه (12 د)\n- [ ] اطلب من مساعد ذكي أن ينقد ترتيبك دون أن تعطيه ملفات النسخة (5 د)\n- [ ] فكرتك: القائمة نفسها على نموذجك (15 د)\n- [ ] ✱ إضافي: اكتب للوكيل طلب إصلاح للبند الأول، ثم أعد الفحص الآلي والفحوصات الخمسة","notes":"ذكاء اصطناعي مرشد: المساعد ينقد الترتيب فقط، ولا تُرفع ملفات النسخة إليه. تأكد أن أحدًا لا يثبّت الحزمة. بعد المختبر قل بوضوح: كل ما في النسخة اصطناعي، المفتاح نص لا يعمل، وأرقام الهوية لا تصح، والصورة رسمها مُعدّ المقرر.","minutes":null,"lo":[]},{"id":"debrief-2-2","n":25,"title":"الفحص الآلي وجد أربعة أنواع، والبقية وجدتها العين","kind":"content","session":2,"hash":"90e19400","md":"#### [day2#debrief-2-2] الفحص الآلي وجد أربعة أنواع، والبقية وجدتها العين\n\n*بعد المختبر*\n\n- آليًا: السر، والمسار، والحزمة، والملف الذي يشبه بيانات شخصية.\n- باليد: اللغة والاتجاه، والعناوين والتباين، ومصدر الصورة، والإفصاح.\n- الفحوصات الخمسة: أخفق C5 وحده: الصفحة لا تعلن لغتها ولا إفصاحها.\n\n> **كل ما في النسخة اصطناعي:** المفتاح نص لا يعمل، وأرقام الهوية لا تصح، والصورة رسمها مُعدّ المقرر.","notes":"الأرقام من تشغيل limits_scan.py وchecks.py على النسخة المزروعة في إعداد المقرر. ناقش الترتيب: من وضع المفتاح أو ملف التصدير في المرتبة الأولى؟ ومن يتحقق بعد من أصلح؟","minutes":null,"lo":["LO3"]},{"id":"s3","n":26,"title":"خمسة مستخدمين وما يحتفظ به المهندسون","kind":"section","session":3,"hash":"424f6d17","md":"#### [day2#s3] خمسة مستخدمين وما يحتفظ به المهندسون\n\n*الجلسة 3*\n\n- تدير جلسة اختبار قصيرة بمهمة واحدة وإفصاح عن الذكاء الاصطناعي\n- ترمّز ملاحظات خمس جلسات في نتائج معدودة تجيب عن السؤال\n- تفصل في التسليم التعلّم والمواصفات وحالات التقييم عن الشيفرة المستبعدة","notes":"","minutes":null,"lo":["LO4"]},{"id":"five-users","n":27,"title":"خمسة مستخدمين يكشفون أكثر المشكلات تكرارًا","kind":"content","session":3,"hash":"2ed85f8d","md":"#### [day2#five-users] خمسة مستخدمين يكشفون أكثر المشكلات تكرارًا\n\n*لماذا خمسة*\n\n**85%** من مشكلات قابلية الاستخدام وجدتها أول دراسة بخمسة مشاركين، بمعدل اكتشاف 31% لكل مستخدم\n\n- الرقم من نموذج عام لدراسات سابقة، لا وعد لكل نموذج أولي.\n- التوصية: اختبارات صغيرة كثيرة، لا دراسة واحدة كبيرة.\n- خمسة يكفون لسؤال واحد، لا لقياس أثر.\n\nالمصدر: Nielsen Norman Group، «Why You Only Need to Test with 5 Users»، 18 مارس 2000.","notes":"اشرح القيد: الرقم مقالة من عام 2000 تحسب ما يجده خمسة من المشكلات بمتوسط اكتشاف 31% لكل مستخدم في مشروعات درسها الكاتب. يصلح لاختبار سريع يجيب عن سؤال، ولا يصلح لقياس نسبة نجاح؛ ذلك عمل المشروع التجريبي.\n\nالمصادر: Nielsen Norman Group، Why You Only Need to Test with 5 Users، 18 مارس 2000.","minutes":null,"lo":["LO4"]},{"id":"run-a-session","n":28,"title":"مهمة واحدة، وإفصاح قبلها، وصمت أثناءها","kind":"content","session":3,"hash":"502782f5","md":"#### [day2#run-a-session] مهمة واحدة، وإفصاح قبلها، وصمت أثناءها\n\n*جلسة من دقيقتين*\n\n1. **1 · الإفصاح** تجربة، وبيانات اصطناعية، والشرح بالذكاء الاصطناعي\n2. **2 · المهمة** بكلمات المستخدم لا الشاشة\n3. **3 · الملاحظة** ما قال وما فعل\n4. **4 · سؤال واحد** «ماذا توقعت؟»\n\n> **من مبادئ سدايا للعموم:** إعلام المستخدمين حين يُنشأ المحتوى بالذكاء الاصطناعي.","notes":"الإفصاح قاعدة الاستخدام المسؤول في المقرر، ويقرؤه الميسّر بصوت عالٍ في كل جلسة. لا تشرح الصفحة أثناء الجلسة: إن سأل المستخدم «ماذا أفعل؟» فقل «ماذا تتوقع؟». لا أسماء في الملاحظات: رموز فقط.\n\nالمصادر: سدايا، مبادئ الذكاء الاصطناعي التوليدي للعموم، القسم 4.3 الشفافية والقابلية للتفسير.","minutes":null,"lo":["LO4"]},{"id":"round-robin","n":29,"title":"ستة في المجموعة، وخمس جولات، وكل واحد يختبر مع خمسة","kind":"content","session":3,"hash":"0b1392b3","md":"#### [day2#round-robin] ستة في المجموعة، وخمس جولات، وكل واحد يختبر مع خمسة\n\n*في القاعة*\n\n- **الجولة.** خمس دقائق: ثلاثة أزواج، يختبر كل واحد نموذج الآخر دقيقتين ثم يتبادلان.\n- **التبديل.** زوج جديد كل جولة، حتى يقابل كل واحد الخمسة الآخرين.\n- **التسجيل.** رمز المستخدم، وما قال، وما فعل. الرأي يُكتب بعد الجولات.","notes":"شغّل مؤقتًا لكل جولة. الزملاء ليسوا مسافرين حقيقيين، وهذا قيد يُكتب في الحزمة: الاختبار يكشف ما يربك أي قارئ، لا ما يخص جمهورًا بعينه.","minutes":null,"lo":["LO4"]},{"id":"code-findings","n":30,"title":"من ملاحظات متفرقة إلى نتائج معدودة","kind":"content","session":3,"hash":"ac31968a","md":"#### [day2#code-findings] من ملاحظات متفرقة إلى نتائج معدودة\n\n*مثال موازٍ: شارح المقاعد*\n\n| النتيجة | من رآها | العدد | ماذا تعني للسؤال |\n| --- | --- | --- | --- |\n| يبحث عن زر لاختيار المقعد | P1 P2 P4 P5 | 4 من 5 | الصفحة تبدو منتجًا ينفّذ |\n| لا يفهم رمز صف المقاعد | P2 P3 | 2 من 5 | مواصفة للنص |\n| الألوان باهتة | P3 | 1 من 5 | تُذكر، ولا تغيّر الجواب |","notes":"الجدول توضيحي من شارح المقاعد. الطريقة: كل ملاحظة تدل على مشكلة تصير نتيجة قصيرة، وكل من رآها يُضاف إليها، ثم العدّ، ثم السؤال: ماذا تقول عن سؤالنا؟ في المختبر خمس جلسات مسجلة للشارح، ونتائجها لا تُذكر قبله.","minutes":null,"lo":["LO4"]},{"id":"what-engineering-keeps","n":31,"title":"يُسلَّم التعلّم والمواصفات وحالات التقييم، وتُستبعد الشيفرة","kind":"content","session":3,"hash":"8a477bb3","md":"#### [day2#what-engineering-keeps] يُسلَّم التعلّم والمواصفات وحالات التقييم، وتُستبعد الشيفرة\n\n*ما يحتفظ به الفريق الهندسي*\n\n- **يُحتفظ به.**\n  - ما ثبت، بعدد المستخدمين\n  - القواعد بالكلمات: ما يجب أن يبقى\n  - حالات التقييم: الفحوصات وحالات من الجلسات\n  - القائمة المرتبة للحدود المفتوحة\n- **يُستبعد.**\n  - الشيفرة التي كتبها الوكيل لسؤال واحد\n  - البيانات الاصطناعية بعد التجربة\n  - التصميم البصري المؤقت","notes":"دليل الناتج الرابع: حزمة تسليم تُقبل في مراجعة مباشرة. «تُستبعد» لا تعني «تُرمى قبل أن تُقرأ»: المهندس يرى المستودع وسجله، لكنه لا يبني عليه. من يدافع عن إبقاء الشيفرة يُسأل: من راجعها، ومن سيصونها؟","minutes":null,"lo":["LO4"]},{"id":"handover-pack","n":32,"title":"حزمة تسليم من ثمانية أقسام يقرؤها مهندس في عشر دقائق","kind":"content","session":3,"hash":"c9caacdb","md":"#### [day2#handover-pack] حزمة تسليم من ثمانية أقسام يقرؤها مهندس في عشر دقائق\n\n*القالب*\n\n1. السؤال والجواب: ما ثبت وما لم يثبت\n2. المواصفات التي تُحفظ\n3. حالات التقييم\n4. ما يُحتفظ به وما يُستبعد\n\n5. الحدود والمخاطر المفتوحة\n6. البيانات والأصول ومصادرها\n7. السؤال التالي\n8. من بنى، ومن يراجع، ومن يقرر","notes":"القالب في ملفات المختبر. يبدأه المشارك في آخر خطوة من المختبر، ويكمله في التحضير الأخير قبل المراجعة. القسم السابع مهم: كثير من النماذج الأولية تنتهي بسؤال لا يجيب عنه إلا مشروع تجريبي.","minutes":null,"lo":["LO4"]},{"id":"separation-of-roles","n":33,"title":"من بنى لا يراجع، ومن يراجع لا يقرر","kind":"content","session":3,"hash":"fb61ecbb","md":"#### [day2#separation-of-roles] من بنى لا يراجع، ومن يراجع لا يقرر\n\n*الفصل بين الأدوار*\n\n**يبني** فريق المنتج مع الوكيل ← **يراجع** مهندس لم يبنِ ← **يقرر** صاحب الفكرة، بعد المراجعة\n\nقاعدة المقرر: لا تدخل بيانات حقيقية مشروعًا تجريبيًا قبل موافقة مسؤول حماية البيانات.","notes":"في الحالة: معاذ وفريق المنتج يبنون، وم. ريان يراجع، وغيداء تقرر، وطلال يوافق على البيانات. في المراجعة الختامية المهندس يراجع ولا يقرر مصير الفكرة في جهة المشارك.","minutes":null,"lo":["LO4"]},{"id":"check-s3","n":34,"title":"ما الذي يدخل الحزمة؟","kind":"quiz","session":3,"hash":"deb41d52","md":"#### [day2#check-s3] ما الذي يدخل الحزمة؟\n\n*نقطة تحقق*\n\n**سؤال:** بعد خمس جلسات على شارح المقاعد، أي سطر يكتبه الفريق في قسم «ما ثبت» من حزمة التسليم؟\n\n- أ. الصفحة سهلة وواضحة في رأي كل من بناها في الفريق.\n- ب. 80% من المسافرين سيستعملون الصفحة بدل الاتصال بمركز الاتصال.\n- ج. الشيفرة مكتوبة بمكتبة Python القياسية دون أي حزمة إضافية.\n- د. أربعة من خمسة بحثوا عن زر لاختيار المقعد، فظنوا الصفحة تنفّذ.","notes":"الجواب: الخيار الرابع. الخيار الثاني فخ شائع في عروض الإدارة: خمسة يكشفون مشكلات، ولا يقيسون نسبة استعمال.","minutes":null,"lo":["LO4"]},{"id":"lab-2-3","n":35,"title":"اختبار مع خمسة مستخدمين","kind":"lab","session":3,"hash":"ec8f2b00","md":"#### [day2#lab-2-3] اختبار مع خمسة مستخدمين\n\nالمختبر 2.3 · 60 دقيقة\n\nترمّز خمس جلسات مسجلة للشارح في جدول نتائج وتقرر ما يُحتفظ به، ثم تختبر نموذجك مع خمسة زملاء بالتناوب وتبدأ حزمة التسليم.\n\n[D2_3_five_users.html](https://sdaiaacademy.github.io/lds-prd-205/labs/D2_3_five_users.html)\n\n- [ ] رمّز الجلسات الخمس المسجلة في جدول نتائج (12 د)\n- [ ] اكتب ما تقوله النتائج عن السؤال، وما يُحتفظ به وما يُستبعد (8 د)\n- [ ] جهّز اختبار نموذجك: المهمة وسطر الإفصاح (5 د)\n- [ ] اختبر مع خمسة زملاء بالتناوب في مجموعات من ستة (25 د)\n- [ ] رتّب نتائجك وابدأ حزمة التسليم (10 د)\n- [ ] ✱ إضافي: اطلب من زميل أن يؤدي دور المهندس ويختار إيداعًا من نموذجك تشرحه في دقيقة","notes":"كوّن مجموعات من ستة قبل الخطوة 4، وشغّل مؤقتًا لكل جولة من خمس دقائق. تأكد أن سطر الإفصاح يُقرأ في كل جلسة. من لم يعمل نموذج فكرته يختبر v3 مع زملائه، ويكتب ذلك في حزمته. لا تُرفع ملاحظات الجلسات إلى أي أداة.","minutes":null,"lo":[]},{"id":"debrief-2-3","n":36,"title":"الجلسات المسجلة: فهموا الرسوم، ولم يقرروا دون فرق السعر","kind":"content","session":3,"hash":"fdbe69da","md":"#### [day2#debrief-2-3] الجلسات المسجلة: فهموا الرسوم، ولم يقرروا دون فرق السعر\n\n*بعد المختبر*\n\n| النتيجة | العدد |\n| --- | --- |\n| ظن أن الصفحة تنفّذ التغيير | 4 من 5 |\n| احتاج إلى فرق السعر ليقرر | 4 من 5 |\n| حار: الرسوم للمسافر أم للحجز؟ | 3 من 5 |\n| لم يلاحظ الإفصاح | 3 من 5 |\n| لم يجد رمز الحجز | 2 من 5 |\n\nبيانات اصطناعية: جلسات كتبها مُعدّ المقرر.","notes":"العدّ محسوب من ملاحظات الجلسات الاصطناعية التي كتبها مُعدّ المقرر، وليست من مسافرين حقيقيين. السؤال التالي (فرق السعر بأسعار حية) لمشروع تجريبي لا لنموذج أولي، وقراره لغيداء بعد مراجعة م. ريان.","minutes":null,"lo":["LO4"]},{"id":"wrap-up","n":37,"title":"ثلاثة أشياء تأخذها معك","kind":"content","session":3,"hash":"f4790da8","md":"#### [day2#wrap-up] ثلاثة أشياء تأخذها معك\n\n*خلاصة اليوم الثاني*\n\n- **1 · افحص ما لم يُجرَّب.** خمسة فحوصات لخمسة أنواع، والمتوقع مكتوب قبل التشغيل.\n- **2 · الحدود قبل الناس.** مفتاح، أو بيانات، أو إفصاح: لا عرض قبل الإصلاح.\n- **3 · سلّم ما تعلّمته.** الشيفرة تُستبعد، والدليل والمواصفات والحالات تبقى.","notes":"دقيقتان. اسأل: ما السؤال التالي في فكرتك، وهل يجيب عنه نموذج أولي أم مشروع تجريبي؟","minutes":null,"lo":[]},{"id":"next","n":38,"title":"الاختبار القصير المراقب، ثم المراجعة مع المهندس","kind":"content","session":3,"hash":"2286bee5","md":"#### [day2#next] الاختبار القصير المراقب، ثم المراجعة مع المهندس\n\n*ما بقي اليوم*\n\n- الاختبار القصير: خمسة مخاطر في نموذج أولي لم تره، دون ذكاء اصطناعي.\n- المراجعة: حزمة تسليمك ونموذجك يعمل، وإيداع يختاره المهندس.\n- أكمل حزمتك، وتأكد أن لا مفتاح في أي ملف ولا في السجل.","notes":"بعد الاستراحة يبدأ الاختبار القصير المراقب. اطلب من الجميع إغلاق الوكلاء والمساعدات قبل الدخول.","minutes":null,"lo":[]}],"activities":[{"id":"review-day1-q1","slide":"review-day1","type":"single","prompt":"في شارح المقاعد طلبتَ إضافة رسالة لمقعد محجوز. ردّ الوكيل: «تم، واختبرت كل شيء». أيها تودعه؟","options":[{"key":"أ","text":"التغيير بعد أن شغّلته وجرّبت المقعد المحجوز وما كان يعمل قبله."},{"key":"ب","text":"التغيير كما هو: الوكيل قال إنه اختبره، وهذا يكفي لإيداعه الآن."},{"key":"ج","text":"التغيير الآن، ثم تشغّله بعد الإيداع لترى هل يعمل كما وصفه الوكيل."},{"key":"د","text":"لا شيء: كل تغيير من وكيل يُرفض أولًا."}],"correct":[0],"explanation":"«يعمل» يعني أنك شغّلته وتحققت منه، ومنه ما كان يعمل قبل التغيير.","misconceptions":["","يأخذ قول الوكيل دليلًا؛ «اختبرت» في المحادثة ليس تشغيلًا على جهازك","يخلط بين الحفظ والتحقق: الإيداع قبل التشغيل يضع في السجل حالة لا يُعرف هل تعمل","يرد كل تغيير دون فحص، فلا يتقدم البناء؛ التراجع لما كسر شيئًا لا لما لم يُفحص"],"lo":["LO2"]},{"id":"check-s1-q1","slide":"check-s1","type":"single","prompt":"بنى فريق المقاعد شارحًا جرّبوه على خمسة حجوزات، كلها لمسافر واحد في رحلة واحدة، فنجح كل شيء. أي فحص تضيفه أولًا؟","options":[{"key":"أ","text":"حجز سادس لمسافر واحد في رحلة واحدة، بالرقم المتوقع مكتوبًا قبل التشغيل."},{"key":"ب","text":"أن تُفتح الصفحة في أقل من ثانيتين."},{"key":"ج","text":"حجز لأربعة مسافرين على رحلتين، بالرقم المتوقع مكتوبًا."},{"key":"د","text":"أن يكون الشرح مقنعًا للمسافر وواضحًا في رأي أعضاء الفريق."}],"correct":[2],"explanation":"يجرّب ما لم يجرّبه العرض، ونتيجته رقم يُقارن.","misconceptions":["يكرر ما نجح في العرض، فلا يكشف شيئًا لم يُجرَّب","يقيس سرعة لم يسأل عنها أحد، ويترك الحالات التي لم تُجرَّب","","يفحص رأي المستخدم، وهذا يُعرف في الاختبار معهم لا بفحص قبول"],"lo":["LO3"]},{"id":"check-s2-q1","slide":"check-s2","type":"single","prompt":"نسخة شارح الأمتعة قبل اختبار الغد فيها أربعة حدود. أيها يأتي أولًا في القائمة المرتبة؟","options":[{"key":"أ","text":"حقل الوزن بلا عنوان مرئي، فلا يعرف قارئ الشاشة ما يُكتب فيه."},{"key":"ب","text":"مفتاح النموذج مكتوب في ملف تحمّله الصفحة."},{"key":"ج","text":"مسار ملف القواعد على جهاز المصمم."},{"key":"د","text":"حزمة في ملف المتطلبات دون إصدار مثبت ودون أن يسأل عنها أحد."}],"correct":[1],"explanation":"كل من يفتح الصفحة يرى المفتاح، والإلغاء عند المزوّد يجب أن يسبق أي عرض.","misconceptions":["حد حقيقي يمنع بعض المستخدمين، لكنه لا يعرّض أحدًا لضرر إن أُصلح قبل الاختبار","","يضر من يعيد استعمال الشيفرة لا من يرى الصفحة؛ يُكتب في التسليم","يُصلح بإصدار مثبت أو بحذف الحزمة، ولا يعرّض أحدًا الآن ما لم تُثبَّت"],"lo":["LO3"]},{"id":"check-s3-q1","slide":"check-s3","type":"single","prompt":"بعد خمس جلسات على شارح المقاعد، أي سطر يكتبه الفريق في قسم «ما ثبت» من حزمة التسليم؟","options":[{"key":"أ","text":"الصفحة سهلة وواضحة في رأي كل من بناها في الفريق."},{"key":"ب","text":"80% من المسافرين سيستعملون الصفحة بدل الاتصال بمركز الاتصال."},{"key":"ج","text":"الشيفرة مكتوبة بمكتبة Python القياسية دون أي حزمة إضافية."},{"key":"د","text":"أربعة من خمسة بحثوا عن زر لاختيار المقعد، فظنوا الصفحة تنفّذ."}],"correct":[3],"explanation":"نتيجة معدودة من الجلسات، بدليلها، وتغيّر المواصفات.","misconceptions":["رأي الفريق في عمله، لا نتيجة من المستخدمين","يعمّم من خمسة زملاء إلى كل المسافرين، والاختبار السريع لا يقيس نسبًا","تفصيل تقني يخص الشيفرة المستبعدة، لا ما تعلّمه الفريق عن السؤال",""],"lo":["LO4"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day2.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

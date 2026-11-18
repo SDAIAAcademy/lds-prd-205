@@ -1,0 +1,34 @@
+# بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة
+
+> وجّه وكيل برمجة لبناء نموذج أولي يجيب عن سؤال منتج، بخطوات صغيرة وفحوصات، واختبره مع خمسة مستخدمين، وسلّم الفريق الهندسي ما تعلّمته لا الشيفرة. مقرر من أكاديمية سدايا، الرمز LDS-PRD-205، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/lds-prd-205/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/lds-prd-205/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/lds-prd-205/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 14,041 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/lds-prd-205/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [اليوم 1: من سؤال إلى نسخة أولى تعمل](https://sdaiaacademy.github.io/lds-prd-205/slides/day1.md): الموجز وملف السياق، ثم البناء بخطوات صغيرة مع إيداع لكل خطوة، ثم استدعاء النموذج؛ الجلسات: النموذج الأولي يجيب عن سؤال، الموجز وملف السياق، خطوات صغيرة وإيداع لكل خطوة، بيئة معزولة ومفتاح محدود وبيانات اصطناعية؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/slides/day1.html؛ نحو 7,029 من الوحدات النصية
+- [اليوم 2: الحدود والتسليم](https://sdaiaacademy.github.io/lds-prd-205/slides/day2.md): فحوصات القبول، وقائمة تحقق الحدود، والاختبار مع خمسة مستخدمين، وما يحتفظ به الفريق الهندسي؛ الجلسات: أوهام المسار المثالي، الأسرار والحزم والوصول والتراخيص، خمسة مستخدمين وما يحتفظ به المهندسون؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/slides/day2.html؛ نحو 5,026 من الوحدات النصية
+- [المشروع الختامي: المراجعة المباشرة مع المهندس](https://sdaiaacademy.github.io/lds-prd-205/slides/capstone.md): نموذج فكرتك وحزمة تسليمه: خمس دقائق عرضًا، وأربع مع المهندس الذي يختار إيداعًا تشرحه؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/slides/capstone.html؛ نحو 1,415 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: كتابة الموجز](https://sdaiaacademy.github.io/lds-prd-205/labs/D1_1_brief.md): اليوم 1، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/labs/D1_1_brief.html
+- [المختبر 1.2: ملف السياق وخطة الوكيل](https://sdaiaacademy.github.io/lds-prd-205/labs/D1_2_context_file.md): اليوم 1، الجلسة 2، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/labs/D1_2_context_file.html
+- [المختبر 1.3: نسخة أولى بإيداع لكل خطوة](https://sdaiaacademy.github.io/lds-prd-205/labs/D1_3_first_version.md): اليوم 1، الجلسة 3، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/labs/D1_3_first_version.html
+- [المختبر 1.4: استدعاء النموذج والبيانات الاصطناعية](https://sdaiaacademy.github.io/lds-prd-205/labs/D1_4_model_calls.md): اليوم 1، الجلسة 4، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/labs/D1_4_model_calls.html
+- [المختبر 2.1: خمسة فحوصات قبول](https://sdaiaacademy.github.io/lds-prd-205/labs/D2_1_acceptance_checks.md): اليوم 2، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/labs/D2_1_acceptance_checks.html
+- [المختبر 2.2: قائمة تحقق الحدود](https://sdaiaacademy.github.io/lds-prd-205/labs/D2_2_limits_checklist.md): اليوم 2، الجلسة 2، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/labs/D2_2_limits_checklist.html
+- [المختبر 2.3: اختبار مع خمسة مستخدمين](https://sdaiaacademy.github.io/lds-prd-205/labs/D2_3_five_users.md): اليوم 2، الجلسة 3، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-prd-205/labs/D2_3_five_users.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/lds-prd-205/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 14,041 من الوحدات النصية
+- [context/day1.md](https://sdaiaacademy.github.io/lds-prd-205/context/day1.md): اليوم 1، نحو 7,029 من الوحدات النصية
+- [context/day2.md](https://sdaiaacademy.github.io/lds-prd-205/context/day2.md): اليوم 2، نحو 5,026 من الوحدات النصية
+- [context/capstone.md](https://sdaiaacademy.github.io/lds-prd-205/context/capstone.md): المشروع الختامي، نحو 1,415 من الوحدات النصية

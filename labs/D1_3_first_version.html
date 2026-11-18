@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.3 · نسخة أولى بإيداع لكل خطوة · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_3_first_version.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.3</span>
+<h1>نسخة أولى بإيداع لكل خطوة</h1>
+<p>من مجلد البداية تبني الصفحة والبحث عن الحجز والقاعدة والرسوم في ثلاث خطوات، لكل خطوة تحقق وإيداع، ثم تكتشف تغييرًا «مرتبًا» كسر البحث وتتراجع عنه. ثم أول خطوة في نموذجك.</p>
+<div class="meta"><span>60 دقيقة</span><span>اليوم 1</span><span>الجلسة 3: خطوات صغيرة وإيداع لكل خطوة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.3">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>نسخة أولى من الشارح تعمل على جهازك: الصفحة، والبحث عن الحجز، والقاعدة والرسوم.</li>
+    <li>مستودع Git فيه أربعة إيداعات: البداية، ثم إيداع لكل خطوة تحققت منها.</li>
+    <li>تغيير من الوكيل كسر ما كان يعمل، اكتشفته وتراجعت عنه.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/kit/start.zip" download><b>start.zip</b><span>مجلد البداية: البيانات الاصطناعية، وستة حجوزات للعرض.</span></a>
+  <a href="files/kit/v1_broken.zip" download><b>v1_broken.zip</b><span>الخطوة 3 بعد «ترتيب» قام به وكيل دون طلب. للخطوة 5.</span></a>
+  <a href="files/kit/v1_step1.zip" download><b>v1_step1.zip</b><span>الحالة المرجعية للخطوة 1، إن تعطل وكيلك.</span></a>
+  <a href="files/kit/v1_step2.zip" download><b>v1_step2.zip</b><span>الحالة المرجعية للخطوة 2.</span></a>
+  <a href="files/kit/v1_step3.zip" download><b>v1_step3.zip</b><span>الحالة المرجعية للخطوة 3.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي: <b>كامل.</b> الوكيل يكتب الشيفرة، وأنت تتحقق وتودع وتتراجع. موجزك وملف سياقك من المختبرين 1.1 و1.2 معك؛ إن لم يكتملا فاطلب المرجعيين من المدرّب.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · جهّز المستودع من مجلد البداية مع موجزك وملف سياقك، وأودع <span class="min">5 دقائق</span></h3>
+  <p>فك <code>start.zip</code>، وضع فيه <code>BRIEF.md</code> و<code>AGENTS.md</code>، ثم في الطرفية داخل المجلد:</p>
+  <pre class="code"><code class="language-bash">git init
+git add .
+git commit -m "Start: brief, context file and data"
+git log --oneline</code></pre>
+</div>
+
+<div class="step">
+  <h3>2 · الخطوة 1: الصفحة وحقل الرمز؛ شغّل وتحقق وأودع <span class="min">10 دقائق</span></h3>
+  <div class="prompt" data-tool="وكيل برمجة">الخطوة 1 فقط من الخطة: خادم صغير في app.py بمكتبة Python القياسية يعرض static/index.html على 127.0.0.1:8205. الصفحة عربية ومن اليمين إلى اليسار، فيها حقل «رمز الحجز» بعنوان وزر. لا بحث بعد. ثم أخبرني كيف أشغّله.</div>
+  <p>شغّل <code>uv run app.py</code> وافتح العنوان. تحقق: العنوان بالعربية، والحقل له عنوان، والصفحة من اليمين. أوقف الخادم بـ Ctrl+C، ثم:</p>
+  <pre class="code"><code class="language-bash">git status
+git add .
+git commit -m "Step 1: page with the booking-code form"</code></pre>
+</div>
+
+<div class="step">
+  <h3>3 · الخطوة 2: البحث عن الحجز وعرض الأجرة؛ شغّل وتحقق وأودع <span class="min">10 دقائق</span></h3>
+  <div class="prompt" data-tool="وكيل برمجة">الخطوة 2 فقط: عند إدخال رمز، ابحث عنه في data/bookings.csv واعرض اسم الأجرة من data/fare_rules.json والمسار. رمز غير موجود: رسالة «لم نجد حجزًا بهذا الرمز». لا تغيّر غير ذلك.</div>
+  <p>جرّب حجزين من الستة ورمزًا غير موجود. نجحت الثلاثة؟ أودع: <code>git commit -am "Step 2: look up the booking and show its fare"</code>.</p>
+</div>
+
+<div class="step">
+  <h3>4 · الخطوة 3: القاعدة والرسوم؛ شغّل وتحقق وأودع <span class="min">10 دقائق</span></h3>
+  <div class="prompt" data-tool="وكيل برمجة">الخطوة 3 فقط: اعرض رمز القاعدة ونصها، وهل يُسمح بالتغيير الآن بحسب الساعات حتى الإقلاع، ورسوم التغيير من القاعدة. الحساب في البرنامج. لا تغيّر غير ذلك.</div>
+  <p>تحقق بحجزين: واحد يُسمح بتغييره، وواحد لا يُسمح (الساعات أقل من الموعد). أودع.</p>
+</div>
+
+<div class="step">
+  <h3>5 · جرّب تغيير الوكيل المرتب، واكتشفه بالتحقق، وتراجع عنه <span class="min">10 دقائق</span></h3>
+  <p>طلب أحدهم من الوكيل «رتّب الشيفرة»، فأعاد كتابة جزء يعمل. انسخ <code>app.py</code> من <code>v1_broken.zip</code> فوق ملفك، ثم:</p>
+  <pre class="code"><code class="language-bash">git diff --stat
+uv run app.py</code></pre>
+  <p>ماذا يحدث؟ لا تطلب من الوكيل أن يصلح ما كسره. عد إلى آخر إيداع يعمل:</p>
+  <pre class="code"><code class="language-bash">git restore .
+uv run app.py</code></pre>
+  <p>اكتب في سطر: ما الذي تغيّر دون طلب، وكيف عرفت.</p>
+</div>
+
+<div class="step">
+  <h3>6 · فكرتك: أول خطوة عاملة وأول إيداع <span class="min">15 دقيقة</span></h3>
+  <p>في مستودع فكرتك: اطلب الخطوة الأولى من خطتك وحدها، وشغّلها، وتحقق منها، وأودعها. خطوة صغيرة تعمل خير من ثلاث لا تعمل.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>اقرأ <code>git diff</code> للتغيير المكسور (قبل التراجع) واكتب في سطرين ما غيّره الوكيل دون أن يُطلب منه.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم إيداعًا في <code>git log --oneline</code>؟ وهل كل إيداع يعمل لو عدت إليه؟</li>
+  <li>في التغيير المكسور: أي تحقق كشفه، وهل كانت الشاشة ستدلك عليه دون تشغيل؟</li>
+  <li>لماذا تراجعت بدل أن تطلب إصلاحًا فوق التغيير؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>التحقق من الحل: <code>uv run labs/solutions/run_all.py 1.3</code>. ينشئ مستودعًا مؤقتًا، ويودع البداية والخطوات الثلاث بعد تحقق كل منها، ثم ينسخ التغيير المكسور فيفشل التحقق، ويتراجع بـ <code>git restore .</code>. النتيجة: أربعة إيداعات، والتغيير المكسور غيّر ملفًا واحدًا.</li>
+    <li>التغيير المكسور يغيّر اسم عمود المفتاح من <code>ref</code> إلى <code>booking_ref</code> «للوضوح»، والملف ما زال <code>ref</code>: البرنامج ينهار عند التشغيل برسالة <code>KeyError</code>.</li>
+    <li>رسوم الخطوة 3 في الحالة المرجعية هي رسوم القاعدة دون ضرب، والحجوزات الستة كلها لمسافر واحد ورحلة واحدة، فلا يظهر الخطأ هنا. لا تنبّه إليه: يظهر في المختبر 2.1.</li>
+    <li>الخطأ الشائع: <code>git add .</code> قبل التحقق، أو طلب «الخطوات الثلاث معًا». أعد المشارك إلى خطوة واحدة.</li>
+    <li>لم يُشغَّل هذا المختبر على وكيل حقيقي عند إعداد المقرر: الحالات المرجعية تمثّل ردود الوكيل، وفُحصت بالسكربت.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_2_context_file.html" rel="prev">→ المختبر السابق</a><a href="D1_4_model_calls.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع b5b0f37</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T07:37:45Z","version":"2027.1.0","commit":"b5b0f37"},"course":{"id":"lds-prd-205","code":"LDS-PRD-205","title":"بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-prd-205/","repo":"SDAIAAcademy/lds-prd-205","home":"../index.html"},"lab":{"id":"1.3","title":"نسخة أولى بإيداع لكل خطوة","summary":"من مجلد البداية تبني الصفحة والبحث عن الحجز والقاعدة والرسوم في ثلاث خطوات، لكل خطوة تحقق وإيداع، ثم تكتشف تغييرًا «مرتبًا» كسر البحث وتتراجع عنه. ثم أول خطوة في نموذجك.","minutes":60,"day":1,"unit":"اليوم 1","session":3,"deck":"../slides/day1.html#lab-1-3","prev":"D1_2_context_file.html","next":"D1_4_model_calls.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

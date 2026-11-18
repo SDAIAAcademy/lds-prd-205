@@ -1,0 +1,1 @@
+rtl-fare-text-helper

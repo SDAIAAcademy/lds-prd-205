@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · خمسة فحوصات قبول · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_acceptance_checks.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>خمسة فحوصات قبول</h1>
+<p>تكتب خمسة فحوصات للشارح، ويحوّلها الوكيل إلى برنامج يعمل دون مفتاح، فتشغّلها على النسخة v2 وتصلح ما يُخفق بطلب واحد لكل فحص، مع سجل فحوصات. ثم خمسة فحوصات لفكرتك.</p>
+<div class="meta"><span>60 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: أوهام المسار المثالي</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>خمسة فحوصات قبول للشارح، مكتوبة بالمعطى والفعل والمتوقع، ثم برنامجًا يشغّلها دون مفتاح.</li>
+    <li>سجل فحوصات: نتيجة كل فحص على v2، والإصلاحات، ونتيجة الخمسة بعد كل إصلاح.</li>
+    <li>خمسة فحوصات لفكرتك، وتشغيلها مرة على الأقل.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/kit/v2.zip" download><b>v2.zip</b><span>النسخة التي جُرِّبت على الحجوزات الستة الأولى. نقطة البداية.</span></a>
+  <a href="files/templates/check_log_template.md" download><b>check_log_template.md</b><span>قالب سجل الفحوصات.</span></a>
+  <a href="files/fare_rules_spec.md" target="_blank"><b>fare_rules_spec.md</b><span>القواعد وطريقة حساب الرسوم.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي: <b>كامل.</b> أنت تكتب ما يجب أن يحدث، والوكيل يحوّله إلى برنامج. الفحوصات تعمل بوضع البديل، فلا تحتاج إلى مفتاح.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اكتب الفحوصات الخمسة: المعطى والفعل والمتوقع، دون شيفرة <span class="min">12 دقيقة</span></h3>
+  <p>من الموجز ومن المواصفات، لا من الشاشة. كل فحص حالة لم يجرّبها العرض الأول. افتح <code>data/bookings.csv</code> في v2 واختر حجوزاتك منه.</p>
+  <table>
+    <tr><th>الفحص</th><th>المعطى</th><th>الفعل</th><th>المتوقع</th></tr>
+    <tr><td>C1</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>C2</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>C3</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>C4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>C5</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+  <p class="small">ما يجب أن يغطيه الخمسة معًا: حجز عادي، وحجز لعدة مسافرين ورحلات، ورمز غير موجود، وتعطل النموذج، والصفحة نفسها (اللغة والاتجاه والعنوان والإفصاح).</p>
+</div>
+
+<div class="step">
+  <h3>2 · اطلب من الوكيل تحويلها إلى checks.py يعمل بوضع البديل <span class="min">10 دقائق</span></h3>
+  <div class="prompt" data-tool="وكيل برمجة">اكتب checks.py بمكتبة Python القياسية يشغّل هذه الفحوصات الخمسة على app.py بوضع MODEL_MODE=stub (وfail للفحص الرابع)، دون خادم ودون مفتاح، ويطبع «اجتاز» أو «أخفق» لكل فحص ثم المجموع. لا تغيّر app.py. الفحوصات: <span class="ph">الصق جدولك هنا</span></div>
+  <p>اقرأ ما كتبه: هل يفحص كل سطر ما كتبته أنت في «المتوقع»، أم شيئًا أسهل؟</p>
+</div>
+
+<div class="step">
+  <h3>3 · شغّلها على v2 وسجّل كل نتيجة في سجل الفحوصات <span class="min">8 دقائق</span></h3>
+  <pre class="code"><code class="language-bash">uv run checks.py</code></pre>
+  <p>سجّل كل نتيجة. لكل فحص أخفق: ما الذي ظهر بدل المتوقع؟ جرّبه في المتصفح أيضًا لترى ما سيراه المسافر.</p>
+</div>
+
+<div class="step">
+  <h3>4 · أصلح فحصًا أخفق بطلب واحد، وأعد الخمسة، وأودع <span class="min">12 دقيقة</span></h3>
+  <p>طلب واحد لفحص واحد، بلغة القاعدة لا بلغة الشيفرة، مع «لا تغيّر غير ذلك». ثم أعد الخمسة كلها: إصلاح يكسر فحصًا آخر لا يُودَع.</p>
+</div>
+
+<div class="step">
+  <h3>5 · أصلح الفحص الآخر الذي أخفق بالطريقة نفسها <span class="min">8 دقائق</span></h3>
+  <p>ثم الخمسة كلها، وإيداع، وسطر في السجل. تعطل وكيلك؟ الحالة المرجعية بعد الإصلاحين يعطيك إياها المدرّب.</p>
+</div>
+
+<div class="step">
+  <h3>6 · فكرتك: خمسة فحوصات لنموذجك وتشغيلها <span class="min">10 دقائق</span></h3>
+  <p>الطريقة نفسها: الجدول أولًا، ثم البرنامج. فحص واحد على الأقل لحالة لم تجرّبها بعد. سجّل النتائج كما هي، ولو فشل أكثرها.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>أضف فحصًا سادسًا لحجز لا يُغيَّر الآن، واقرأ رسالته بعين المسافر: هل يمكن أن تُفهم إلغاءً؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم فحصًا نجح على v2؟ ولماذا لم يُكتشف ما أخفق في العرض الأول؟</li>
+  <li>ماذا اخترع النموذج حين وصله رمز غير موجود؟ ولماذا لم يكن ذلك خطأ النموذج؟</li>
+  <li>بعد الإصلاح الأول، هل أعدت الفحوصات الخمسة أم الفحص الذي أصلحته فقط؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>التحقق: <code>uv run labs/solutions/run_all.py 2.1</code>. على v2: 3 من 5؛ C2 يُخفق (الرسوم 75 للحجز QB3M9K لثلاثة مسافرين ورحلتين، والصحيح 450)، وC3 يُخفق (يُستدعى النموذج فيكتب البديل رسومًا مخترعة: مئة ريال لكل مسافر). على v3: 5 من 5. السجل المرجعي: <code>labs/solutions/reference/check_log.md</code>، والفحوصات المرجعية: <code>labs/files/kit/v3/checks.py</code> (لا تعطها قبل نهاية الخطوة 2).</li>
+    <li>الحالة المرجعية بعد الإصلاحين: <code>v3.zip</code>. أعطها لمن تعطل وكيله في الخطوة 4 أو 5، وبعد أن يكون قد سجّل نتائج v2.</li>
+    <li>الخطأ الشائع: فحوصات تكرر الحجوزات الستة الأولى فتنجح كلها. اسأل: أي حجز في الملف لم يجرّبه أحد بعد؟ والخطأ الثاني: برنامج فحوصات يكتب «المتوقع» من ناتج البرنامج نفسه. اطلب أن يكون الرقم المتوقع 450 مكتوبًا في الفحص.</li>
+    <li>الاختراع في C3 من البديل المكتوب مسبقًا، وهو مكتوب ليمثّل ما قد يفعله نموذج سُئل دون قاعدة. لم يُجرَّب على نموذج مستضاف.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_4_model_calls.html" rel="prev">→ المختبر السابق</a><a href="D2_2_limits_checklist.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع b5b0f37</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T07:37:45Z","version":"2027.1.0","commit":"b5b0f37"},"course":{"id":"lds-prd-205","code":"LDS-PRD-205","title":"بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-prd-205/","repo":"SDAIAAcademy/lds-prd-205","home":"../index.html"},"lab":{"id":"2.1","title":"خمسة فحوصات قبول","summary":"تكتب خمسة فحوصات للشارح، ويحوّلها الوكيل إلى برنامج يعمل دون مفتاح، فتشغّلها على النسخة v2 وتصلح ما يُخفق بطلب واحد لكل فحص، مع سجل فحوصات. ثم خمسة فحوصات لفكرتك.","minutes":60,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_4_model_calls.html","next":"D2_2_limits_checklist.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

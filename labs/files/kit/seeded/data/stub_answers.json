@@ -1,0 +1,6 @@
+{
+  "_note": "Scripted stand-in for a hosted model (MODEL_MODE=stub). Fixed sentences filled from the facts in the prompt.",
+  "allowed": "تستطيع تغيير حجزك وفق القاعدة {RULE_ID} لأجرة «{FAMILY}». رسوم التغيير لهذا الحجز بالريال: {FEE}، ويُضاف فرق السعر إن كانت الرحلة الجديدة أغلى. التغيير متاح حتى {DEADLINE} قبل الإقلاع.",
+  "not_allowed": "لا يمكن تغيير هذا الحجز الآن وفق القاعدة {RULE_ID} لأجرة «{FAMILY}»، لأن التغيير يُغلق قبل الإقلاع بـ{DEADLINE}.",
+  "no_rule": "تستطيع تغيير حجزك برسوم قدرها مئة ريال لكل مسافر، ويُضاف فرق السعر إن وُجد."
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="page" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة · أكاديمية سدايا</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<meta name="description" content="وجّه وكيل برمجة لبناء نموذج أولي يجيب عن سؤال منتج، بخطوات صغيرة وفحوصات، واختبره مع خمسة مستخدمين، وسلّم الفريق الهندسي ما تعلّمته لا الشيفرة">
+<link rel="icon" href="_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="index.md">
+<link rel="describedby" href="llms.txt">
+<link rel="stylesheet" href="_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo" id="logo"></div><nav><a href="slides/day1.html">الشرائح</a><a href="practice.html">أسئلة التدريب</a><a href="index.md" type="text/markdown">Markdown</a></nav></div>
+<div class="kicker">مسار التنفيذيين والقادة · أكاديمية سدايا · LDS-PRD-205</div>
+<h1>بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة<span class="sub en" lang="en" dir="ltr">Prototyping AI Products with Coding Agents</span></h1>
+<p>وجّه وكيل برمجة لبناء نموذج أولي يجيب عن سؤال منتج، بخطوات صغيرة وفحوصات، واختبره مع خمسة مستخدمين، وسلّم الفريق الهندسي ما تعلّمته لا الشيفرة</p>
+<div class="meta"><span class="track">مسار التنفيذيين والقادة</span><span>يومان تدريبيان + يوم للمشروع الختامي</span><span>16 ساعة</span><span>المستوى 200</span></div>
+</div>
+</header>
+<main class="wrap">
+<h2>عن المقرر</h2>
+<p>يوجّه العاملون في المنتجات والتصميم وكيل برمجة لبناء نموذج أولي لتطبيق ويب يستدعي نموذجًا مستضافًا على بيانات اصطناعية، ثم يضيفون فحوصات القبول، ويختبرونه مع خمسة مستخدمين، ويحددون المواضع التي تضلل فيها النماذج الأولية التي يبنيها الوكلاء، ويسلّمون الفريق الهندسي ما يُحتفظ به وما يُستبعد. أما الأدوات التي لا تحتاج إلى برمجة فيغطيها المقرر USE-FLU-205، والهندسة باستخدام الوكلاء يغطيها المقرر DEV-SWE-201.</p>
+<p><b>لمن هذا المقرر:</b> الممارسون. مديرو المنتجات ومالكوها، ومصممو الخدمات والتفاعل، وقادة التسليم ممن يتولون ميزات أو خدمات قائمة على الذكاء الاصطناعي، والمهندسون المنتقلون إلى أدوار المنتجات.</p>
+<p><b>الصيغة:</b> ورشة عمل: يومان مع مختبرات وعمل تحضيري موجه واختبار مع خمسة مستخدمين</p>
+<h2>دراسة الحالة</h2>
+<div class="note info"><b>طيران قُبّرة: شارح تغيير الحجز.</b> طيران قُبّرة ناقل اقتصادي افتراضي، يريد فريق المنتج فيه أن يعرف هل تغني صفحة تشرح بالعربية رسوم تغيير الحجز وقاعدته عن الاتصال بمركز الاتصال. يبني المشاركون بوكيل برمجة «شارح تغيير الحجز»: الرسوم يحسبها البرنامج من قواعد الأجرة الثلاث، والشرح يكتبه نموذج مستضاف (وبديل مكتوب مسبقًا في الملفات). كل البيانات اصطناعية وثابتة: 6 حجوزات للعرض ثم 40 حجزًا، وأعداد تواصل لشهر، وخمس جلسات اختبار مسجلة، وحالة مرجعية لكل خطوة، ونسخة فيها ثمانية حدود مزروعة عمدًا لها مفتاح للمدرب.</div>
+<h2>مخطط المقرر</h2>
+<div class="day">
+<div class="day-head c-teal"><div><div class="t">اليوم 1 · 4 جلسات · 4 مختبرات</div><h3>من سؤال إلى نسخة أولى تعمل</h3></div><a class="btn" href="slides/day1.html">فتح الشرائح</a></div>
+<div class="scroll"><table>
+<tr><th>الجلسة</th><th>الموضوع</th><th>المختبر</th></tr>
+<tr><td>1</td><td><b>النموذج الأولي يجيب عن سؤال</b><br>النماذج الأولية المنطلقة من سؤال ومستوى دقتها، والنموذج الأولي والمشروع التجريبي والمنتج<ul><li>تصوغ سؤالًا يجيب عنه نموذج أولي في أيام، وتسمّي القرار الذي يتوقف عليه</li><li>تحدد ما يجب أن يكون حقيقيًا في النموذج الأولي وما يكفي أن يكون مزيفًا</li><li>تميّز النموذج الأولي من المشروع التجريبي ومن المنتج بما يثبته كل منها</li></ul></td><td><a href="labs/D1_1_brief.html">المختبر 1.1 · كتابة الموجز</a> <span class="muted">(60 د)</span></td></tr>
+<tr><td>2</td><td><b>الموجز وملف السياق</b><br>ما يقرؤه وكيل البرمجة في كل جلسة، وملف السياق، والخطة قبل الشيفرة، وأنماط الصلاحيات<ul><li>تفصل ما يبقى في الموجز عمّا يدخل ملف السياق</li><li>تكتب ملف سياق فيه التشغيل والبنية والقواعد وطريقة العمل</li><li>تراجع خطة الوكيل على الموجز قبل أن يكتب سطرًا</li></ul></td><td><a href="labs/D1_2_context_file.html">المختبر 1.2 · ملف السياق وخطة الوكيل</a> <span class="muted">(60 د)</span></td></tr>
+<tr><td>3</td><td><b>خطوات صغيرة وإيداع لكل خطوة</b><br>تغيير واحد ثم تشغيل وتحقق ثم إيداع، وإدارة الإصدارات وسيلةً للتراجع، وقراءة الفرق دون قراءة الشيفرة<ul><li>تطلب من الوكيل تغييرًا واحدًا وتتحقق منه بالتشغيل قبل الإيداع</li><li>تقرأ ما غيّره الوكيل من الفرق في Git دون أن تقرأ الشيفرة كلها</li><li>تتراجع عن تغيير كسر ما كان يعمل بأمر واحد</li></ul></td><td><a href="labs/D1_3_first_version.html">المختبر 1.3 · نسخة أولى بإيداع لكل خطوة</a> <span class="muted">(60 د)</span></td></tr>
+<tr><td>4</td><td><b>بيئة معزولة ومفتاح محدود وبيانات اصطناعية</b><br>بيئات التشغيل المعزولة والمفاتيح محدودة الإنفاق والبيانات الاصطناعية، والأرقام من البرنامج والكلمات من النموذج<ul><li>تضع المفتاح في ملف البيئة وحده، وتحدّ الإنفاق وعدد الاستدعاءات</li><li>تطلب بيانات اصطناعية ثابتة تشبه الحالات الصعبة لا السهلة</li><li>تقسم العمل: الرقم يحسبه البرنامج، والشرح يكتبه النموذج</li></ul></td><td><a href="labs/D1_4_model_calls.html">المختبر 1.4 · استدعاء النموذج والبيانات الاصطناعية</a> <span class="muted">(60 د)</span></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-cyan"><div><div class="t">اليوم 2 · 3 جلسات · 3 مختبرات</div><h3>الحدود والتسليم</h3></div><a class="btn" href="slides/day2.html">فتح الشرائح</a></div>
+<div class="scroll"><table>
+<tr><th>الجلسة</th><th>الموضوع</th><th>المختبر</th></tr>
+<tr><td>1</td><td><b>أوهام المسار المثالي</b><br>لماذا ينجح العرض ويفشل الاستعمال، وفحوصات القبول بالمعطى والفعل والمتوقع، والفحص الذي يجب أن يُخفق أولًا<ul><li>تجد الحالات التي لم يجربها العرض الأول</li><li>تكتب فحص قبول بالمعطى والفعل والمتوقع قبل أن يُبرمج</li><li>تعيد الفحوصات كلها بعد كل إصلاح وتسجل نتائجها</li></ul></td><td><a href="labs/D2_1_acceptance_checks.html">المختبر 2.1 · خمسة فحوصات قبول</a> <span class="muted">(60 د)</span></td></tr>
+<tr><td>2</td><td><b>الأسرار والحزم والوصول والتراخيص</b><br>الأسرار والحزم غير المفحوصة وفجوات إمكانية الوصول والكتابة من اليمين إلى اليسار، والبيانات الحقيقية، وتراخيص الأصول المولَّدة<ul><li>تطبق قائمة تحقق الحدود بفحص آلي ثم باليد</li><li>تتحقق من مصدر كل ملف بيانات وترخيص كل أصل</li><li>ترتب الحدود بالأثر وتحدد لكل حد إصلاحه ومن يصلحه</li></ul></td><td><a href="labs/D2_2_limits_checklist.html">المختبر 2.2 · قائمة تحقق الحدود</a> <span class="muted">(60 د)</span></td></tr>
+<tr><td>3</td><td><b>خمسة مستخدمين وما يحتفظ به المهندسون</b><br>الاختبار السريع مع خمسة مستخدمين والإفصاح لهم، وترميز النتائج، وما يحتفظ به الفريق الهندسي: التعلّم والمواصفات وحالات التقييم<ul><li>تدير جلسة اختبار قصيرة بمهمة واحدة وإفصاح عن الذكاء الاصطناعي</li><li>ترمّز ملاحظات خمس جلسات في نتائج معدودة تجيب عن السؤال</li><li>تفصل في التسليم التعلّم والمواصفات وحالات التقييم عن الشيفرة المستبعدة</li></ul></td><td><a href="labs/D2_3_five_users.html">المختبر 2.3 · اختبار مع خمسة مستخدمين</a> <span class="muted">(60 د)</span></td></tr>
+</table></div>
+</div>
+<div class="day">
+<div class="day-head c-amber"><div><div class="t">المشروع الختامي</div><h3>المراجعة المباشرة مع المهندس</h3></div><a class="btn" href="slides/capstone.html">فتح الشرائح</a></div>
+<div class="scroll"><table><tr><td>نموذج فكرتك وحزمة تسليمه: خمس دقائق عرضًا، وأربع مع المهندس الذي يختار إيداعًا تشرحه</td></tr></table></div>
+</div>
+<h2>المشروع الختامي</h2>
+<div class="two">
+<div><p>نموذج أولي لفكرة المشارك نفسه على بيانات اصطناعية، مع النتائج وحزمة تسليم يراجعها مهندس مراجعة مباشرة</p><p><b>ما تسلّمه:</b> مشروع فردي يُسلَّم رابطًا لمجلد مشترك في Google Drive، فيه: الموجز وملف السياق، وحزمة Git للمستودع بكل إيداعاته (git bundle) وسجلات تفاعل الوكيل، وسجل الفحوصات، وقائمة الحدود المرتبة، وجدول نتائج الاختبار مع خمسة مستخدمين، وحزمة التسليم. بيانات اصطناعية فقط، ولا مفتاح في أي ملف. ثم تسع دقائق: خمس للعرض، وأربع يختار فيها المهندس إيداعًا يشرحه المشارك ويسأل عن الحزمة.</p><p><b>الصيغة:</b> العرض والتجربة الحية 5 د · الأسئلة 4 د</p></div>
+<div><h3>سلم التقدير</h3><div class="bar c-teal"><span>النموذج الأولي لفكرتك: يعمل على بيانات اصطناعية، وإيداع لكل خطوة عاملة<i style="--w:57%"></i></span><b>20%</b></div><div class="bar c-cyan"><span>سجل الفحوصات وقائمة الحدود المرتبة لنموذجك<i style="--w:57%"></i></span><b>20%</b></div><div class="bar c-coral"><span>نتائج الاختبار مع خمسة مستخدمين بأدلتها<i style="--w:71%"></i></span><b>25%</b></div><div class="bar c-purple"><span>حزمة التسليم: التعلّم والمواصفات وحالات التقييم منفصلة عن الشيفرة المستبعدة<i style="--w:100%"></i></span><b>35%</b></div></div>
+</div>
+<h2>نواتج التعلم</h2>
+<p>بنهاية المقرر يستطيع المشارك أن:</p>
+<div class="day"><div class="scroll"><table>
+<tr><th></th><th>نواتج التعلم</th><th>المستوى</th><th>الدليل</th></tr>
+<tr><td><b>LO1</b></td><td>يعدّ موجزًا وملف سياق يحددان السؤال والنطاق والبيانات والقيود ومعايير الإنجاز، استنادًا إلى فكرة الحالة ومواصفاتها</td><td>Applied</td><td>موجز يبني الوكيل منه نسخة أولى عاملة</td></tr>
+<tr><td><b>LO2</b></td><td>يستخدم وكيل برمجة لبناء نموذج أولي يستدعي نموذجًا لغويًا، بخطوات صغيرة متحقق منها وتحت إدارة الإصدارات، باستخدام بيئة عمل معزولة ومفتاح محدود الإنفاق وبيانات اصطناعية</td><td>Applied</td><td>نموذج أولي يعمل وإيداع لكل خطوة عاملة</td></tr>
+<tr><td><b>LO3</b></td><td>يختبر النموذج الأولي وفق فحوصات القبول وقائمة تحقق للحدود تشمل المسارات المضمّنة في الرموز البرمجية والأسرار المكشوفة والتبعيات غير المفحوصة والبيانات الحقيقية وإمكانية الوصول، على النموذج الأولي العامل</td><td>Applied</td><td>سجل فحوصات وقائمة حدود مرتبة</td></tr>
+<tr><td><b>LO4</b></td><td>يسلّم حزمة تسليم تفصل ما ثبت من تعلّم والمواصفات وحالات التقييم عن الرموز البرمجية الواجب استبعادها، استنادًا إلى نتائج الاختبار مع خمسة مستخدمين ومراجع هندسي</td><td>Performance</td><td>حزمة تسليم تُقبل في مراجعة مباشرة</td></tr>
+</table></div></div>
+<h2>الأدوات</h2>
+<div class="grid">
+<div class="card c-teal"><h3>وكيل برمجة</h3><p>goose · OpenCode · أي وكيل برمجة تجاري</p></div>
+<div class="card c-cyan"><h3>بيئة عمل معزولة مع إدارة الإصدارات</h3><p>حاوية تطوير محلية مع Git · بيئة تطوير مستضافة بباقة مجانية</p></div>
+<div class="card c-coral"><h3>الوصول إلى نموذج مع حد للإنفاق</h3><p>نموذج مستضاف مفتوح الأوزان · أي واجهة برمجة تطبيقات (API) تجارية</p></div>
+</div>
+<h2>قبل أن تبدأ</h2>
+<h3>المتطلبات السابقة</h3>
+<ul><li>يملك خبرة سابقة في كتابة متطلبات منتج أو قصة مستخدم</li><li>ينفذ أمرًا في الطرفية باتباع خطوات مكتوبة</li></ul>
+<div class="note tip">المختبرات صفحات في متصفحك، تصل إليها من الجدول أعلاه ومن الشرائح.</div>
+<h2>المصادر</h2>
+<h3>المرجعيات الوطنية</h3>
+<ul><li><a href="https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataProtectionLawAr.pdf">نظام حماية البيانات الشخصية</a></li><li><a href="https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/b7cfae89-828e-4994-b167-adaa00e37188/1">نظام حماية البيانات الشخصية: النص بتعديلاته (هيئة الخبراء بمجلس الوزراء)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf">Personal Data Protection Law (SDAIA, English edition)</a></li><li><a href="https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf">مكتب إدارة البيانات الوطنية: سياسة تصنيف البيانات</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf">NDMO: Data Classification Policy (English edition)</a></li><li><a href="https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf">سدايا: مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية (2025)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf">SDAIA: Generative AI Guidelines for Government (English edition)</a></li><li><a href="https://sdaia.gov.sa/ar/SDAIA/about/Files/GenerativeAIPublicAR.pdf">سدايا: مبادئ الذكاء الاصطناعي التوليدي للعموم (2025)</a></li><li><a href="https://sdaia.gov.sa/en/SDAIA/about/Files/GenerativeAIPublicEN.pdf">SDAIA: Generative AI Guidelines for Public (English edition)</a></li><li><a href="https://sdaia.gov.sa/ar/SDAIA/about/Pages/RegulationsAndPolicies.aspx">سدايا: الأنظمة والسياسات (صفحة الفهرس)</a></li></ul>
+<h3>وكلاء البرمجة وملفات السياق</h3>
+<ul><li><a href="https://agents.md/">AGENTS.md: a README for agents</a></li><li><a href="https://github.com/aaif-goose/goose">goose: open source AI agent (Apache-2.0), repository README</a></li><li><a href="https://goose-docs.ai/docs/guides/managing-tools/goose-permissions">goose documentation: goose permission modes</a></li><li><a href="https://opencode.ai/docs/permissions/">OpenCode documentation: permissions</a></li><li><a href="https://git-scm.com/docs/git-restore">Git documentation: git-restore</a></li><li><a href="https://git-scm.com/docs/git-revert">Git documentation: git-revert</a></li></ul>
+<h3>النماذج المستضافة والمفاتيح</h3>
+<ul><li><a href="https://openrouter.ai/docs/api-reference/limits">OpenRouter documentation: API rate limits and free model variants</a></li><li><a href="https://openrouter.ai/docs/features/provisioning-api-keys">OpenRouter documentation: provisioning API keys with a credit limit</a></li></ul>
+<h3>الاختبار مع المستخدمين وإمكانية الوصول</h3>
+<ul><li><a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">Nielsen Norman Group: Why You Only Need to Test with 5 Users (2000)</a></li><li><a href="https://github.com/w3c/wcag/blob/main/guidelines/sc/20/language-of-page.html">W3C WCAG 2.2 source: Success Criterion 3.1.1 Language of Page</a></li><li><a href="https://github.com/w3c/wcag/blob/main/guidelines/sc/20/labels-or-instructions.html">W3C WCAG 2.2 source: Success Criterion 3.3.2 Labels or Instructions</a></li><li><a href="https://github.com/w3c/wcag/blob/main/guidelines/sc/20/info-and-relationships.html">W3C WCAG 2.2 source: Success Criterion 1.3.1 Info and Relationships</a></li></ul>
+<h2>الملفات والروابط</h2>
+<div class="files">
+<a href="practice.html"><b>practice.html</b><span>أسئلة التدريب مع التعليل</span></a>
+<a href="index.md"><b>index.md</b><span>هذه الصفحة بصيغة Markdown، لمساعد ذكي</span></a>
+<a href="llms.txt"><b>llms.txt</b><span>المقرر للمساعدات الذكية (llms.txt)</span></a>
+<a href="https://github.com/SDAIAAcademy/lds-prd-205"><b>SDAIAAcademy/lds-prd-205</b><span>مستودع المقرر</span></a>
+</div>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع b5b0f37</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T07:37:45Z","version":"2027.1.0","commit":"b5b0f37"},"course":{"id":"lds-prd-205","code":"LDS-PRD-205","title":"بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-prd-205/","repo":"SDAIAAcademy/lds-prd-205","home":"index.html"},"ai":{"context":{"course":"context/course.md","courseJs":"context/course.js","day":null,"llms":"llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="_engine/academy.js"></script>
+</body>
+</html>

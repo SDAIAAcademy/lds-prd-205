@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>طيران قبّرة: ماذا يكلف تغيير حجزي؟</title>
+<style>
+  body { font-family: system-ui, "Segoe UI", Tahoma, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; color: #1b1b1b; background: #fff; }
+  label { display: block; font-weight: 600; margin-block-end: .4rem; }
+  input { font-size: 1.1rem; padding: .5rem; inline-size: 12rem; }
+  button { font-size: 1.1rem; padding: .5rem 1rem; }
+  .note { font-size: .95rem; color: #333; border-inline-start: 4px solid #555; padding-inline-start: .6rem; }
+  .fee { font-size: 1.4rem; font-weight: 700; }
+</style>
+</head>
+<body>
+<h1>ماذا يكلف تغيير حجزي؟</h1>
+<p class="note">نموذج أولي للتجربة على بيانات اصطناعية. لا يغيّر أي حجز.</p>
+<form id="form">
+  <label for="ref">رمز الحجز (ستة أحرف وأرقام)</label>
+  <input id="ref" name="ref" autocomplete="off" dir="ltr">
+  <button type="submit">اعرض الشرح</button>
+</form>
+<div id="out" aria-live="polite"></div>
+<p class="note">الشرح يكتبه الذكاء الاصطناعي من قاعدة الأجرة، والرسوم يحسبها النظام من القواعد. تحقّق قبل أن تقرر.</p>
+<script src="app.js"></script>
+</body>
+</html>

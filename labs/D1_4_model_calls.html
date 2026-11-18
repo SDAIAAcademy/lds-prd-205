@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.4 · استدعاء النموذج والبيانات الاصطناعية · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_4_model_calls.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-4">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.4</span>
+<h1>استدعاء النموذج والبيانات الاصطناعية</h1>
+<p>تضيف مولّدًا لأربعين حجزًا اصطناعيًا، واستدعاءً للنموذج يشرح القاعدة، مع المفتاح في .env وحد للاستدعاءات ووضع للتعطل. ثم استدعاء النموذج في فكرتك.</p>
+<div class="meta"><span>60 دقيقة</span><span>اليوم 1</span><span>الجلسة 4: بيئة معزولة ومفتاح محدود وبيانات اصطناعية</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.4">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>مولّد لأربعين حجزًا اصطناعيًا يعطي الملف نفسه في كل تشغيل.</li>
+    <li>استدعاء لنموذج لغوي يكتب الشرح بالعربية، والرسوم تبقى من البرنامج.</li>
+    <li>المفتاح في <code>.env</code> وحده، وحد لعدد الاستدعاءات، ووضع للتعطل يُظهر نص القاعدة.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/kit/v1_step3.zip" download><b>v1_step3.zip</b><span>الحالة المرجعية للخطوة 3، إن لم يكن معك إيداعك.</span></a>
+  <a href="files/kit/v2.zip" download><b>v2.zip</b><span>الحالة المرجعية بعد هذا المختبر، إن تعطل وكيلك.</span></a>
+</div>
+<p class="small">سياسة الذكاء الاصطناعي: <b>كامل.</b> المفتاح يعطيك إياه المدرّب: بحد إنفاق صغير ولمدة الورشة. لا تلصقه في محادثة الوكيل ولا في أي ملف غير <code>.env</code>. بيانات اصطناعية فقط.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · ابدأ من إيداعك الأخير أو من الحالة المرجعية للخطوة 3 <span class="min">3 دقائق</span></h3>
+  <p><code>git log --oneline</code>: آخر إيداع هو الخطوة 3؟ لا إيداع عندك؟ فك <code>v1_step3.zip</code>، واعمل <code>git init</code> وإيداعًا أول، واكتب ذلك في رسالة الإيداع.</p>
+</div>
+
+<div class="step">
+  <h3>2 · اطلب مولّدًا للحجوزات ببذرة ثابتة، وشغّله مرتين وقارن <span class="min">10 دقائق</span></h3>
+  <div class="prompt" data-tool="وكيل برمجة">أضف make_bookings.py بمكتبة Python القياسية يكتب data/bookings.csv: 40 حجزًا اصطناعيًا ببذرة ثابتة، بالحقول نفسها. أبقِ الحجوزات الستة الحالية أولًا. اجعل بين الحجوزات عددًا لعدة مسافرين ولرحلتين، وحجوزات قريبة من آخر موعد للتغيير. لا أسماء ولا أرقام هوية ولا أي بيانات شخصية.</div>
+  <p>شغّله مرتين: <code>uv run make_bookings.py</code>، ثم <code>git diff --stat</code> بعد التشغيل الثاني. لا فرق؟ الملف ثابت. أودع.</p>
+</div>
+
+<div class="step">
+  <h3>3 · أضف استدعاء النموذج بوضع البديل، والرسوم تبقى من البرنامج <span class="min">12 دقيقة</span></h3>
+  <div class="prompt" data-tool="وكيل برمجة">أضف دالة call_model تقرأ MODEL_MODE من البيئة: stub (افتراضي) يملأ جملًا ثابتة من data/stub_answers.json، وhosted يستدعي نقطة chat/completions بالعنوان MODEL_BASE_URL والنموذج MODEL_NAME والمفتاح MODEL_API_KEY، وfail يرمي خطأ. البرنامج يحسب الرسوم ويعطي النموذج القاعدة والرقم، والنموذج يكتب الشرح فقط. إن فشل النموذج فاعرض نص القاعدة. خذ stub_answers.json من v2.zip.</div>
+  <p>شغّل وجرّب <code>QB4K7M</code>: شرح يبدأ بـ«تستطيع تغيير حجزك» ورسوم 150. أودع.</p>
+</div>
+
+<div class="step">
+  <h3>4 · ضع المفتاح في .env وجرّب الوضع المستضاف، ثم وضع التعطل <span class="min">10 دقائق</span></h3>
+  <p>انسخ <code>.env.example</code> باسم <code>.env</code>، واملأ الاسم والمفتاح اللذين أعطاك إياهما المدرّب، واجعل <code>MODEL_MODE=hosted</code>. تأكد أولًا: <code>git status</code> لا يُظهر <code>.env</code> (الملف في <code>.gitignore</code>). شغّل وجرّب ثلاثة حجوزات. ثم <code>MODEL_MODE=fail</code>: يظهر نص القاعدة ولا تنهار الصفحة.</p>
+  <p class="small">لا مفتاح، أو النموذج المجاني مشغول؟ ابقَ على <code>stub</code>: الخطوات التالية لا تحتاج إلى نموذج.</p>
+</div>
+
+<div class="step">
+  <h3>5 · اختبر حد الاستدعاءات، وتأكد أن المفتاح لا يصل إلى المتصفح <span class="min">10 دقائق</span></h3>
+  <p>اجعل <code>MODEL_MAX_CALLS=2</code> وشغّل، واطلب ثلاثة شروح: الثالث من نص القاعدة لا من النموذج. ثم افتح مصدر الصفحة في المتصفح وملف <code>app.js</code>: لا مفتاح ولا اسم متغير المفتاح. أعد الحد إلى 30، وأودع (دون <code>.env</code>).</p>
+</div>
+
+<div class="step">
+  <h3>6 · فكرتك: استدعاء النموذج وبيانات اصطناعية <span class="min">15 دقيقة</span></h3>
+  <p>في مستودع فكرتك: بيانات اصطناعية بمولّد ثابت، واستدعاء للنموذج بالأوضاع الثلاثة، والمفتاح في <code>.env</code>. ما يُحسب يحسبه البرنامج. أودع كل خطوة عاملة.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>قارن شرح البديل بشرح النموذج المستضاف لثلاثة حجوزات: هل كتب النموذج رقمًا من عنده؟ سجّل الجملة إن وجدتها.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم حجزًا من الأربعين لأكثر من مسافر أو لرحلتين؟ ولماذا يهمك هذا العدد في اليوم الثاني؟</li>
+  <li>أين يعيش المفتاح، ومن يستطيع أن يراه، وماذا يحدث حين يبلغ الحد؟</li>
+  <li>لو كتب النموذج الرسوم بنفسه، كيف كنت ستعرف أنها خطأ؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>التحقق: <code>uv run labs/solutions/run_all.py 1.4</code>. المولّد يعيد الملف نفسه؛ 22 حجزًا من 40 لأكثر من مسافر أو رحلة؛ بحد استدعاءين جاء الشرحان الأولان من البديل والثالث من نص القاعدة؛ و<code>.env.example</code> يسمّي ما يقرؤه <code>app.py</code> بالضبط.</li>
+    <li>جهّز قبل الجلسة مفاتيح لكل مشارك بحد إنفاق صغير ولمدة الورشة، من مزوّد يتيح نماذج مستضافة مجانية أو مفتوحة الأوزان، وألغها بعد اليوم الثاني. المفاتيح لا تُعرض على الشاشة.</li>
+    <li>الوضع المستضاف لم يُشغَّل عند إعداد المقرر: لا مفتاح صالح كان متاحًا. البديل المكتوب مسبقًا وحده جُرِّب. لا تذكر للقاعة نتيجة نموذج لم تره بنفسك.</li>
+    <li>في v2 خطآن مقصودان لا تنبّه إليهما: الرسوم لا تُضرب في المسافرين والرحلات، والرمز غير الموجود يذهب إلى النموذج فيخترع رسومًا. يكشفهما المختبر 2.1.</li>
+    <li>الخطأ الشائع: إيداع <code>.env</code>. إن حدث: ألغِ المفتاح فورًا، ولا يكفي حذف الملف في إيداع لاحق.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_3_first_version.html" rel="prev">→ المختبر السابق</a><a href="D2_1_acceptance_checks.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع b5b0f37</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T07:37:45Z","version":"2027.1.0","commit":"b5b0f37"},"course":{"id":"lds-prd-205","code":"LDS-PRD-205","title":"بناء النماذج الأولية لمنتجات الذكاء الاصطناعي باستخدام وكلاء البرمجة","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-prd-205/","repo":"SDAIAAcademy/lds-prd-205","home":"../index.html"},"lab":{"id":"1.4","title":"استدعاء النموذج والبيانات الاصطناعية","summary":"تضيف مولّدًا لأربعين حجزًا اصطناعيًا، واستدعاءً للنموذج يشرح القاعدة، مع المفتاح في .env وحد للاستدعاءات ووضع للتعطل. ثم استدعاء النموذج في فكرتك.","minutes":60,"day":1,"unit":"اليوم 1","session":4,"deck":"../slides/day1.html#lab-1-4","prev":"D1_3_first_version.html","next":"D2_1_acceptance_checks.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
